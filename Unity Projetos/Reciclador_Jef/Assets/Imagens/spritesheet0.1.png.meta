@@ -1,0 +1,771 @@
+fileFormatVersion: 2
+guid: aa772aa6cca358445a13cf4796b6698c
+timeCreated: 1453409470
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botao_play
+    21300002: botao_rejogar_ativo
+    21300004: botao_config
+    21300006: botao_rank
+    21300008: botao_play_pequeno
+    21300010: material_vidro_01
+    21300012: material_vidro_02
+    21300014: material_vidro_05
+    21300016: botao_menu
+    21300018: botao_lista
+    21300020: material_vidro_03
+    21300022: material_vidro_04
+    21300024: material_papel_01
+    21300026: material_papel_02
+    21300028: material_papel_03
+    21300030: material_papel_04
+    21300032: botao_conquistas
+    21300034: botao_video
+    21300036: botao_v
+    21300038: botao_voltar_2
+    21300040: botao_pausa_inativo
+    21300042: botao_x
+    21300044: botao_pausa_ativo
+    21300046: botao_som
+    21300048: botao_porta
+    21300050: botao_casa
+    21300052: material_plastico_01
+    21300054: material_plastico_02
+    21300056: material_plastico_03
+    21300058: material_plastico_04
+    21300060: spritesheet0.1_40
+    21300062: botao_rejogar_inativo
+    21300064: botao_voltar
+    21300066: botao_som_2
+    21300068: botao_mundo
+    21300070: botao_casa_2
+    21300072: botao_interrogacao
+    21300074: material_metal_01
+    21300076: material_metal_02
+    21300078: material_metal_03
+    21300080: material_metal_04
+    21300082: monstro_02
+    21300084: monstro_03
+    21300086: spritesheet0.1_55
+    21300088: spritesheet0.1_56
+    21300090: spritesheet0.1_57
+    21300092: spritesheet0.1_58
+    21300094: monstro_01
+    21300096: cenario
+    21300098: monstro_04
+    21300100: monstro_05
+    21300102: monstro_06
+    21300104: monstro_07
+    21300106: monstro_08
+    21300108: monstro_09
+    21300110: spritesheet0.1_67
+    21300112: monstro_10
+    21300114: lixeira_vidro
+    21300116: lixeira_metal
+    21300118: titulo
+    21300120: lixeira_papel
+    21300122: lixeira_plastico
+    21300124: botao_v_2
+    21300126: botao_avancar
+    21300128: botao_sair
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botao_play
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1837
+        width: 228
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_rejogar_ativo
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1846
+        width: 116
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_config
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1840
+        width: 123
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_rank
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1843
+        width: 119
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_play_pequeno
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 1881
+        width: 80
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_vidro_01
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1814
+        width: 112
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_vidro_02
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1807
+        width: 67
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_vidro_05
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1840
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_menu
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1836
+        width: 119
+        height: 116
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_lista
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 1835
+        width: 115
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_vidro_03
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1843
+        width: 62
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_vidro_04
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1824
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_papel_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1672
+        width: 165
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_papel_02
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1684
+        width: 121
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_papel_03
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1687
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_papel_04
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1682
+        width: 125
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_conquistas
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1707
+        width: 120
+        height: 118
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_video
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1709
+        width: 120
+        height: 115
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_v
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 1720
+        width: 111
+        height: 110
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_voltar_2
+      rect:
+        serializedVersion: 2
+        x: 1740
+        y: 1724
+        width: 105
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_pausa_inativo
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 1577
+        width: 121
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_x
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 1585
+        width: 109
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_pausa_ativo
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 1581
+        width: 107
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_som
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 1595
+        width: 91
+        height: 89
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_porta
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1572
+        width: 119
+        height: 116
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_casa
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1568
+        width: 124
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_plastico_01
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1556
+        width: 126
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_plastico_02
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1526
+        width: 91
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_plastico_03
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1515
+        width: 101
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_plastico_04
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1524
+        width: 126
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_40
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1593
+        width: 78
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_rejogar_inativo
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 1446
+        width: 121
+        height: 115
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_voltar
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 1465
+        width: 113
+        height: 103
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_som_2
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1451
+        width: 88
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_mundo
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 1426
+        width: 133
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_casa_2
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 1435
+        width: 119
+        height: 121
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_interrogacao
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1465
+        width: 91
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_metal_01
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1396
+        width: 108
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_metal_02
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 1396
+        width: 99
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_metal_03
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 1394
+        width: 57
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: material_metal_04
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1392
+        width: 101
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_02
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1304
+        width: 133
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_03
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 1311
+        width: 260
+        height: 82
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_55
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1312
+        width: 79
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_56
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 1312
+        width: 79
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_57
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1325
+        width: 70
+        height: 59
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_58
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 1315
+        width: 68
+        height: 69
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_01
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 1308
+        width: 104
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cenario
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 242
+        width: 886
+        height: 1020
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_04
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 1050
+        width: 154
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_05
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 1054
+        width: 165
+        height: 114
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_06
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 1048
+        width: 158
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_07
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 834
+        width: 157
+        height: 146
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_08
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 832
+        width: 218
+        height: 149
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_09
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 843
+        width: 225
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet0.1_67
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 822
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstro_10
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 624
+        width: 281
+        height: 208
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lixeira_vidro
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 330
+        width: 206
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lixeira_metal
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 324
+        width: 208
+        height: 245
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: titulo
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 52
+        width: 1129
+        height: 129
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lixeira_papel
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 52
+        width: 207
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: lixeira_plastico
+      rect:
+        serializedVersion: 2
+        x: 1698
+        y: 52
+        width: 208
+        height: 244
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_v_2
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1722
+        width: 111
+        height: 109
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_avancar
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1712
+        width: 115
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: botao_sair
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1707
+        width: 117
+        height: 120
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
