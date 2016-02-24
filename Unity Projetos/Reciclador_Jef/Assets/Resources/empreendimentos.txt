@@ -1,0 +1,35 @@
+empreendimento		::horta
+	nome			::Horta Comunitária
+	descricao		::Essa horta é da hora mano.
+	nivel maximo	::3
+	nivel :: 1
+		atributos		::
+			velocidade reciclagem		::25
+			dinheiro gerado				::5
+			separacao automatica		::1
+			poder jogador				::3
+		requisitos		::
+			preco						::54
+			nivel sustentabilidade		::2
+			empreendimentos construidos	:: fazendadecabras : 2; coisadahora : 1 
+	nivel :: 2
+		atributos		::
+			velocidade reciclagem		::50
+			dinheiro gerado				::10
+			separacao automatica		::2
+			poder jogador				::6
+		requisitos		::
+			preco						::154
+			nivel sustentabilidade		::20
+			empreendimentos construidos	:: fazendadecabras : 4; coisadahora : 2 
+	nivel :: 3
+		atributos		::
+			velocidade reciclagem		::75
+			dinheiro gerado				::100
+			separacao automatica		::7
+			poder jogador				::21
+		requisitos		::
+			preco						::2154
+			nivel sustentabilidade		::70
+			empreendimentos construidos	:: fazendadecabras : 25; coisadahora : 30
+fim empreendimento	::horta

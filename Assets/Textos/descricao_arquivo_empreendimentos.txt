@@ -1,0 +1,21 @@
+## Arquivo de empreendimentos.
+
+## Linhas começadas com ## (dois hashtags, sustenido, etc) serão descartadas pelo parser. São comentários.
+## Linhas em branco serão descartadas pelo parser.
+
+## Esqueleto de um empreendimento. Ele deve seguir a ordem, mas pode ter espaços e linhas comentadas entre os itens.
+empreendimento		::identificador
+	nome			::Versão amigável do nome do empreendimento
+	descricao		::Resumo do empreendimento. Se o nome não for o nome real, colocar aqui.
+	nivel maximo	::Quantos níveis de evolução o empreendimento pode ter. (1-6)
+	nivel :: N
+		atributos		::
+			velocidade reciclagem		::Quantidade, em porcentagem, do aumento de velocidade (0-100%)
+			dinheiro gerado				::Dinheiro gerado por tempo. Número inteiro. Tempo é fixo.
+			separacao automatica		::Dano causado ao longo do tempo nos monstros. Número inteiro.
+			poder jogador				::Acréscimo ao dano do clique do jogador. Número inteiro.
+		requisitos		::
+			preco						::Custo para comprar este nível, em $.
+			nivel sustentabilidade		::Nível de sustentabilidade necessário para esse nível do empreendimento.
+			empreendimentos construidos	:: identificadorA:nivelA; identificadorB : nivelB
+fim empreendimento	::identificador
