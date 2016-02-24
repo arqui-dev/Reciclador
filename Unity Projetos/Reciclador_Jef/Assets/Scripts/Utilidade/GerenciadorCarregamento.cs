@@ -7,10 +7,7 @@ using System.Collections.Generic;
 /// </summary>
 public class GerenciadorCarregamento : MonoBehaviour
 {
-	static int maximoNivelMaximo = 6;
-
 	static string [] separadorLinhas = {"\n","\n\r","\r\n","\r"};
-	static string comentario = "##";
 	static string [] divisor = {"::"};
 	static string caminhoEmpreendimentos = "empreendimentos";
 
@@ -18,13 +15,11 @@ public class GerenciadorCarregamento : MonoBehaviour
 	static string parseNome = "nome";
 	static string parseDescricao = "descricao";
 	static string parseNivelMaximo = "nivelmaximo";
-	static string parseNivel = "nivel";
-	static string parseAtributos = "atributos";
+	static string parseNivelEmpreendimento = "nivelempreendimento";
 	static string parseVelocidadeReciclagem = "velocidadereciclagem";
 	static string parseDinheiroGerado = "dinheirogerado";
 	static string parseSeparacaoAutomatica = "separacaoautomatica";
 	static string parsePoderJogador = "poderjogador";
-	static string parseRequisitos = "requisitos";
 	static string parsePreco = "preco";
 	static string parseNivelSustentabilidade = "nivelsustentabilidade";
 	static string parseEmpreendimentosConstruidos = "empreendimentosconstruidos";
@@ -73,10 +68,16 @@ public class GerenciadorCarregamento : MonoBehaviour
 		return null;
 	}
 
+	/// <summary>
+	/// Verifica as linhas passadas e retorna o empreendimento descrito nelas.
+	/// </summary>
+	/// <returns>Empreendimento.</returns>
+	/// <param name="identificador">Identificador do empreendimento.</param>
+	/// <param name="linhas">Lista das linhas que contem a descrição do empreendimento.</param>
 	static Empreendimento PegarEmpreendimento(
 		string identificador, string [] linhas)
 	{
-		Empreendimento empreendimento = new Empreendimento();
+		//Empreendimento empreendimento = new Empreendimento();
 		string nome = "";
 		string descricao = "";
 		int nivelMaximo = 1;
@@ -126,13 +127,14 @@ public class GerenciadorCarregamento : MonoBehaviour
 				divisor, System.StringSplitOptions.None);
 
 						
-			if (linhaAtual[0].StartsWith(parseNivel))
+			if (linhaAtual[0].StartsWith(parseNivelEmpreendimento))
 			{
 				int nv = 0;
 				if (int.TryParse(linhaAtual[1], out nv))
 				{
 					nivelAtual = nv;
 				}
+				Debug.Log ("NivelAtual = "+nivelAtual+"; NivelString: "+linhaAtual[1]+"; Linha: "+linha);
 			}
 			else if (linhaAtual[0].StartsWith(parseVelocidadeReciclagem))
 			{
@@ -193,18 +195,27 @@ public class GerenciadorCarregamento : MonoBehaviour
 				linhaAtual[1] = linhaAtual[1].Replace(" ","");
 				linhaAtual[1] = linhaAtual[1].Replace("\t","");
 
-				string [] contrucoes = linhaAtual[1].Split(';');
-				foreach(string c in contrucoes)
+				string [] construcoes = linhaAtual[1].Split(';');
+				Debug.Log ("Linha: "+construcoes[0]+"; "+construcoes[1]);
+
+				if (!construidos.ContainsKey(nivelAtual))
+				{
+					construidos.Add(nivelAtual, new Dictionary<string, int>());
+				}
+
+				foreach(string c in construcoes)
 				{
 					string [] constr = c.Split(':');
 
-					construidos[nivelAtual][constr[0]] = 1;
+					construidos[nivelAtual].Add(constr[0], 1);
 					int i = 0;
 					if (int.TryParse(constr[1], out i))
 					{
 						construidos[nivelAtual][constr[0]] = i;
 					}
 				}
+
+				Debug.Log ("Nivel "+nivelAtual+": "+construidos[nivelAtual].Count);
 			}
 		}
 
@@ -226,6 +237,7 @@ public class GerenciadorCarregamento : MonoBehaviour
 			{
 				saida += s + ": " + construidos[i+1][s] + "; ";
 			}
+			saida += "\n";
 		}
 
 		Debug.Log (saida);
