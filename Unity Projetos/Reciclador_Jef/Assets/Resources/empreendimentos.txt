@@ -4,7 +4,12 @@ empreendimento		::horta
 	nivel maximo	::3
 	nivel empreendimento :: 1
 		atributos		::
-			velocidade reciclagem		::25
+			velocidade reciclagem		::25,25,25,25
+			valor venda					::10,10,10,10
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
 			dinheiro gerado				::5
 			separacao automatica		::1
 			poder jogador				::3
@@ -14,7 +19,12 @@ empreendimento		::horta
 			empreendimentos construidos	:: fazendadecabras : 2; coisadahora : 1 
 	nivel empreendimento :: 2
 		atributos		::
-			velocidade reciclagem		::50
+			velocidade reciclagem		::50,30,30,50
+			valor venda					::20,20,30,30
+			experiencia					::20
+			velocidade aparecer lixo	::5
+			limite fila					::1,1,2,1
+			lixo minimo					::0
 			dinheiro gerado				::10
 			separacao automatica		::2
 			poder jogador				::6
@@ -24,7 +34,12 @@ empreendimento		::horta
 			empreendimentos construidos	:: fazendadecabras : 4; coisadahora : 2 
 	nivel empreendimento :: 3
 		atributos		::
-			velocidade reciclagem		::75
+			velocidade reciclagem		::75,80,80,75
+			valor venda					::30,30,50,50
+			experiencia					::50
+			velocidade aparecer lixo	::10
+			limite fila					::2,2,4,3
+			lixo minimo					::1
 			dinheiro gerado				::100
 			separacao automatica		::7
 			poder jogador				::21
@@ -33,3 +48,41 @@ empreendimento		::horta
 			nivel sustentabilidade		::70
 			empreendimentos construidos	:: fazendadecabras : 25; coisadahora : 30
 fim empreendimento	::horta
+
+
+empreendimento		::casa_de_jogos_de_tabuleiro
+	nome			::Funhouse
+	descricao		::Da pra divertir bastante neste lugar
+	nivel maximo	::2
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::25,25,25,25
+			valor venda					::10,10,10,10
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::5
+			separacao automatica		::1
+			poder jogador				::3
+		requisitos		::
+			preco						::54
+			nivel sustentabilidade		::2
+			empreendimentos construidos	:: horta : 1
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::50,30,30,50
+			valor venda					::20,20,30,30
+			experiencia					::20
+			velocidade aparecer lixo	::5
+			limite fila					::1,1,2,1
+			lixo minimo					::0
+			dinheiro gerado				::10
+			separacao automatica		::2
+			poder jogador				::6
+		requisitos		::
+			preco						::154
+			nivel sustentabilidade		::20
+			empreendimentos construidos	:: horta : 10; coisadahora : 1 
+
+fim empreendimento	::casa_de_jogos_de_tabuleiro

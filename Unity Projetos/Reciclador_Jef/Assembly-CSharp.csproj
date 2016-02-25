@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\FuncoesCamera.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjAreaReciclavel.cs" />
+     <Compile Include="Assets\Scripts\Objetos\ObjEmpreendimento.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjGerenciadorLixo.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjLixoMisturado.cs" />
