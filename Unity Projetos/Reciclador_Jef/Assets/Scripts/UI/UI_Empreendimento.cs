@@ -14,7 +14,8 @@ public class UI_Empreendimento : MonoBehaviour
 
 	public GameObject objGastar;
 
-	public Empreendimento	empreendimento;
+	Empreendimento	empreendimento;
+	public int indiceEmpreendimento = 0;
 
 	Text	textoLocal;
 
@@ -39,6 +40,9 @@ public class UI_Empreendimento : MonoBehaviour
 			posicaoLocalDinheiro = 
 				GameObject.Find("pnlMoeda").transform;
 		}
+
+		empreendimento = GerenciadorEmpreendimentos
+			.PegarEmpreendimento(indiceEmpreendimento);
 
 		empreendimento.Reiniciar();
 

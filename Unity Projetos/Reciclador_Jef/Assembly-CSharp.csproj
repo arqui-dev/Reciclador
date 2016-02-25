@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\UI\UI_Menu.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Dados.cs" />
      <Compile Include="Assets\Scripts\Utilidade\GerenciadorCarregamento.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Jogador.cs" />
      <None Include="Assets\Resources\empreendimentos.txt" />
  <Reference Include="UnityEngine.UI">

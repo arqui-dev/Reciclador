@@ -509,7 +509,7 @@ public class GerenciadorCarregamento : MonoBehaviour
 
 	void Awake()
 	{
-		CarregarEmpreendimentos();
+		//CarregarEmpreendimentos();
 	}
 }
 

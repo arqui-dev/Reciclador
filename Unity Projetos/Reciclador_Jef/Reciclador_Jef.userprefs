@@ -1,13 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tipos\Empreendimento.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utilidade\GerenciadorCarregamento.cs" Line="183" Column="1" />
-      <File FileName="Assets\Scripts\Objetos\ObjEmpreendimentos.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tipos\Empreendimento.cs" Line="187" Column="5" />
-      <File FileName="Assets\Scripts\UI\UI_Empreendimento.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" Line="35" Column="4" />
+      <File FileName="Assets\Scripts\UI\UI_Empreendimento.cs" Line="102" Column="13" />
       <File FileName="Assets\Resources\empreendimentos.txt" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Objetos\ObjEmpreendimento.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tipos\Empreendimento.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
