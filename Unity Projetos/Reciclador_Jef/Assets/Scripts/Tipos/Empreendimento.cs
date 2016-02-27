@@ -190,6 +190,43 @@ public class Empreendimento// : MonoBehaviour
 
 		return saida;
 	}
+
+	public bool PodeComprar()
+	{
+		if (custo <= Jogador.pontos && custo > 0 &&
+		    nivelRequisito > 0 && nivelRequisito <= Jogador.nivel &&
+		    TemRequisitos())
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool TemRequisitos()
+	{
+		if (nivel >= nivelMaximo)
+		{
+			Debug.Log ("Nivel >= nivel maximo");
+			return false;
+		}
+
+		if (_empreendimentosRequisitos.ContainsKey(nivel+1))
+		{
+			foreach(string s in _empreendimentosRequisitos[nivel+1].Keys)
+			{
+				if (GerenciadorEmpreendimentos.TemRequisito(
+					s, _empreendimentosRequisitos[nivel+1][s]) == false)
+				{
+					Debug.Log ("Nao tem: "+s+": "+_empreendimentosRequisitos[nivel+1][s]);
+					return false;
+				}
+			}
+			return true;
+		}
+
+		Debug.Log ("Nao contem nivel "+nivel);
+		return false;
+	}
 }
 /*
 Os empreendimentos sustentáveis (upgrades) podem fazer:

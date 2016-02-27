@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Camera\FuncoesCamera.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjAreaReciclavel.cs" />
-     <Compile Include="Assets\Scripts\Objetos\ObjEmpreendimento.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjGerenciadorLixo.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjLixoMisturado.cs" />
@@ -63,6 +62,7 @@
      <Compile Include="Assets\Scripts\UI\UI_Empreendimento.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Mensanges.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Menu.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\CriarListaEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Dados.cs" />
      <Compile Include="Assets\Scripts\Utilidade\GerenciadorCarregamento.cs" />
      <Compile Include="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" />

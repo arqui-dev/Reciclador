@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class Empreendimento : MonoBehaviour
+public class Empreendimento// : MonoBehaviour
 {
 	public string 	nome						= "";
+	public string 	identificador 				= "";
 
 	public int		[]	_taxaSeparacaoLixo		= {0};
 	public long		[]	_dinheiroPorTempo		= {0};
@@ -15,8 +17,15 @@ public class Empreendimento : MonoBehaviour
 
 	public float	[]	_velocidadeAparecerLixo	= {0};
 
+	// TODO: Ajeitar a separaçao automatica!
+	public int 		[]	_separacaoAutomatica	= {0};
+
 	public long		[]	_custos					= {	1 };
 	public int		[]	_nivelRequisito			= { 1 };
+
+	// outros empreendimentos de requisito
+	public Dictionary<int,Dictionary<string, int>> _empreendimentosRequisitos = 
+		new Dictionary<int,Dictionary<string, int>>();
 
 	// Precisa de 1 nivel a mais, para mostrar a descriçao
 	// sem comprar e de cada nivel
@@ -39,6 +48,10 @@ public class Empreendimento : MonoBehaviour
 	}
 	public int		nivel {
 		get { return _nivel; }
+	}
+
+	public int separacaoAutomatica {
+		get { return _separacaoAutomatica[_nivel]; }
 	}
 
 	public int 		nivelRequisito
@@ -139,6 +152,79 @@ public class Empreendimento : MonoBehaviour
 			_nivel++;
 			return true;
 		}
+		return false;
+	}
+
+	override public string ToString()
+	{
+		string saida = "";
+		saida += "Identificador: " 	+ identificador + "\n";
+		saida += "Nome: " 			+ nome + "\n";
+		saida += "Descrição: " 		+ descricao + "\n";
+		saida += "Nível máximo: " 	+ nivelMaximo + "\n\n";
+
+		for (int nv = 0; nv < nivelMaximo; nv++)
+		{
+			saida += "Nível: " 		+ (nv+1) + "\n";
+			saida += "    Atributos: " 	+ "\n";
+			saida += "        Velocidade de reciclagem: "	+ _velocidadeReciclagem[nv].x + ", " + _velocidadeReciclagem[nv].y + ", " + _velocidadeReciclagem[nv].z + ", " + _velocidadeReciclagem[nv].w + "\n";
+			saida += "        Valor de venda: " + _valorDeVenda[nv].x + ", " + _valorDeVenda[nv].y + ", " + _valorDeVenda[nv].z + ", " + _valorDeVenda[nv].w + "\n";
+			saida += "        Experiência extra: " + _aumentoXP[nv] + "\n";
+			saida += "        Velocidade aparecer Lixo: "	+ _velocidadeAparecerLixo[nv] + "\n";
+			saida += "        Limite das filas de reciclagem: "	+ _limiteRecicladoras[nv].x + ", " + _limiteRecicladoras[nv].y + ", " + _limiteRecicladoras[nv].z + ", " + _limiteRecicladoras[nv].w + "\n";
+			saida += "        Nível mínimo do lixo: "	+ _nivelMinimoLixo[nv] + "\n";
+			saida += "        Dinheiro gerado por tempo: "	+ _dinheiroPorTempo[nv] + "\n";
+			saida += "        Separação automática: "	+ _separacaoAutomatica[nv] + "\n";
+			saida += "        Taxa de separação do jogador: " + _taxaSeparacaoLixo[nv] + "\n";
+
+			saida += "    Requisitos: " 	+ "\n";
+			saida += "        Preço: " + _custos[nv] + "\n";
+			saida += "        Sustentabilidade Mínima: " + _nivelRequisito[nv] + "\n";
+			saida += "        Empreendimentos construídos: " +  "\n";
+			foreach(string s in _empreendimentosRequisitos[nv+1].Keys)
+			{
+				saida += "            " + s + ": "+ _empreendimentosRequisitos[nv+1][s] + "\n";
+			}
+			saida += "\n";
+		}
+
+		return saida;
+	}
+
+	public bool PodeComprar()
+	{
+		if (custo <= Jogador.pontos && custo > 0 &&
+		    nivelRequisito > 0 && nivelRequisito <= Jogador.nivel &&
+		    TemRequisitos())
+		{
+			return true;
+		}
+		return false;
+	}
+
+	bool TemRequisitos()
+	{
+		if (nivel >= nivelMaximo)
+		{
+			Debug.Log ("Nivel >= nivel maximo");
+			return false;
+		}
+
+		if (_empreendimentosRequisitos.ContainsKey(nivel+1))
+		{
+			foreach(string s in _empreendimentosRequisitos[nivel+1].Keys)
+			{
+				if (GerenciadorEmpreendimentos.TemRequisito(
+					s, _empreendimentosRequisitos[nivel+1][s]) == false)
+				{
+					Debug.Log ("Nao tem: "+s+": "+_empreendimentosRequisitos[nivel+1][s]);
+					return false;
+				}
+			}
+			return true;
+		}
+
+		Debug.Log ("Nao contem nivel "+nivel);
 		return false;
 	}
 }

@@ -14,8 +14,7 @@ public class UI_Empreendimento : MonoBehaviour
 
 	public GameObject objGastar;
 
-	Empreendimento	empreendimento;
-	public int indiceEmpreendimento = 0;
+	public Empreendimento empreendimento;
 
 	Text	textoLocal;
 
@@ -40,11 +39,6 @@ public class UI_Empreendimento : MonoBehaviour
 			posicaoLocalDinheiro = 
 				GameObject.Find("pnlMoeda").transform;
 		}
-
-		empreendimento = GerenciadorEmpreendimentos
-			.PegarEmpreendimento(indiceEmpreendimento);
-
-		empreendimento.Reiniciar();
 
 		textoLocal = GetComponentInChildren<Text>();
 		AjeitarTexto();
@@ -86,6 +80,11 @@ public class UI_Empreendimento : MonoBehaviour
 		selecionado.SelecionadoComprar();
 	}
 
+	public static void ComprarEstatico()
+	{
+		selecionado.SelecionadoComprar();
+	}
+
 	void SelecionadoComprar()
 	{
 		long	custo		= empreendimento.custo;
@@ -117,10 +116,7 @@ public class UI_Empreendimento : MonoBehaviour
 	{
 		if (selecionado == this)
 		{
-			if (empreendimento.custo <= Jogador.pontos &&
-			    empreendimento.custo > 0 &&
-			    empreendimento.nivelRequisito > 0 &&
-			    empreendimento.nivelRequisito <= Jogador.nivel)
+			if (empreendimento.PodeComprar())
 			{
 				btComprar.interactable = true;
 			}

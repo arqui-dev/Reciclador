@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: aa772aa6cca358445a13cf4796b6698c
-timeCreated: 1453409470
+timeCreated: 1456498436
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -188,10 +188,10 @@ TextureImporter:
     - name: material_vidro_05
       rect:
         serializedVersion: 2
-        x: 596
-        y: 1840
-        width: 72
-        height: 88
+        x: 541
+        y: 1824
+        width: 125
+        height: 104
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,8 +230,8 @@ TextureImporter:
         serializedVersion: 2
         x: 541
         y: 1824
-        width: 55
-        height: 61
+        width: 125
+        height: 104
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

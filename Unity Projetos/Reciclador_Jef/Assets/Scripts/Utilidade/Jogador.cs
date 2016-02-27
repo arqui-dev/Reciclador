@@ -8,6 +8,9 @@ public class Jogador : MonoBehaviour
 	public int 	multiplicadorXPNivel	= 50;
 	public int 	multiplicadorXPGeral	= 100;
 
+	public int dinheiroInicialTestes	= 10000;
+	public int nivelInicialTestes		= 90;
+
 
 	static long	_pontos				= 0;
 	static int	_dano				= 1;
@@ -123,6 +126,11 @@ public class Jogador : MonoBehaviour
 
 	void Awake()
 	{
+#if UNITY_EDITOR
+		_pontos = dinheiroInicialTestes;
+		_nivel = nivelInicialTestes;
+#endif
+
 		if (instancia == null)
 		{
 			instancia = this;
