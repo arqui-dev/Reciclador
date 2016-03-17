@@ -23,5 +23,10 @@ public class Dados
 		return saida;
 	}
 
+	static public string textoDescricao_custo = "Custo";
+	static public string textoDescricao_requisitos = "Requisitos";
+	static public string textoDescricao_sustentabilidade = "Sustentabilidade";
+	static public string textoDescricao_empreendimentosNecessarios = "Empreendimentos Necessários";
+	static public string textoDescricao_descricao = "Descrição";
 }
 

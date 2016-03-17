@@ -30,10 +30,10 @@
 
 ## Exemplo:
 
-empreendimento		::catadores_de_reciclaveis
-	nome			::Catadores
-	descricao		::Gerencia pessoas que pegam os recicláveis na vizinhança
-	nivel maximo	::2
+empreendimento		::reciclagem_de_papel
+	nome			::Reciclagem de papel
+	descricao		::A reciclagem de papel é uma atividade industrial que diminui o consumo de recursos naturais, impede que este resíduo acumule em aterros sanitários e gera renda no processo. Nome completo: Empresa de reciclagem de papel.
+	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
 			velocidade reciclagem		::10,10,10,10
@@ -51,6 +51,66 @@ empreendimento		::catadores_de_reciclaveis
 			empreendimentos construidos	:: 
 	nivel empreendimento :: 2
 		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::25
+			nivel sustentabilidade		::2
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::55
+			nivel sustentabilidade		::3
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::75
+			nivel sustentabilidade		::4
+			empreendimentos construidos	:: catadores_de_residuos : 1
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::150
+			nivel sustentabilidade		::5
+			empreendimentos construidos	:: catadores_de_residuos : 1
+	nivel empreendimento :: 6
+		atributos		::
 			velocidade reciclagem		::15,15,15,15
 			valor venda					::0,0,0,0
 			experiencia					::5
@@ -61,7 +121,43 @@ empreendimento		::catadores_de_reciclaveis
 			separacao automatica		::3
 			poder jogador				::0
 		requisitos		::
-			preco						::108
+			preco						::1080
+			nivel sustentabilidade		::9
+			empreendimentos construidos	:: catadores_de_residuos : 2
+fim empreendimento	::reciclagem_de_papel
+
+empreendimento		::catadores_de_residuos
+	nome			::Associação de catadores
+	descricao		::Nome completo: Associação / Cooperativa de catadores de resíduos de papel 
+	nivel maximo	::2
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::50
 			nivel sustentabilidade		::3
-			empreendimentos construidos	:: empreendimento_sustentavel_A : 1 ; empreendimento_sustentavel_B : 3
-fim empreendimento	::catadores_de_reciclaveis
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::500
+			nivel sustentabilidade		::3
+			empreendimentos construidos	:: reciclagem_de_papel : 2
+fim empreendimento	::reciclagem_de_papel
