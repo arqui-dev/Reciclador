@@ -28,40 +28,100 @@
 			##empreendimentos construidos	::Lista dos empreendimentos necessários, e seus níveis, para poder comprar este nível deste aprimoramento. Cada empreendimento requisitado é separado por ; (ponto-e-vírgula), e é descrito da maneira "identificador : nível" (sem aspas), sendo que o identificador é um identificador de um empreendimento existente, e o nível é um número inteiro entre 1 e o nível máximo daquele empreendimento. Após o ultimo empreendimento da lista NÃO é colocado o ponto-e-vírgula. Se não houverem emprendimentos requisitados, mesmo assim essa linha deve existir, porém com nada colocado após os ::
 ##fim empreendimento	::identificador_do_empreendimento
 
-## Exemplo:
+## Constantes: Base(DMG) = 1, Base$ = 5$ e BaseXP = 6xp
 
-empreendimento		::catadores_de_reciclaveis
-	nome			::Catadores
-	descricao		::Gerencia pessoas que pegam os recicláveis na vizinhança
-	nivel maximo	::2
+empreendimento		::catadores_de_papel
+	nome			::Cooperativa dos catadores de papel
+	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
-			velocidade reciclagem		::10,10,10,10
+			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::0
-			velocidade aparecer lixo	::0
-			limite fila					::1,0,0,0
-			lixo minimo					::0
+			experiencia					::6
+			velocidade aparecer lixo	::1
+			limite fila					::2,0,0,0
+			lixo minimo					::2
 			dinheiro gerado				::0
-			separacao automatica		::1
-			poder jogador				::0
+			separacao automatica		::0
+			poder jogador				::1
 		requisitos		::
-			preco						::15
+			preco						::25
 			nivel sustentabilidade		::1
 			empreendimentos construidos	:: 
 	nivel empreendimento :: 2
 		atributos		::
-			velocidade reciclagem		::15,15,15,15
+			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::0
-			limite fila					::2,1,1,1
+			experiencia					::12
+			velocidade aparecer lixo	::2
+			limite fila					::4,0,0,0
 			lixo minimo					::0
 			dinheiro gerado				::0
-			separacao automatica		::3
-			poder jogador				::0
+			separacao automatica		::0
+			poder jogador				::2
 		requisitos		::
-			preco						::108
-			nivel sustentabilidade		::3
-			empreendimentos construidos	:: empreendimento_sustentavel_A : 1 ; empreendimento_sustentavel_B : 3
-fim empreendimento	::catadores_de_reciclaveis
+			preco						:: 150
+			nivel sustentabilidade		:: 6
+			empreendimentos construidos	::
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::18
+			velocidade aparecer lixo	::3
+			limite fila					::6,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::3
+		requisitos		::
+			preco						:: 450
+			nivel sustentabilidade		:: 18
+			empreendimentos construidos	::
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::20
+			velocidade aparecer lixo	::4
+			limite fila					::8,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 900
+			nivel sustentabilidade		:: 36
+			empreendimentos construidos	::
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::25
+			velocidade aparecer lixo	::5
+			limite fila					::10,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::5
+		requisitos		::
+			preco						:: 1200
+			nivel sustentabilidade		:: 48
+			empreendimentos construidos	::
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::30
+			velocidade aparecer lixo	::6
+			limite fila					::12,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::6
+		requisitos		::
+			preco						:: 1350
+			nivel sustentabilidade		:: 54
+			empreendimentos construidos	::
+fim empreendimento	::catadores_de_papel
