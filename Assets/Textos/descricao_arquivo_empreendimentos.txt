@@ -33,8 +33,8 @@
 ##Catadores de:
 
 empreendimento		::catadores_de_papel
-	nome			::Cooperativa dos catadores de papel
-	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nome			::Catadores de papel
+	descricao		:: ## A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda no processo.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -129,8 +129,8 @@ empreendimento		::catadores_de_papel
 fim empreendimento	::catadores_de_papel
 ##=================================
 empreendimento		::catadores_de_vidro
-	nome			::Cooperativa dos catadores de vidro
-	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nome			::Fábrica de Vitrais
+	descricao		:: ## Os cacos de vidro são fundidos a temperaturas acima de 1300ºC, podendo ser reutilizados infinitas vezes, por isso é importante reciclá-los.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -225,8 +225,8 @@ empreendimento		::catadores_de_vidro
 fim empreendimento	::catadores_de_vidro
 ##=====================================
 empreendimento		::catadores_de_metal
-	nome			::Cooperativa dos catadores de metal
-	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nome			::Depósito de sucatas ferrosas
+	descricao		::## O benefício da reciclagem de metal reduz o consumo de energia para a produção do alumínio, preserva o meio ambiente e movimenta a economia, gerando empregos e fonte de renda.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -320,9 +320,9 @@ empreendimento		::catadores_de_metal
 			empreendimentos construidos	::
 fim empreendimento	::catadores_de_metal
 ##===============================
-empreendimento		::catadores_de_metal
-	nome			::Cooperativa dos catadores de metal
-	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+empreendimento		::catadores_de_plastico
+	nome			::Indústria de reciclagem de plástico
+	descricao		::##Pláticos podem durar de centenas a milhares de anos para de decompor na natureza, somando isso ao fato de serem matéria prima de inúmeras coisas, sua reciclagem se torna indispensável para saúde do planeta.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::

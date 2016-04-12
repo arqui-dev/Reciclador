@@ -17,9 +17,9 @@ Obtenha um empreendimento surpresa
 - Um por todos e todos pelo MUNDO!
 Obtenha todos os empreendimentos.
 -Catador de latinha
-Recicle 30 materiais
--Colecionador de tranqueiras
 Recicle 100 materiais
+-Colecionador de tranqueiras
+Recicle 300 materiais
 - Rainha da Sucata
 Recicle 500 materiais
 - Capitão Planeta
