@@ -19,6 +19,7 @@ public class Jogador : MonoBehaviour
 	static int	_xpTotal			= 0;
 	static int 	_xpProximoNivel		= 1;
 	static int	_nivel				= 1;
+	static int 	_resets				= 0;
 
 	static bool inicializado		= false;
 
@@ -26,7 +27,8 @@ public class Jogador : MonoBehaviour
 	{
 		get 
 		{ 
-			return _dano + ObjEmpreendimentos.taxaSeparacaoLixo; 
+			return _dano + ObjEmpreendimentos.taxaSeparacaoLixo
+				+ Dados.bonusResetDano * _resets;
 		}
 	}
 	static public int	quebrarArmadura
@@ -53,6 +55,10 @@ public class Jogador : MonoBehaviour
 	{
 		get { return _xpProximoNivel; }
 	}
+	static public int resets
+	{
+		get { return _resets; }
+	}
 
 	static public bool Gastar(long custo)
 	{
@@ -66,7 +72,7 @@ public class Jogador : MonoBehaviour
 
 	static public void Pontuar(long pontos)
 	{
-		_pontos += pontos;
+		_pontos += (pontos + Dados.bonusResetDinheiro * _resets);
 	}
 
 	static public int XPAjeitada(int xp)
@@ -78,7 +84,9 @@ public class Jogador : MonoBehaviour
 	{
 		bool subiuDeNivel = false;
 
-		_xpAtual += xp;
+		int xpExtra = Dados.bonusResetXP * _resets;
+
+		_xpAtual += (xp + xpExtra);
 
 		if (_xpAtual < 0)
 		{
@@ -122,6 +130,19 @@ public class Jogador : MonoBehaviour
 		AtualizarXPProximoNivel();
 		AtualizarXPTotal();
 		inicializado = true;
+	}
+
+	static public void Resetar()
+	{
+		_resets++;
+		_pontos				= 0;
+		_dano				= 1;
+		_quebrarArmadura	= 0;
+		_xpAtual			= 0;
+		_xpTotal			= 0;
+		_xpProximoNivel		= 1;
+		_nivel				= 1;
+		Inicializar();
 	}
 
 	void Awake()

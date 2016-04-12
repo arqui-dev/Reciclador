@@ -28,5 +28,10 @@ public class Dados
 	static public string textoDescricao_sustentabilidade = "Sustentabilidade";
 	static public string textoDescricao_empreendimentosNecessarios = "Empreendimentos Necessários";
 	static public string textoDescricao_descricao = "Descrição";
+
+
+	static public int bonusResetXP = 5;
+	static public int bonusResetDinheiro = 5;
+	static public int bonusResetDano = 2;
 }
 

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Objetos\ObjGerenciadorLixo.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjLixoMisturado.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjReciclavel.cs" />
+     <Compile Include="Assets\Scripts\Objetos\ObjReset.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjTextoFlutuante.cs" />
      <Compile Include="Assets\Scripts\Tipos\Empreendimento.cs" />
      <Compile Include="Assets\Scripts\Tipos\LixoMisturado.cs" />

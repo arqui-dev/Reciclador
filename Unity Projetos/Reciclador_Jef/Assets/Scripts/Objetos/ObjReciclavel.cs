@@ -151,7 +151,10 @@ public class ObjReciclavel : MonoBehaviour
 	
 	void AjeitarTexto()
 	{
-		texto.text = "R\n"+tipo;
+		if (texto != null)
+		{
+			texto.text = "R\n"+tipo;
+		}
 	}
 
 	void Adicionar()
