@@ -5,6 +5,8 @@ public class Jogador : MonoBehaviour
 {
 	static public Jogador instancia = null;
 
+	public GameObject _canvasReset;
+
 	public int 	multiplicadorXPNivel	= 50;
 	public int 	multiplicadorXPGeral	= 100;
 
@@ -22,6 +24,8 @@ public class Jogador : MonoBehaviour
 	static int 	_resets				= 0;
 
 	static bool inicializado		= false;
+
+	static GameObject canvasReset	= null;
 
 	static public int	dano
 	{
@@ -104,7 +108,29 @@ public class Jogador : MonoBehaviour
 
 		AtualizarXPTotal();
 
+		if (_nivel > Dados.nivelMaximo)
+		{
+			_nivel = Dados.nivelMaximo;
+		}
+
+		VerificarReset();
+
 		return subiuDeNivel;
+	}
+
+	static void VerificarReset()
+	{
+		if (canvasReset != null)
+		{
+			if (_nivel < Dados.nivelMaximo)
+			{
+				canvasReset.SetActive(false);
+			}
+			else
+			{
+				canvasReset.SetActive(true);
+			}
+		}
 	}
 
 	static void AtualizarXPProximoNivel()
@@ -129,6 +155,9 @@ public class Jogador : MonoBehaviour
 	{
 		AtualizarXPProximoNivel();
 		AtualizarXPTotal();
+
+		VerificarReset();
+
 		inicializado = true;
 	}
 
@@ -154,7 +183,8 @@ public class Jogador : MonoBehaviour
 
 		if (instancia == null)
 		{
-			instancia = this;
+			instancia	= this;
+			canvasReset = _canvasReset;
 		}
 		if (inicializado == false)
 		{

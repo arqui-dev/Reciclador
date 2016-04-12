@@ -33,5 +33,7 @@ public class Dados
 	static public int bonusResetXP = 5;
 	static public int bonusResetDinheiro = 5;
 	static public int bonusResetDano = 2;
+
+	static public int nivelMaximo = 100;
 }
 
