@@ -30,6 +30,8 @@
 
 ## Constantes: Base(DMG) = 1, Base$ = 5$ e BaseXP = 6xp
 
+##Catadores de:
+
 empreendimento		::catadores_de_papel
 	nome			::Cooperativa dos catadores de papel
 	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
@@ -46,7 +48,7 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::1
 		requisitos		::
-			preco						::25
+			preco						::10
 			nivel sustentabilidade		::1
 			empreendimentos construidos	:: 
 	nivel empreendimento :: 2
@@ -61,7 +63,7 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::2
 		requisitos		::
-			preco						:: 150
+			preco						:: 120
 			nivel sustentabilidade		:: 6
 			empreendimentos construidos	::
 	nivel empreendimento :: 3
@@ -76,14 +78,14 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::3
 		requisitos		::
-			preco						:: 450
+			preco						:: 720
 			nivel sustentabilidade		:: 18
 			empreendimentos construidos	::
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::20
+			experiencia					::24
 			velocidade aparecer lixo	::4
 			limite fila					::8,0,0,0
 			lixo minimo					::0
@@ -91,14 +93,14 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::4
 		requisitos		::
-			preco						:: 900
+			preco						:: 2880
 			nivel sustentabilidade		:: 36
 			empreendimentos construidos	::
 	nivel empreendimento :: 5
 		atributos		::
 			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::25
+			experiencia					::30
 			velocidade aparecer lixo	::5
 			limite fila					::10,0,0,0
 			lixo minimo					::0
@@ -106,14 +108,14 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::5
 		requisitos		::
-			preco						:: 1200
+			preco						:: 7680
 			nivel sustentabilidade		:: 48
 			empreendimentos construidos	::
-	nivel empreendimento :: 2
+	nivel empreendimento :: 6
 		atributos		::
 			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::30
+			experiencia					::36
 			velocidade aparecer lixo	::6
 			limite fila					::12,0,0,0
 			lixo minimo					::0
@@ -121,7 +123,295 @@ empreendimento		::catadores_de_papel
 			separacao automatica		::0
 			poder jogador				::6
 		requisitos		::
-			preco						:: 1350
+			preco						:: 17280
 			nivel sustentabilidade		:: 54
 			empreendimentos construidos	::
 fim empreendimento	::catadores_de_papel
+##=================================
+empreendimento		::catadores_de_vidro
+	nome			::Cooperativa dos catadores de vidro
+	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nivel maximo	::6
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::6
+			velocidade aparecer lixo	::1
+			limite fila					::0,2,0,0
+			lixo minimo					::2
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						::11
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::12
+			velocidade aparecer lixo	::2
+			limite fila					::0,4,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::2
+		requisitos		::
+			preco						:: 140
+			nivel sustentabilidade		:: 7
+			empreendimentos construidos	::
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::18
+			velocidade aparecer lixo	::3
+			limite fila					::0,6,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::3
+		requisitos		::
+			preco						:: 760
+			nivel sustentabilidade		:: 19
+			empreendimentos construidos	::
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::24
+			velocidade aparecer lixo	::4
+			limite fila					::0,8,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 2960
+			nivel sustentabilidade		:: 37
+			empreendimentos construidos	::
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::30
+			velocidade aparecer lixo	::5
+			limite fila					::0,10,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::5
+		requisitos		::
+			preco						:: 7840
+			nivel sustentabilidade		:: 49
+			empreendimentos construidos	::
+	nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::36
+			velocidade aparecer lixo	::6
+			limite fila					::0,12,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::6
+		requisitos		::
+			preco						:: 17600
+			nivel sustentabilidade		:: 55
+			empreendimentos construidos	::
+fim empreendimento	::catadores_de_vidro
+##=====================================
+empreendimento		::catadores_de_metal
+	nome			::Cooperativa dos catadores de metal
+	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nivel maximo	::6
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::6
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,2,0
+			lixo minimo					::2
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						::10
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::12
+			velocidade aparecer lixo	::2
+			limite fila					::0,0,4,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::2
+		requisitos		::
+			preco						:: 160
+			nivel sustentabilidade		:: 8
+			empreendimentos construidos	::
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::18
+			velocidade aparecer lixo	::3
+			limite fila					::0,0,6,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::3
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		:: 20
+			empreendimentos construidos	::
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::24
+			velocidade aparecer lixo	::4
+			limite fila					::0,0,8,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 3040
+			nivel sustentabilidade		:: 38
+			empreendimentos construidos	::
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::30
+			velocidade aparecer lixo	::5
+			limite fila					::0,0,10,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::5
+		requisitos		::
+			preco						:: 8000
+			nivel sustentabilidade		:: 50
+			empreendimentos construidos	::
+	nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::36
+			velocidade aparecer lixo	::6
+			limite fila					::0,0,12,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::6
+		requisitos		::
+			preco						:: 17920
+			nivel sustentabilidade		:: 56
+			empreendimentos construidos	::
+fim empreendimento	::catadores_de_metal
+##===============================
+empreendimento		::catadores_de_metal
+	nome			::Cooperativa dos catadores de metal
+	descricao		:: ## Criar descrição curta, max 144 caracteres baseado no documento "2. tipos de lixo e..."
+	nivel maximo	::6
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::6
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,4,0
+			lixo minimo					::2
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						::10
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::12
+			velocidade aparecer lixo	::2
+			limite fila					::0,0,4,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::2
+		requisitos		::
+			preco						:: 160
+			nivel sustentabilidade		:: 8
+			empreendimentos construidos	::
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::18
+			velocidade aparecer lixo	::3
+			limite fila					::0,0,0,6
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::3
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		:: 20
+			empreendimentos construidos	::
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::24
+			velocidade aparecer lixo	::4
+			limite fila					::0,0,0,8
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 3120
+			nivel sustentabilidade		:: 39
+			empreendimentos construidos	::
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::30
+			velocidade aparecer lixo	::5
+			limite fila					::0,0,0,10
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::5
+		requisitos		::
+			preco						:: 8160
+			nivel sustentabilidade		:: 51
+			empreendimentos construidos	::
+	nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::36
+			velocidade aparecer lixo	::6
+			limite fila					::0,0,0,12
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::6
+		requisitos		::
+			preco						:: 18240
+			nivel sustentabilidade		:: 57
+			empreendimentos construidos	::
+fim empreendimento	::catadores_de_plastico
