@@ -1,0 +1,12 @@
+Falta
+	2.6.1 Menu in game: faltam os menus de opções e de achievements
+	2.6.3 Fluxo de Telas
+	2.6.4 Sistema de Ajuda
+	2.7 Projeto de som
+	3.3:
+		Reset
+		Conquistas
+		Mensages - o sistema ta feito, mas não as mensagens em sistema
+	3.4:
+		Chamar atenção para uma nova mensagem
+		Reinicar
