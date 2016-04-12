@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: f160c4f0b1b37ce42839b342715d879d
+timeCreated: 1460493507
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: monstroLv01
+    21300002: monstroLv02
+    21300004: monstroLv03
+    21300006: monstroLv04
+    21300008: monstroLv05
+    21300010: monstroLv06
+    21300012: monstroLv07
+    21300014: monstroLv08
+    21300016: monstroLv09
+    21300018: monstroLv10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: monstroLv01
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1494
+        width: 137
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv02
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1464
+        width: 161
+        height: 177
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv03
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1465
+        width: 355
+        height: 176
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv04
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 1397
+        width: 232
+        height: 316
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv05
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 866
+        width: 329
+        height: 333
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv06
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 838
+        width: 314
+        height: 414
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv07
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 841
+        width: 294
+        height: 411
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv08
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 838
+        width: 418
+        height: 467
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv09
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 77
+        width: 579
+        height: 594
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: monstroLv10
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 19
+        width: 714
+        height: 710
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
