@@ -1,18 +1,18 @@
-Array de n�veis para empreendimentos [6,18,24,36,54,60,82,96]
+Array de níveis para empreendimentos [6,18,24,36,54,60,82,96]
 
 Empreendimentos:
 Gerais: Empreendimentos que afetam a todos os lixos
-Comuns: Empreendimentos que possuem uma vers�o para cada tipo de lixo
-Exclusivos: Empreendimentos �nicos para um tipo de lixo
-Easter Egg: Empreendimentos relacionados a um lixo n�o-recicl�vel (ou de processo diferente dos gerais)
+Comuns: Empreendimentos que possuem uma versão para cada tipo de lixo
+Exclusivos: Empreendimentos únicos para um tipo de lixo
+Easter Egg: Empreendimentos relacionados a um lixo não-reciclável (ou de processo diferente dos gerais)
 ========================================================
 Gerais:
 	Coleta Seletiva:
 
 Comuns:
 	Catadores:
-	Artes�os:
-		descricao: Falar sobre o tipo de artesanato que � feito e seu benef�cio a sociedade
+	Artesãos:
+		descricao: Falar sobre o tipo de artesanato que é feito e seu benefício a sociedade
 		velocidade reciclagem: 2n tipo
 		valor venda: 2n
 		experiencia: 10n*N[j]
@@ -26,50 +26,50 @@ Comuns:
 	Exclusivos:
 	
 	Easter Eggs:
-		Usina de Incinera��o	(seringa)
-			Descri��o:
+		Usina de Incineração	(seringa)
+			Descrição: Lixo hospitalar não pode ser reciclado, porém, existem tratamentos melhores que o descarte, como a incineração. Durante a incineração não destruídos além do objeto, todos os microorganismos que podem existir nele. 
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo: 
 		Usina de Blendagem (lata de tinta)
-			Descri��o:
+			Descrição: Na blendagem,o resíduo é totalmente descaracterizado e misturado junto a outros resíduos que recebemos de forma a produzir uma mistura líquido ou sólido com alto poder calorífero (blend).
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo: 
-		M�quina de tritura��o de madeira (ripa de madeira tipo o plank)
-			Descri��o:
+		Máquina de trituração de madeira (ripa de madeira tipo o plank)
+			Descrição: A madeira é triturada e acaba por ser enviada ao reuso na fabricação de placas aglomeradas que são utilizadas por indústrias de móveis. Parte por ser encaminhada ao aquecimento dos fornos e caldeiras, bem como no fabrico de papéis e celulose. 
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo: 
 		Triturador de borracha (Pato)
-			Descri��o:
+			Descrição: Os processos de reciclagem de borrachas é realizado através do triturador de pneu e borracha e tem se tornado cada vez mais importante e lucrativo no mundo. 
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo:
-		Fabrica de m�veis de pneu (Pneu)
-			Descri��o:
+		Fabrica de móveis de pneu (Pneu)
+			Descrição: Os pneus pode ser reutilizados entre muitas outras coisas, em tiras usadas em móveis estofados, o que além de preservar o meio ambiente ajuda na geração de centenas de empregos.
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo:
-		M�quina de reciclagem de fraldas (fralda suja)
-			Descri��o:
+		Máquina de reciclagem de fraldas (fralda suja)
+			Descrição: Após a coleta de objetos como fraldas e absorventes, a máquina esteriliza seus componentes e então os transforma em novos produtos, como madeira plástica, telhas e materiais de absorção.
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo:
-		M�quina descontamina��o e descaracteriza��o de l�mpadas (lampada)
-			Descri��o:
+		Máquina descontaminação e descaracterização de lâmpadas (lampada)
+			Descrição: A descontaminação das lâmpadas é feita no local da coleta, com uma máquina portátil, e após isso ela é triturada. filtrada e aspirada, garantindo a destinação correta dos passivos ambientais.
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
 			dinheiro ao clicar no lixo:
 		Usina de reciclagem de isopor (Caixa de isopor quebrada)
-			Descri��o:
+			Descrição: Após a coleta seletiva o material passa pela máquina de reciclagem, e é compactado em fardos, que passam por um segundo processo de reciclagem, onde o isopor é triturado, derretido, granulado e volta a ser matéria-prima de novos produtos.			
 			Gatilho: 
 			preco: 
 			nivel sustentabilidade: 
