@@ -419,19 +419,19 @@ fim empreendimento	::catadores_de_plastico
 ##artesãos
 
 empreendimento		::artesanato_papel
-	nome			::Ateliês de Papel
+	nome			::Ateliê de Papel
 	descricao		::Artesanato utilizando residuo de papel ....
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
-			velocidade reciclagem		::2,0,0,0
-			valor venda					::2,0,0,0
+			velocidade reciclagem		::1,0,0,0
+			valor venda					::0,0,0,0
 			experiencia					::60
 			velocidade aparecer lixo	::0
 			limite fila					::0,0,0,0
 			lixo minimo					::0
 			dinheiro gerado				::1
-			separacao automatica		::1
+			separacao automatica		::0
 			poder jogador				::0
 		requisitos		::
 			preco						:: 800
@@ -439,47 +439,511 @@ empreendimento		::artesanato_papel
 			empreendimentos construidos	:: catadores_papel : 2 ;
 	nivel empreendimento :: 2
 		atributos		::
-			velocidade reciclagem		::4,0,0,0
-			valor venda					::4,0,0,0
+			velocidade reciclagem		::3,0,0,0
+			valor venda					::2,0,0,0
 			experiencia					::360
 			velocidade aparecer lixo	::0
 			limite fila					::0,0,0,0
 			lixo minimo					::0
 			dinheiro gerado				::2
-			separacao automatica		::2
+			separacao automatica		::0
 			poder jogador				::0
 		requisitos		::
 			preco						:: 7000
 			nivel sustentabilidade		::18
 			empreendimentos construidos	:: catadores_papel : 3 ;
-	nivel empreendimento :: 4
+	nivel empreendimento :: 3
 		atributos		::
-			velocidade reciclagem		::4,0,0,0
+			velocidade reciclagem		::5,0,0,0
 			valor venda					::4,0,0,0
 			experiencia					::1440
 			velocidade aparecer lixo	::0
 			limite fila					::0,0,0,0
 			lixo minimo					::0
 			dinheiro gerado				::3
-			separacao automatica		::1
+			separacao automatica		::0
 			poder jogador				::0
 		requisitos		::
 			preco						:: 1850
 			nivel sustentabilidade		::48
 			empreendimentos construidos	:: catadores_papel : 4 ;
-	nivel empreendimento :: 1
+	nivel empreendimento :: 4
 		atributos		::
-			velocidade reciclagem		::4,0,0,0
-			valor venda					::4,0,0,0
+			velocidade reciclagem		::7,0,0,0
+			valor venda					::6,0,0,0
 			experiencia					::2400
 			velocidade aparecer lixo	::0
 			limite fila					::0,0,0,0
 			lixo minimo					::0
 			dinheiro gerado				::4
-			separacao automatica		::1
+			separacao automatica		::0
 			poder jogador				::0
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::60
 			empreendimentos construidos	:: catadores_papel : 5 ;
 fim empreendimento	::artesanato_papel
+##=============================
+empreendimento		::artesanato_vidro
+	nome			::Vitrais reciclados
+	descricao		::Artesanato com restos de vidro ....
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,1,0,0
+			valor venda					::0,0,0,0
+			experiencia					::60
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::1
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		::6
+			empreendimentos construidos	:: catadores_vidro : 2 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,3,0,0
+			valor venda					::0,2,0,0
+			experiencia					::360
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::2
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 7000
+			nivel sustentabilidade		::18
+			empreendimentos construidos	:: catadores_vidro : 3 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,5,0,0
+			valor venda					::0,4,0,0
+			experiencia					::1440
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::3
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 1850
+			nivel sustentabilidade		::48
+			empreendimentos construidos	:: catadores_vidro : 4 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,7,0,0
+			valor venda					::0,6,0,0
+			experiencia					::2400
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::4
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 100000
+			nivel sustentabilidade		::60
+			empreendimentos construidos	:: catadores_vidro : 5 ;
+fim empreendimento	::artesanato_vidro
+##===========================
+empreendimento		::artesanato_metal
+	nome			::Arte em Metal
+	descricao		::Artesanato com ferro velho ....
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,1,0
+			valor venda					::0,0,0,0
+			experiencia					::60
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::1
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		::6
+			empreendimentos construidos	:: catadores_metal : 2 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,3,0
+			valor venda					::0,0,2,0
+			experiencia					::360
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::2
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 7000
+			nivel sustentabilidade		::18
+			empreendimentos construidos	:: catadores_metal : 3 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,5,0
+			valor venda					::0,0,4,0
+			experiencia					::1440
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::3
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 1850
+			nivel sustentabilidade		::48
+			empreendimentos construidos	:: catadores_metal : 4 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,7,0
+			valor venda					::0,0,6,0
+			experiencia					::2400
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::4
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 100000
+			nivel sustentabilidade		::60
+			empreendimentos construidos	:: catadores_metal : 5 ;
+fim empreendimento	::artesanato_metal
+##===========================
+empreendimento		::artesanato_plastico
+	nome			::Utilidades de Garrafas Pet
+	descricao		::Vassouras, bancos e outros artigos feitos de garrafas de refrigerante recicladas.
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,1
+			valor venda					::0,0,0,0
+			experiencia					::60
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::1
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		::6
+			empreendimentos construidos	:: catadores_plastico : 2 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,3
+			valor venda					::0,0,0,2
+			experiencia					::360
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::2
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 7000
+			nivel sustentabilidade		::18
+			empreendimentos construidos	:: catadores_plastico : 3 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,5
+			valor venda					::0,0,0,4
+			experiencia					::1440
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::3
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 1850
+			nivel sustentabilidade		::48
+			empreendimentos construidos	:: catadores_plastico : 4 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,7
+			valor venda					::0,0,0,6
+			experiencia					::2400
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::4
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 100000
+			nivel sustentabilidade		::60
+			empreendimentos construidos	:: catadores_plastico : 5 ;
+fim empreendimento	::artesanato_plastico
+##====================================================
+##Usinas de reciclagem de:
+
+empreendimento		::recicladora_de_papel
+	nome			::Usina de reciclagem de papel
+	descricao		:: 
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::10,0,0,0
+			valor venda					::5,0,0,0
+			experiencia					::3600
+			velocidade aparecer lixo	::10
+			limite fila					::6,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 360000
+			nivel sustentabilidade		::36
+			empreendimentos construidos	:: catadores_papel:3 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::20,0,0,0
+			valor venda					::10,0,0,0
+			experiencia					::5400
+			velocidade aparecer lixo	::20
+			limite fila					::12,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::8
+		requisitos		::
+			preco						:: 1080000
+			nivel sustentabilidade		::54
+			empreendimentos construidos	:: catadores_papel:4 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::30,0,0,0
+			valor venda					::15,0,0,0
+			experiencia					::8200
+			velocidade aparecer lixo	::20
+			limite fila					::16,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::12
+		requisitos		::
+			preco						:: 2460000
+			nivel sustentabilidade		::82
+			empreendimentos construidos	:: catadores_papel:5 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::40,0,0,0
+			valor venda					::20,0,0,0
+			experiencia					::9600
+			velocidade aparecer lixo	::20
+			limite fila					::24,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::16
+		requisitos		::
+			preco						:: 3840000
+			nivel sustentabilidade		::96
+			empreendimentos construidos	:: catadores_papel:6 ;
+fim empreendimento	::usina_papel
+##============================================
+empreendimento		::recicladora_de_vidro
+	nome			::Usina de reciclagem de vidro
+	descricao		:: 
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,10,0,0
+			valor venda					::0,5,0,0
+			experiencia					::3700
+			velocidade aparecer lixo	::10
+			limite fila					::0,6,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 740000
+			nivel sustentabilidade		::37
+			empreendimentos construidos	:: catadores_vidro:3 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,20,0,0
+			valor venda					::0,10,0,0
+			experiencia					::5500
+			velocidade aparecer lixo	::20
+			limite fila					::0,12,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::8
+		requisitos		::
+			preco						:: 1650000
+			nivel sustentabilidade		::55
+			empreendimentos construidos	:: catadores_vidro:4 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,30,0,0
+			valor venda					::0,15,0,0
+			experiencia					::8300
+			velocidade aparecer lixo	::20
+			limite fila					::0,16,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::12
+		requisitos		::
+			preco						:: 3320000
+			nivel sustentabilidade		::83
+			empreendimentos construidos	:: catadores_vidro:5 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,40,0,0
+			valor venda					::0,20,0,0
+			experiencia					::9700
+			velocidade aparecer lixo	::20
+			limite fila					::0,24,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::16
+		requisitos		::
+			preco						:: 4850000
+			nivel sustentabilidade		::97
+			empreendimentos construidos	:: catadores_vidro:6 ;
+fim empreendimento	::usina_vidro
+##============================================
+empreendimento		::recicladora_de_vidro
+	nome			::Usina de reciclagem de vidro
+	descricao		:: 
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,10,0
+			valor venda					::0,0,5,0
+			experiencia					::3800
+			velocidade aparecer lixo	::10
+			limite fila					::0,0,6,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 1140000
+			nivel sustentabilidade		::38
+			empreendimentos construidos	:: catadores_metal:3 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,20,0
+			valor venda					::0,0,10,0
+			experiencia					::5600
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,12,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::8
+		requisitos		::
+			preco						:: 2240000
+			nivel sustentabilidade		::56
+			empreendimentos construidos	:: catadores_metal:4 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,30,0
+			valor venda					::0,0,15,0
+			experiencia					::8400
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,16,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::12
+		requisitos		::
+			preco						:: 4200000
+			nivel sustentabilidade		::84
+			empreendimentos construidos	:: catadores_metal:5 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,40,0
+			valor venda					::0,0,20,0
+			experiencia					::9800
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,24,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::16
+		requisitos		::
+			preco						:: 5880000
+			nivel sustentabilidade		::98
+			empreendimentos construidos	:: catadores_metal:6 ;
+fim empreendimento	::usina_metal
+##============================================
+empreendimento		::recicladora_de_vidro
+	nome			::Usina de reciclagem de vidro
+	descricao		:: 
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,10
+			valor venda					::0,0,0,5
+			experiencia					::3900
+			velocidade aparecer lixo	::10
+			limite fila					::0,0,0,6
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::4
+		requisitos		::
+			preco						:: 1560000
+			nivel sustentabilidade		::39
+			empreendimentos construidos	:: catadores_plastico:3 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,20
+			valor venda					::0,0,0,10
+			experiencia					::5700
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,0,12
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::8
+		requisitos		::
+			preco						:: 2850000
+			nivel sustentabilidade		::57
+			empreendimentos construidos	:: catadores_plastico:4 ;
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,30
+			valor venda					::0,0,0,15
+			experiencia					::8500
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,0,16
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::12
+		requisitos		::
+			preco						:: 5100000
+			nivel sustentabilidade		::85
+			empreendimentos construidos	:: catadores_plastico:5 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,40
+			valor venda					::0,0,0,20
+			experiencia					::9900
+			velocidade aparecer lixo	::20
+			limite fila					::0,0,0,24
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::16
+		requisitos		::
+			preco						:: 6930000
+			nivel sustentabilidade		::99
+			empreendimentos construidos	:: catadores_plastico:6 ;
+fim empreendimento	::usina_plastico
