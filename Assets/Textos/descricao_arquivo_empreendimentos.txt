@@ -420,7 +420,7 @@ fim empreendimento	::catadores_de_plastico
 
 empreendimento		::artesanato_papel
 	nome			::Ateliê de Papel
-	descricao		::Artesanato utilizando residuo de papel ....
+	descricao		::Papel reciclado é um material super versátil, podendo ser usado para fazer inúmeros novos objetos, como bijuterias, embalagens, jogos, brinquedos.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -486,7 +486,7 @@ fim empreendimento	::artesanato_papel
 ##=============================
 empreendimento		::artesanato_vidro
 	nome			::Vitrais reciclados
-	descricao		::Artesanato com restos de vidro ....
+	descricao		::Quando não podem ser reutilizadas, as garrafas de vidro são um problema ambiental, felizmente após a reciclagem eles podem se tornar lustres, luminárias, peças de decoração e vasos para plantas, entre outros.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -552,7 +552,7 @@ fim empreendimento	::artesanato_vidro
 ##===========================
 empreendimento		::artesanato_metal
 	nome			::Arte em Metal
-	descricao		::Artesanato com ferro velho ....
+	descricao		::É possível fazer artesanato com latinhas de alumínio, latas de aço e peças de metal que não tem mais uso, transformando em diversos objetos, devido a sua flexibilidade.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -686,7 +686,7 @@ fim empreendimento	::artesanato_plastico
 
 empreendimento		::recicladora_de_papel
 	nome			::Usina de reciclagem de papel
-	descricao		:: 
+	descricao		:: A reciclagem de papel é uma atividade industrial que diminui o consumo de recursos naturais e impede que este resíduo acumule em aterros sanitários, gerando renda no processo.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -751,7 +751,7 @@ empreendimento		::recicladora_de_papel
 fim empreendimento	::usina_papel
 ##============================================
 empreendimento		::recicladora_de_vidro
-	nome			::Usina de reciclagem de vidro
+	nome			::Na usina o vidro o é limpo, em seguida, é vai para um triturador, que o transforma em cacos, que são submetidos a temperaturas de 1.200ºC centígrados, transformando-os em novos vidros. 
 	descricao		:: 
 	nivel maximo	::4
 	nivel empreendimento :: 1
@@ -816,8 +816,8 @@ empreendimento		::recicladora_de_vidro
 			empreendimentos construidos	:: catadores_vidro:6 ;
 fim empreendimento	::usina_vidro
 ##============================================
-empreendimento		::recicladora_de_vidro
-	nome			::Usina de reciclagem de vidro
+empreendimento		::recicladora_de_metal
+	nome			::Diferente de outros materiais, a usina recicladora de metal é a que melhor funciona no mundo, todo metal reciclado é submetido ao processo de fundição, onde são transformados em novos metais.
 	descricao		:: 
 	nivel maximo	::4
 	nivel empreendimento :: 1
@@ -882,9 +882,9 @@ empreendimento		::recicladora_de_vidro
 			empreendimentos construidos	:: catadores_metal:6 ;
 fim empreendimento	::usina_metal
 ##============================================
-empreendimento		::recicladora_de_vidro
-	nome			::Usina de reciclagem de vidro
-	descricao		:: 
+empreendimento		::recicladora_de_plástico
+	nome			::Usina de reciclagem de plástico
+	descricao		:: Depois de separado, enfardado e estocado, o plástico é moído e lavado para voltar ao processamento industrial, onde é seco e transferido para o aglutinador e extrusora gerando gerando grãos de plástico.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
