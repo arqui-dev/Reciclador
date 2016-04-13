@@ -1,0 +1,76 @@
+Array de níveis para empreendimentos [6,18,24,36,54,60,82,96]
+
+Empreendimentos:
+Gerais: Empreendimentos que afetam a todos os lixos
+Comuns: Empreendimentos que possuem uma versão para cada tipo de lixo
+Exclusivos: Empreendimentos únicos para um tipo de lixo
+Easter Egg: Empreendimentos relacionados a um lixo não-reciclável (ou de processo diferente dos gerais)
+========================================================
+Gerais:
+	Coleta Seletiva:
+
+Comuns:
+	Catadores:
+	Artesãos:
+		descricao: Falar sobre o tipo de artesanato que é feito e seu benefício a sociedade
+		velocidade reciclagem: 2n tipo
+		valor venda: 2n
+		experiencia: 10n*N[j]
+		dinheiro gerado: n
+		separacao automatica: n
+		preco: (N[j]+100+t)*((Base$^n)
+		nivel sustentabilidade	: N[6,18,48,60] + 2t
+		empreendimentos construidos: catadores_TIPO : n+1 ;
+	Usinas de reciclagem:
+	
+	Exclusivos:
+	
+	Easter Eggs:
+		Usina de Incineração	(seringa)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo: 
+		Usina de Blendagem (lata de tinta)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo: 
+		Máquina de trituração de madeira (ripa de madeira tipo o plank)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo: 
+		Triturador de borracha (Pato)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo:
+		Fabrica de móveis de pneu (Pneu)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo:
+		Máquina de reciclagem de fraldas (fralda suja)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo:
+		Máquina descontaminação e descaracterização de lâmpadas (lampada)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo:
+		Usina de reciclagem de isopor (Caixa de isopor quebrada)
+			Descrição:
+			Gatilho: 
+			preco: 
+			nivel sustentabilidade: 
+			dinheiro ao clicar no lixo:

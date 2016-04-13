@@ -34,7 +34,7 @@
 
 empreendimento		::catadores_de_papel
 	nome			::Catadores de papel
-	descricao		:: ## A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda no processo.
+	descricao		:: A cooperativa dos catadores é uma iníciativa social que ajuda não só as pessoas mas o meio ambiente. A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda para as famílias envolvidas no processo.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -345,7 +345,7 @@ empreendimento		::catadores_de_plastico
 			valor venda					::0,0,0,0
 			experiencia					::12
 			velocidade aparecer lixo	::2
-			limite fila					::0,0,4,0
+			limite fila					::0,0,0,4
 			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
@@ -415,3 +415,71 @@ empreendimento		::catadores_de_plastico
 			nivel sustentabilidade		:: 57
 			empreendimentos construidos	::
 fim empreendimento	::catadores_de_plastico
+##======================================
+##artesãos
+
+empreendimento		::artesanato_papel
+	nome			::Ateliês de Papel
+	descricao		::Artesanato utilizando residuo de papel ....
+	nivel maximo	::4
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::2,0,0,0
+			valor venda					::2,0,0,0
+			experiencia					::60
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::1
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						:: 800
+			nivel sustentabilidade		::6
+			empreendimentos construidos	:: catadores_papel : 2 ;
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::4,0,0,0
+			valor venda					::4,0,0,0
+			experiencia					::360
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::2
+			separacao automatica		::2
+			poder jogador				::0
+		requisitos		::
+			preco						:: 7000
+			nivel sustentabilidade		::18
+			empreendimentos construidos	:: catadores_papel : 3 ;
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::4,0,0,0
+			valor venda					::4,0,0,0
+			experiencia					::1440
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::3
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						:: 1850
+			nivel sustentabilidade		::48
+			empreendimentos construidos	:: catadores_papel : 4 ;
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::4,0,0,0
+			valor venda					::4,0,0,0
+			experiencia					::2400
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::4
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						:: 100000
+			nivel sustentabilidade		::60
+			empreendimentos construidos	:: catadores_papel : 5 ;
+fim empreendimento	::artesanato_papel

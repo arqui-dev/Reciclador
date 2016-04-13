@@ -30,9 +30,9 @@
 
 ## Exemplo:
 
-empreendimento		::catadores_de_reciclaveis
-	nome			::Catadores
-	descricao		::Gerencia pessoas que pegam os recicláveis na vizinhança
+empreendimento		::empreendimentos_ex
+	nome			::Exemplo
+	descricao		::Texto explicando o que é este empreendimento
 	nivel maximo	::2
 	nivel empreendimento :: 1
 		atributos		::
@@ -64,4 +64,4 @@ empreendimento		::catadores_de_reciclaveis
 			preco						::108
 			nivel sustentabilidade		::3
 			empreendimentos construidos	:: empreendimento_sustentavel_A : 1 ; empreendimento_sustentavel_B : 3
-fim empreendimento	::catadores_de_reciclaveis
+fim empreendimento	::empreendimento_ex
