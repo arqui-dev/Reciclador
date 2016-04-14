@@ -14,7 +14,7 @@
 	##nivel empreendimento				::Número inteiro, entre 1 e nível máximo, representando o nível que será descrito a seguir. Cada nível deve ser representado, um abaixo do outro, com todas as características.
 		##atributos						::(Nada precisa ser escrito aqui, é apenas um separador)
 			##velocidade reciclagem		::Quatro valores inteiros, entre zero e cem (0-100), separados por ##vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico. Esse valor indica o quanto a velocidade de reciclagem, em porcentagem, da recicladora em questão, será aumentado.
-			##valor venda					::Porcentagem extra do valor de venda dos itens na recicladora em questão. Quatro valores inteiros, entre zero e cem (0-100), separados por vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico.
+			##valor venda					::Valor inteiro extra do valor de venda dos itens na recicladora em questão. Quatro valores inteiros, entre zero e cem (0-100), separados por vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico.
 			##experiencia					::Valor inteiro indicando a porcentagem extra de experiência que o jogador ganha de todas as fontes.
 			##velocidade aparecer lixo	::Velocidade extra que reduz o tempo de aparição de lixos no cenário.
 			##limite fila					::Quatro valores inteiros, entre zero e cem (0-100), separados por vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico. Esses valores aumentam o limite da fila de reciclagem que cada recicladora tem.
@@ -43,7 +43,7 @@ empreendimento		::catadores_de_papel
 			experiencia					::6
 			velocidade aparecer lixo	::1
 			limite fila					::2,0,0,0
-			lixo minimo					::2
+			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
 			poder jogador				::1
@@ -65,7 +65,7 @@ empreendimento		::catadores_de_papel
 		requisitos		::
 			preco						:: 120
 			nivel sustentabilidade		:: 6
-			empreendimentos construidos	::
+			empreendimentos construidos	:: 
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,0,0,0
@@ -139,7 +139,7 @@ empreendimento		::catadores_de_vidro
 			experiencia					::6
 			velocidade aparecer lixo	::1
 			limite fila					::0,2,0,0
-			lixo minimo					::2
+			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
 			poder jogador				::1
@@ -235,7 +235,7 @@ empreendimento		::catadores_de_metal
 			experiencia					::6
 			velocidade aparecer lixo	::1
 			limite fila					::0,0,2,0
-			lixo minimo					::2
+			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
 			poder jogador				::1
@@ -331,7 +331,7 @@ empreendimento		::catadores_de_plastico
 			experiencia					::6
 			velocidade aparecer lixo	::1
 			limite fila					::0,0,4,0
-			lixo minimo					::2
+			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
 			poder jogador				::1
@@ -947,3 +947,149 @@ empreendimento		::recicladora_de_plástico
 			nivel sustentabilidade		::99
 			empreendimentos construidos	:: catadores_plastico:6 ;
 fim empreendimento	::usina_plastico
+##==================================================
+## Empreendimento Geral
+
+empreendimento		::coleta_seletiva
+	nome			::Coleta Seletiva
+	descricao		:: 
+	nivel maximo	::9
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::6
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::2
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 5
+			nivel sustentabilidade		::1
+			empreendimentos construidos	::
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::12
+			velocidade aparecer lixo	::2
+			limite fila					::0,0,0,0
+			lixo minimo					::3
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 25
+			nivel sustentabilidade		::3
+			empreendimentos construidos	::
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::36
+			velocidade aparecer lixo	::3
+			limite fila					::0,0,0,0
+			lixo minimo					::3
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 225
+			nivel sustentabilidade		::6
+			empreendimentos construidos	::
+		nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::60
+			velocidade aparecer lixo	::4
+			limite fila					::0,0,0,0
+			lixo minimo					::5
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 625
+			nivel sustentabilidade		::10
+			empreendimentos construidos	::
+		nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::90
+			velocidade aparecer lixo	::5
+			limite fila					::0,0,0,0
+			lixo minimo					::6
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 3125
+			nivel sustentabilidade		::15
+			empreendimentos construidos	::
+		nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::126
+			velocidade aparecer lixo	::6
+			limite fila					::0,0,0,0
+			lixo minimo					::7
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 15625
+			nivel sustentabilidade		::21
+			empreendimentos construidos	::
+		nivel empreendimento :: 7
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::196
+			velocidade aparecer lixo	::7
+			limite fila					::0,0,0,0
+			lixo minimo					::8
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 78000
+			nivel sustentabilidade		::28
+			empreendimentos construidos	::
+	nivel empreendimento :: 8
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::216
+			velocidade aparecer lixo	::8
+			limite fila					::0,0,0,0
+			lixo minimo					::9
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 390625
+			nivel sustentabilidade		::36
+			empreendimentos construidos	::
+	nivel empreendimento :: 9
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::270
+			velocidade aparecer lixo	::9
+			limite fila					::0,0,0,0
+			lixo minimo					::10
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 1953125
+			nivel sustentabilidade		::45
+			empreendimentos construidos	::
+fim empreendimento	::coleta_seletiva
+##=========================================
+## Empreendimentos exclusivos de um tipo de lixo
+## PAPEL:
