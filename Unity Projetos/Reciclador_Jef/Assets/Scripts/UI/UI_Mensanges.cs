@@ -46,6 +46,8 @@ public class UI_Mensanges : MonoBehaviour
 					mensagemAtual = listaMensagens[0];
 					listaMensagens.RemoveAt(0);
 					pegouMensagem = true;
+
+					Som.Tocar(Som.Tipo.Mensagem);
 				}
 				catch(UnityException e)
 				{

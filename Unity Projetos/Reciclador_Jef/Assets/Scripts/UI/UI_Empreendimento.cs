@@ -97,6 +97,8 @@ public class UI_Empreendimento : MonoBehaviour
 
 		AjeitarDescricao();
 		AjeitarBotaoComprar();
+
+		Som.Tocar(Som.Tipo.Navegar);
 	}
 
 	void AjeitarDescricao()
@@ -137,11 +139,13 @@ public class UI_Empreendimento : MonoBehaviour
 	{
 		//Debug.Log ("Clicou!");
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	public static void ComprarEstatico()
 	{
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	void SelecionadoComprar()

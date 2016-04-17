@@ -4,13 +4,15 @@ using System.Collections;
 
 public class HUD_XP : MonoBehaviour
 {
-
+	public string _txtSustentabilidade = "";
 	Text texto;
+	static string txtSustentabilidade = "";
 	
 	void Awake()
 	{
 		texto = GetComponent<Text>();
 		texto.text = PegarTextoPontos();
+		txtSustentabilidade = _txtSustentabilidade;
 	}
 	
 	void Update ()
@@ -20,7 +22,7 @@ public class HUD_XP : MonoBehaviour
 	
 	static string PegarTextoPontos()
 	{
-		return "Lv "+Jogador.nivel;
+		return txtSustentabilidade + Jogador.nivel;
 	}
 }
 

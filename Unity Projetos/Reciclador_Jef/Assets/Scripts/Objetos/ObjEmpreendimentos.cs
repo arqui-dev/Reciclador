@@ -6,6 +6,8 @@ public class ObjEmpreendimentos : MonoBehaviour
 {
 	static public ObjEmpreendimentos instancia = null;
 
+	public bool destruir = false;
+
 	static public int		taxaSeparacaoLixo		= 0;
 	static public float 	aumentoXP				= 0;
 	static public long 		dinheiroPorTempo		= 0;
@@ -27,9 +29,19 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	void Awake()
 	{
-		instancia = this;
+#if !UNITY_EDITOR
+		if (destruir)
+			DestroyImmediate(gameObject);
+#endif
 
-		if (posicaoMostrarGrana == null)
+		if (instancia != null && instancia != this)
+		{
+			DestroyImmediate(gameObject);
+		}
+		instancia = this;
+		DontDestroyOnLoad(gameObject);
+
+		if (posicaoMostrarGrana == null && Application.loadedLevelName == "Jogo")
 		{
 			posicaoMostrarGrana = 
 				GameObject.Find("pnlMoeda").transform;
@@ -49,6 +61,7 @@ public class ObjEmpreendimentos : MonoBehaviour
 			proximoTempoReceberPontos = 
 				Time.time + tempoReceberDinheiro;
 		}
+
 	}
 
 	void ReceberPontos()

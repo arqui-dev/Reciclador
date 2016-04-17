@@ -174,6 +174,8 @@ public class ObjLixoMisturado : MonoBehaviour
 		AjeitarTexto();
 
 		ObjGerenciadorLixo.CriarTextoDano(dano, transform);
+
+		Som.Tocar(Som.Tipo.AcertarMonstro);
 		
 		if (derrotado)
 		{

@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reciclador_Andre.CSharp", "Reciclador_Andre.CSharp.csproj", "{8CE5AA4A-D200-AD80-65D0-6716B5E18AAA}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{E0C7CB62-2D7E-7610-596C-36FB0A778406}") = "Reciclador_Andre", "Assembly-CSharp.csproj", "{28598968-5CF5-747D-B475-74CE754D2A10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8CE5AA4A-D200-AD80-65D0-6716B5E18AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8CE5AA4A-D200-AD80-65D0-6716B5E18AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8CE5AA4A-D200-AD80-65D0-6716B5E18AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8CE5AA4A-D200-AD80-65D0-6716B5E18AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28598968-5CF5-747D-B475-74CE754D2A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28598968-5CF5-747D-B475-74CE754D2A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28598968-5CF5-747D-B475-74CE754D2A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28598968-5CF5-747D-B475-74CE754D2A10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+		Policies = $0
+		$0.TextStylePolicy = $1
+		$1.inheritsSet = null
+		$1.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $2
+		$2.inheritsSet = Mono
+		$2.inheritsScope = text/x-csharp
+		$2.scope = text/x-csharp
+		$0.TextStylePolicy = $3
+		$3.FileWidth = 120
+		$3.TabWidth = 4
+		$3.IndentWidth = 4
+		$3.EolMarker = Unix
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/plain
+		$3.scope = text/plain
 	EndGlobalSection
 EndGlobal

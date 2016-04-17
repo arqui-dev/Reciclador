@@ -227,6 +227,17 @@ public class Empreendimento// : MonoBehaviour
 		Debug.Log ("Nao contem nivel "+nivel);
 		return false;
 	}
+
+	public void Carregar()
+	{
+		if (PlayerPrefs.HasKey(identificador))
+			_nivel = PlayerPrefs.GetInt(identificador);
+	}
+
+	public void Salvar()
+	{
+		PlayerPrefs.SetInt(identificador, _nivel);
+	}
 }
 /*
 Os empreendimentos sustentáveis (upgrades) podem fazer:

@@ -87,6 +87,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 
 		Jogador.Pontuar(pontos);
 
+		Som.Tocar(Som.Tipo.CompletarReciclagem);
+
 		Instantiate<GameObject>(objPontuacao).
 			GetComponent<ObjTextoFlutuante>().Criar(
 				"$"+pontos, transform.position);

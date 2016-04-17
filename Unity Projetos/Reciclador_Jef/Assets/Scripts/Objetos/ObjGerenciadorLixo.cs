@@ -75,6 +75,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		VerificarAproximarLixos();
 		VerificarTempoJuntarLixo();
 		VerificarTempoCriarLixo();
+
+
 	}
 
 	void VerificarAproximarLixos()
@@ -220,6 +222,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		ManterNaArea(
 			lixo.transform, 
 			lixo.GetComponent<RectTransform>().sizeDelta);
+
+		Som.Tocar(Som.Tipo.AparecerMonstro);
 
 		//Adicionar(novoLixo.GetComponent<ObjLixoMisturado>());
 	}
@@ -406,6 +410,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		int pontos = lixoPuxando.Nivel() + lixoSendoPuxado.Nivel();
 		CriarXP(-pontos, lixoPuxando.transform, false);
 
+		Som.Tocar(Som.Tipo.JuntarMonstro);
+
 		lixoPuxando.Juntar(lixoSendoPuxado);
 		PararJuncao();
 	}
@@ -568,11 +574,13 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					if (!oar.Reciclar(reciclavel))
 					{
 						ManterNaArea(reciclavel.transform, area);
+						Som.Tocar(Som.Tipo.ErrarLixeira);
 					}
 				}
 				else
 				{
 					ManterNaArea(reciclavel.transform, area);
+					Som.Tocar(Som.Tipo.ErrarLixeira);
 				}
 			}
 		}

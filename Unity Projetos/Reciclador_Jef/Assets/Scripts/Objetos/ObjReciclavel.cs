@@ -193,6 +193,8 @@ public class ObjReciclavel : MonoBehaviour
 			GetComponent<ObjTextoFlutuante>().Criar(
 				"$"+pontos, transform.position);
 
+		Som.Tocar(Som.Tipo.SumirReciclavel);
+
 		if (xpPerdidaAoSumir > 0)
 		{
 			ObjGerenciadorLixo.CriarXP(
@@ -233,6 +235,9 @@ public class ObjReciclavel : MonoBehaviour
 		transform.SetParent(pai, true);
 		brilhandoReciclar = true;
 		reciclando = true;
+
+		Som.Tocar(Som.Tipo.AcertarLixeira);
+
 		Remover();
 	}
 }
