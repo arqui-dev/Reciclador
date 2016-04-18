@@ -228,7 +228,7 @@ public class Jogador : MonoBehaviour
 
 	void Awake()
 	{
-		/*
+/*
 #if UNITY_EDITOR
 		_pontos = dinheiroInicialTestes;
 		_nivel = nivelInicialTestes;

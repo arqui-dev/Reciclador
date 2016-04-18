@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Objetos\ObjAreaReciclavel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilidade\Jogador.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utilidade\Jogador.cs" Line="256" Column="43" />
-      <File FileName="Assets\Scripts\Objetos\ObjAreaReciclavel.cs" Line="46" Column="46" />
+      <File FileName="Assets\Scripts\Utilidade\Jogador.cs" Line="237" Column="1" />
+      <File FileName="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
