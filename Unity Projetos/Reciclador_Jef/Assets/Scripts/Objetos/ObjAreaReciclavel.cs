@@ -29,6 +29,27 @@ public class ObjAreaReciclavel : MonoBehaviour
 	float proximoTempoReciclagem = 0;
 	float ultimaDuracao = 0;
 
+
+
+	public void Salvar()
+	{
+		PlayerPrefs.SetInt(gameObject.name, listaReciclando.Count);
+	}
+
+	public void Carregar()
+	{
+		if (PlayerPrefs.HasKey(gameObject.name))
+		{
+			int qtd = PlayerPrefs.GetInt(gameObject.name);
+			for (int i = 0; i < qtd; i++)
+			{
+				listaReciclando.Add(new ObjReciclavel());
+			}
+
+			proximoTempoReciclagem = Time.time + DuracaoReciclagemAtual();
+		}
+	}
+
 	void Awake()
 	{
 		if (areaLixeira == null)
@@ -39,6 +60,13 @@ public class ObjAreaReciclavel : MonoBehaviour
 
 		area = areaLixeira.sizeDelta;
 		ultimaDuracao = duracaoReciclagem;
+
+		switch(tipo){
+		case Reciclavel.Tipo.Papel: 	Jogador.recicladoraPapel = this; break;
+		case Reciclavel.Tipo.Vidro: 	Jogador.recicladoraVidro = this; break;
+		case Reciclavel.Tipo.Metal: 	Jogador.recicladoraMetal = this; break;
+		case Reciclavel.Tipo.Plastico: 	Jogador.recicladoraPlastico = this; break;
+		}
 	}
 
 	void Update()
@@ -121,5 +149,7 @@ public class ObjAreaReciclavel : MonoBehaviour
 		}
 		return true;
 	}
+
+
 }
 

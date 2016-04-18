@@ -30,5 +30,13 @@ public class PopupEmpreendimentos : MonoBehaviour
 			Som.Tocar(Som.Tipo.Navegar);
 		}
 	}
+
+	/// <summary> 
+	/// Compra o empreendimento selecionado, se este atender aos pre-requisitos.
+	/// </summary>
+	public void Comprar()
+	{
+		UI_Empreendimento.ComprarEstatico();
+	}
 }
 

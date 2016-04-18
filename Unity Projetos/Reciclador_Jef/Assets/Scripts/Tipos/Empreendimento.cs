@@ -231,7 +231,10 @@ public class Empreendimento// : MonoBehaviour
 	public void Carregar()
 	{
 		if (PlayerPrefs.HasKey(identificador))
+		{
 			_nivel = PlayerPrefs.GetInt(identificador);
+			Debug.Log ("Empreendimento '"+identificador+"' carregado. Nivel: "+_nivel);
+		}
 	}
 
 	public void Salvar()

@@ -53,6 +53,8 @@ public class Jogador : MonoBehaviour
 		PlayerPrefs.SetString(Dados.stringSalvar, saida);
 
 		GerenciadorEmpreendimentos.Salvar();
+
+		Debug.Log ("Jogador Salvo");
 	}
 
 	static void Carregar()
@@ -74,6 +76,7 @@ public class Jogador : MonoBehaviour
 		_resets 			= int.Parse(lista[8]);
 		tempoDeJogo 		= ulong.Parse(lista[9]);
 
+		Debug.Log ("Jogador Carregado\n"+entrada);
 	}
 
 	static public int	dano
@@ -231,7 +234,7 @@ public class Jogador : MonoBehaviour
 		_nivel = nivelInicialTestes;
 #endif
 //*/
-
+		Debug.Log("Teste amor");
 		if (instancia == null)
 		{
 			instancia	= this;
@@ -245,13 +248,33 @@ public class Jogador : MonoBehaviour
 		proximoSave = Time.time + tempoSalvar;
 	}
 
+	static public ObjAreaReciclavel recicladoraPapel = null;
+	static public ObjAreaReciclavel recicladoraVidro = null;
+	static public ObjAreaReciclavel recicladoraMetal = null;
+	static public ObjAreaReciclavel recicladoraPlastico = null;
+
+	static bool carregouRecicladoras = false;
 
 	void Update()
 	{
-		if (Time.time > proximoSave)
+		if (Application.loadedLevelName == "Jogo" && Time.time > proximoSave)
 		{
 			proximoSave = Time.time + tempoSalvar;
 			Salvar();
+			ObjGerenciadorLixo.instancia.Salvar();
+			recicladoraPapel.Salvar();
+			recicladoraVidro.Salvar();
+			recicladoraMetal.Salvar();
+			recicladoraPlastico.Salvar();
+		}
+
+		if (carregouRecicladoras == false && Application.loadedLevelName == "Jogo")
+		{
+			recicladoraPapel.Carregar();
+			recicladoraVidro.Carregar();
+			recicladoraMetal.Carregar();
+			recicladoraPlastico.Carregar();
+			carregouRecicladoras = true;
 		}
 	}
 }
