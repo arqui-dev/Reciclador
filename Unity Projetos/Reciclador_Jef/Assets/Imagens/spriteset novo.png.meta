@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f8413bb833200a94a9222116a7e1cb04
-timeCreated: 1460480223
+timeCreated: 1460899649
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -30,6 +30,8 @@ TextureImporter:
     21300046: btLista2
     21300048: btRetornar
     21300050: fundoEsverdeado
+    21300052: fundoBordaCinza
+    21300054: fundoBordaAzul
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -80,8 +82,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1700
-        y: 678
-        width: 250
+        y: 1159
+        width: 247
         height: 250
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -89,18 +91,18 @@ TextureImporter:
     - name: fundoCinza
       rect:
         serializedVersion: 2
-        x: 919
-        y: 44
-        width: 705
-        height: 415
+        x: 1018
+        y: 59
+        width: 881
+        height: 374
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 63, y: 63, z: 63, w: 63}
+      border: {x: 9, y: 9, z: 9, w: 9}
     - name: btEmpreendimentos
       rect:
         serializedVersion: 2
         x: 0
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -110,7 +112,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 151
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -120,7 +122,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 301
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -130,7 +132,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 451
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -140,7 +142,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 601
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -150,7 +152,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 751
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -160,7 +162,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 901
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -170,7 +172,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1051
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -180,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1201
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -190,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1351
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -200,7 +202,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1501
-        y: 803
+        y: 1283
         width: 150
         height: 150
       alignment: 0
@@ -210,7 +212,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -220,7 +222,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 151
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -230,7 +232,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 301
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -240,7 +242,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 451
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -250,7 +252,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 601
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -260,7 +262,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 751
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -270,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 901
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -280,7 +282,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1051
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -290,7 +292,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1201
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -300,7 +302,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1351
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -310,7 +312,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1501
-        y: 653
+        y: 1133
         width: 150
         height: 150
       alignment: 0
@@ -320,7 +322,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 503
+        y: 983
         width: 150
         height: 150
       alignment: 0
@@ -329,13 +331,33 @@ TextureImporter:
     - name: fundoEsverdeado
       rect:
         serializedVersion: 2
-        x: 44
-        y: 44
-        width: 705
-        height: 415
+        x: 1010
+        y: 506
+        width: 887
+        height: 381
       alignment: 0
       pivot: {x: .5, y: .5}
-      border: {x: 63, y: 63, z: 63, w: 63}
+      border: {x: 9, y: 9, z: 9, w: 9}
+    - name: fundoBordaCinza
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 44
+        width: 918
+        height: 408
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 21, y: 21, z: 21, w: 21}
+    - name: fundoBordaAzul
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 496
+        width: 918
+        height: 408
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 21, y: 21, z: 21, w: 21}
   spritePackingTag: 
   userData: 
   assetBundleName: 

@@ -1,0 +1,846 @@
+fileFormatVersion: 2
+guid: f8413bb833200a94a9222116a7e1cb04
+timeCreated: 1460816332
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: btPlayGrande
+    21300002: fundoCinza
+    21300004: btEmpreendimentos
+    21300006: btConquistas
+    21300008: btSom
+    21300010: btEstrela
+    21300012: btPlay
+    21300014: btRank
+    21300016: btPause
+    21300018: btCompleto
+    21300020: btMusica
+    21300022: btFacebook
+    21300024: btHome
+    21300026: btLeaderboards
+    21300028: btPremio
+    21300030: btConfig
+    21300032: bvtTwitter
+    21300034: btGplus
+    21300036: btAvancar
+    21300038: btSair
+    21300040: btAjuda
+    21300042: btFechar
+    21300044: btLista
+    21300046: btLista2
+    21300048: btRetornar
+    21300050: fundoEsverdeado
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: btPlayGrande
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1156
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125, y: 51}
+        - {x: 123, y: 61}
+        - {x: 117, y: 77}
+        - {x: 79, y: 115}
+        - {x: 60, y: 125}
+        - {x: -56, y: 125}
+        - {x: -89, y: 100}
+        - {x: -118, y: 63}
+        - {x: -122, y: 35}
+        - {x: -122, y: -38}
+        - {x: -121, y: -42}
+        - {x: -97, y: -86}
+        - {x: -69, y: -107}
+        - {x: -39, y: -120}
+        - {x: -24, y: -124}
+        - {x: 52, y: -124}
+        - {x: 103, y: -92}
+        - {x: 124, y: -55}
+        - {x: 125, y: -50}
+      - - {x: -120, y: -68}
+        - {x: -122, y: -70}
+        - {x: -122, y: -98}
+        - {x: -120, y: -100}
+        - {x: -116, y: -100}
+        - {x: -115, y: -95}
+        - {x: -115, y: -69}
+        - {x: -116, y: -68}
+      - - {x: -109, y: 122}
+        - {x: -111, y: 121}
+        - {x: -111, y: 116}
+        - {x: -109, y: 115}
+        - {x: -103, y: 115}
+        - {x: -103, y: 120}
+        - {x: -104, y: 122}
+    - name: fundoCinza
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 58
+        width: 892
+        height: 379
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 63, y: 63, z: 63, w: 63}
+      outline:
+      - - {x: -446, y: 189.5}
+        - {x: -446, y: -187.5}
+        - {x: 444, y: -187.5}
+        - {x: 446, y: -185.5}
+        - {x: 446, y: 189.5}
+    - name: btEmpreendimentos
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5369211, y: 0.4815393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -77.53816, y: 77.76904}
+        - {x: -80.53816, y: 62.769043}
+        - {x: -80.53816, y: -65.23096}
+        - {x: -55.538162, y: -72.23096}
+        - {x: 58.461838, y: -72.23096}
+        - {x: 69.46184, y: -44.230957}
+        - {x: 69.46184, y: 48.769043}
+        - {x: 64.46184, y: 77.76904}
+      - - {x: -80.53816, y: -59.230957}
+        - {x: -77.53816, y: -58.230957}
+        - {x: -77.53816, y: -40.230957}
+        - {x: -79.53816, y: -38.230957}
+        - {x: -80.53816, y: -38.230957}
+      - - {x: -75.53816, y: 73.76904}
+        - {x: -74.53816, y: 70.76904}
+        - {x: -71.53816, y: 70.76904}
+        - {x: -69.53816, y: 72.76904}
+        - {x: -70.53816, y: 75.76904}
+        - {x: -73.53816, y: 75.76904}
+    - name: btConquistas
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -67, y: 75}
+        - {x: -75, y: 57}
+        - {x: -75, y: -55}
+        - {x: -58, y: -75}
+        - {x: 44, y: -75}
+        - {x: 75, y: -58}
+        - {x: 75, y: 73}
+        - {x: 67, y: 75}
+      - - {x: 72, y: -60}
+        - {x: 74, y: -62}
+        - {x: 75, y: -62}
+        - {x: 75, y: -41}
+        - {x: 72, y: -42}
+      - - {x: -71, y: 71}
+        - {x: -70, y: 68}
+        - {x: -67, y: 68}
+        - {x: -65, y: 70}
+        - {x: -66, y: 73}
+        - {x: -69, y: 73}
+    - name: btSom
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -48, y: 75}
+        - {x: -75, y: 49}
+        - {x: -75, y: -51}
+        - {x: -46, y: -75}
+        - {x: 41, y: -75}
+        - {x: 75, y: -48}
+        - {x: 75, y: 39}
+        - {x: 63, y: 75}
+      - - {x: 70, y: -60}
+        - {x: 72, y: -62}
+        - {x: 75, y: -61}
+        - {x: 75, y: -43}
+        - {x: 73, y: -41}
+        - {x: 70, y: -42}
+      - - {x: -73, y: 71}
+        - {x: -72, y: 68}
+        - {x: -69, y: 68}
+        - {x: -67, y: 70}
+        - {x: -68, y: 73}
+        - {x: -71, y: 73}
+    - name: btEstrela
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 75}
+        - {x: -75, y: 50}
+        - {x: -75, y: -41}
+        - {x: -54, y: -74}
+        - {x: -48, y: -75}
+        - {x: 64, y: -75}
+        - {x: 75, y: -39}
+        - {x: 75, y: 49}
+        - {x: 35, y: 75}
+      - - {x: 69, y: -60}
+        - {x: 71, y: -62}
+        - {x: 74, y: -61}
+        - {x: 74, y: -43}
+        - {x: 72, y: -41}
+        - {x: 69, y: -42}
+      - - {x: -74, y: 71}
+        - {x: -73, y: 68}
+        - {x: -70, y: 68}
+        - {x: -68, y: 70}
+        - {x: -69, y: 73}
+        - {x: -72, y: 73}
+    - name: btPlay
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1283
+        width: 144
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66, y: 75}
+        - {x: -72, y: 63}
+        - {x: -72, y: -64}
+        - {x: -38, y: -75}
+        - {x: 50, y: -75}
+        - {x: 72, y: -61}
+        - {x: 72, y: 75}
+      - - {x: -72, y: 71}
+        - {x: -71, y: 68}
+        - {x: -68, y: 68}
+        - {x: -66, y: 70}
+        - {x: -67, y: 73}
+        - {x: -70, y: 73}
+    - name: btRank
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 75}
+        - {x: -75, y: 63}
+        - {x: -75, y: -54}
+        - {x: -57, y: -75}
+        - {x: 69, y: -75}
+        - {x: 75, y: -45}
+        - {x: 75, y: 49}
+        - {x: 60, y: 75}
+      - - {x: 71, y: -42}
+        - {x: 71, y: -60}
+        - {x: 73, y: -62}
+        - {x: 75, y: -61}
+        - {x: 75, y: -42}
+        - {x: 74, y: -41}
+      - - {x: -72, y: 71}
+        - {x: -71, y: 68}
+        - {x: -68, y: 68}
+        - {x: -66, y: 70}
+        - {x: -67, y: 73}
+        - {x: -70, y: 73}
+    - name: btPause
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 75}
+        - {x: -75, y: 63}
+        - {x: -75, y: -54}
+        - {x: -57, y: -75}
+        - {x: 69, y: -75}
+        - {x: 75, y: -45}
+        - {x: 75, y: 49}
+        - {x: 60, y: 75}
+      - - {x: 71, y: -42}
+        - {x: 71, y: -60}
+        - {x: 73, y: -62}
+        - {x: 75, y: -61}
+        - {x: 75, y: -42}
+        - {x: 74, y: -41}
+      - - {x: -72, y: 71}
+        - {x: -71, y: 68}
+        - {x: -68, y: 68}
+        - {x: -66, y: 70}
+        - {x: -67, y: 73}
+        - {x: -70, y: 73}
+    - name: btCompleto
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 75}
+        - {x: -75, y: 63}
+        - {x: -75, y: -54}
+        - {x: -57, y: -75}
+        - {x: 69, y: -75}
+        - {x: 75, y: -45}
+        - {x: 75, y: 49}
+        - {x: 60, y: 75}
+      - - {x: 71, y: -42}
+        - {x: 71, y: -60}
+        - {x: 73, y: -62}
+        - {x: 75, y: -61}
+        - {x: 75, y: -42}
+        - {x: 74, y: -41}
+      - - {x: -72, y: 71}
+        - {x: -71, y: 68}
+        - {x: -68, y: 68}
+        - {x: -66, y: 70}
+        - {x: -67, y: 73}
+        - {x: -70, y: 73}
+    - name: btMusica
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 1282
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69, y: 36}
+        - {x: 51, y: 75}
+        - {x: -68, y: 75}
+        - {x: -75, y: 49}
+        - {x: -75, y: -42}
+        - {x: -44, y: -75}
+        - {x: 40, y: -75}
+        - {x: 75, y: -32}
+        - {x: 75, y: 26}
+        - {x: 72, y: 25}
+      - - {x: 70, y: -59}
+        - {x: 72, y: -61}
+        - {x: 75, y: -60}
+        - {x: 75, y: -42}
+        - {x: 73, y: -40}
+        - {x: 70, y: -41}
+      - - {x: -73, y: 72}
+        - {x: -72, y: 69}
+        - {x: -69, y: 69}
+        - {x: -67, y: 71}
+        - {x: -68, y: 74}
+        - {x: -71, y: 74}
+    - name: btFacebook
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 75}
+        - {x: -75, y: 63}
+        - {x: -75, y: -54}
+        - {x: -57, y: -75}
+        - {x: 69, y: -75}
+        - {x: 75, y: -45}
+        - {x: 75, y: 49}
+        - {x: 60, y: 75}
+      - - {x: 71, y: -42}
+        - {x: 71, y: -60}
+        - {x: 73, y: -62}
+        - {x: 75, y: -61}
+        - {x: 75, y: -42}
+        - {x: 74, y: -41}
+      - - {x: -72, y: 71}
+        - {x: -71, y: 68}
+        - {x: -68, y: 68}
+        - {x: -66, y: 70}
+        - {x: -67, y: 73}
+        - {x: -70, y: 73}
+    - name: btHome
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39, y: 75}
+        - {x: -55, y: 75}
+        - {x: -75, y: 59}
+        - {x: -75, y: -57}
+        - {x: -71, y: -75}
+        - {x: 44, y: -75}
+        - {x: 70, y: -53}
+        - {x: 72, y: -41}
+        - {x: 72, y: 51}
+      - - {x: -75, y: 71}
+        - {x: -74, y: 68}
+        - {x: -71, y: 68}
+        - {x: -69, y: 70}
+        - {x: -70, y: 73}
+        - {x: -73, y: 73}
+    - name: btLeaderboards
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -60, y: 75}
+        - {x: -75, y: 57}
+        - {x: -75, y: -55}
+        - {x: -71, y: -75}
+        - {x: 56, y: -75}
+        - {x: 75, y: -44}
+        - {x: 75, y: 65}
+        - {x: 63, y: 75}
+      - - {x: -75, y: -61}
+        - {x: -72, y: -60}
+        - {x: -72, y: -42}
+        - {x: -74, y: -40}
+        - {x: -75, y: -40}
+      - - {x: -70, y: 72}
+        - {x: -69, y: 69}
+        - {x: -66, y: 69}
+        - {x: -64, y: 71}
+        - {x: -65, y: 74}
+        - {x: -68, y: 74}
+    - name: btPremio
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -49, y: 75}
+        - {x: -75, y: 56}
+        - {x: -75, y: -55}
+        - {x: -70, y: -75}
+        - {x: 57, y: -75}
+        - {x: 75, y: -56}
+        - {x: 75, y: 51}
+        - {x: 62, y: 75}
+      - - {x: 72, y: -59}
+        - {x: 74, y: -61}
+        - {x: 75, y: -61}
+        - {x: 75, y: -40}
+        - {x: 72, y: -41}
+      - - {x: -71, y: 72}
+        - {x: -70, y: 69}
+        - {x: -67, y: 69}
+        - {x: -65, y: 71}
+        - {x: -66, y: 74}
+        - {x: -69, y: 74}
+    - name: btConfig
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -73, y: 75}
+        - {x: -75, y: 74}
+        - {x: -75, y: -61}
+        - {x: -70, y: -75}
+        - {x: 33, y: -75}
+        - {x: 75, y: -41}
+        - {x: 75, y: 42}
+        - {x: 52, y: 75}
+      - - {x: 69, y: -59}
+        - {x: 71, y: -61}
+        - {x: 74, y: -60}
+        - {x: 74, y: -42}
+        - {x: 72, y: -40}
+        - {x: 69, y: -41}
+      - - {x: -74, y: 72}
+        - {x: -73, y: 69}
+        - {x: -70, y: 69}
+        - {x: -68, y: 71}
+        - {x: -69, y: 74}
+        - {x: -72, y: 74}
+    - name: bvtTwitter
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: 75}
+        - {x: -75, y: -75}
+        - {x: 32, y: -75}
+        - {x: 75, y: -29}
+        - {x: 75, y: 67}
+        - {x: 55, y: 75}
+      - - {x: 68, y: -59}
+        - {x: 70, y: -61}
+        - {x: 73, y: -60}
+        - {x: 73, y: -42}
+        - {x: 71, y: -40}
+        - {x: 68, y: -41}
+      - - {x: -75, y: 72}
+        - {x: -74, y: 69}
+        - {x: -71, y: 69}
+        - {x: -69, y: 71}
+        - {x: -70, y: 74}
+        - {x: -73, y: 74}
+    - name: btGplus
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1133
+        width: 146
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 75}
+        - {x: -73, y: 67}
+        - {x: -73, y: -59}
+        - {x: -68, y: -73}
+        - {x: -58, y: -75}
+        - {x: 42, y: -75}
+        - {x: 73, y: -63}
+        - {x: 73, y: 72}
+        - {x: 69, y: 75}
+      - - {x: 69, y: -42}
+        - {x: 69, y: -60}
+        - {x: 71, y: -62}
+        - {x: 73, y: -61}
+        - {x: 73, y: -42}
+        - {x: 72, y: -41}
+      - - {x: -73, y: 72}
+        - {x: -73, y: 68}
+        - {x: -70, y: 68}
+        - {x: -68, y: 70}
+        - {x: -69, y: 73}
+        - {x: -72, y: 73}
+    - name: btAvancar
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -70, y: 75}
+        - {x: -75, y: 55}
+        - {x: -75, y: -54}
+        - {x: -35, y: -75}
+        - {x: 62, y: -75}
+        - {x: 75, y: -34}
+        - {x: 75, y: 57}
+        - {x: 43, y: 75}
+      - - {x: 67, y: -60}
+        - {x: 69, y: -62}
+        - {x: 72, y: -61}
+        - {x: 72, y: -43}
+        - {x: 70, y: -41}
+        - {x: 67, y: -42}
+      - - {x: -75, y: 72}
+        - {x: -75, y: 68}
+        - {x: -72, y: 68}
+        - {x: -70, y: 70}
+        - {x: -71, y: 73}
+        - {x: -74, y: 73}
+    - name: btSair
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: 25}
+        - {x: 69, y: 36}
+        - {x: 51, y: 75}
+        - {x: -68, y: 75}
+        - {x: -75, y: 50}
+        - {x: -75, y: -47}
+        - {x: -39, y: -75}
+        - {x: 30, y: -75}
+        - {x: 33, y: -74}
+        - {x: 60, y: -50}
+        - {x: 75, y: -24}
+        - {x: 75, y: 26}
+      - - {x: 70, y: -59}
+        - {x: 72, y: -61}
+        - {x: 75, y: -60}
+        - {x: 75, y: -42}
+        - {x: 73, y: -40}
+        - {x: 70, y: -41}
+      - - {x: -73, y: 72}
+        - {x: -72, y: 69}
+        - {x: -69, y: 69}
+        - {x: -67, y: 71}
+        - {x: -68, y: 74}
+        - {x: -71, y: 74}
+    - name: btAjuda
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72, y: 75}
+        - {x: -75, y: 57}
+        - {x: -75, y: -75}
+        - {x: 68, y: -75}
+        - {x: 75, y: -73}
+        - {x: 75, y: 41}
+        - {x: 47, y: 75}
+      - - {x: 71, y: -41}
+        - {x: 71, y: -59}
+        - {x: 73, y: -61}
+        - {x: 75, y: -60}
+        - {x: 75, y: -41}
+        - {x: 74, y: -40}
+      - - {x: -72, y: 72}
+        - {x: -71, y: 69}
+        - {x: -68, y: 69}
+        - {x: -66, y: 71}
+        - {x: -67, y: 74}
+        - {x: -70, y: 74}
+    - name: btFechar
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1131
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -75, y: 75}
+        - {x: -75, y: -70}
+        - {x: -52, y: -74}
+        - {x: 36, y: -74}
+        - {x: 75, y: -34}
+        - {x: 75, y: 40}
+        - {x: 38, y: 75}
+      - - {x: 69, y: -58}
+        - {x: 71, y: -60}
+        - {x: 74, y: -59}
+        - {x: 74, y: -41}
+        - {x: 72, y: -39}
+        - {x: 69, y: -40}
+      - - {x: -74, y: 73}
+        - {x: -73, y: 70}
+        - {x: -70, y: 70}
+        - {x: -68, y: 72}
+        - {x: -69, y: 75}
+        - {x: -72, y: 75}
+    - name: btLista
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 75}
+        - {x: -75, y: 63}
+        - {x: -75, y: -50}
+        - {x: -35, y: -75}
+        - {x: 70, y: -75}
+        - {x: 75, y: -57}
+        - {x: 75, y: 75}
+      - - {x: 67, y: -59}
+        - {x: 69, y: -61}
+        - {x: 72, y: -60}
+        - {x: 72, y: -42}
+        - {x: 70, y: -40}
+        - {x: 67, y: -41}
+      - - {x: -75, y: 73}
+        - {x: -75, y: 69}
+        - {x: -72, y: 69}
+        - {x: -70, y: 71}
+        - {x: -71, y: 74}
+        - {x: -74, y: 74}
+    - name: btLista2
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1132
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55, y: 75}
+        - {x: -75, y: 69}
+        - {x: -75, y: -62}
+        - {x: -46, y: -75}
+        - {x: 48, y: -75}
+        - {x: 69, y: -62}
+        - {x: 69, y: 61}
+        - {x: 54, y: 75}
+      - - {x: -72, y: 70}
+        - {x: -72, y: 73}
+        - {x: -75, y: 74}
+        - {x: -75, y: 69}
+    - name: btRetornar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 982
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -69, y: 75}
+        - {x: -75, y: 72}
+        - {x: -75, y: -44}
+        - {x: -33, y: -75}
+        - {x: 75, y: -75}
+        - {x: 75, y: 55}
+        - {x: 65, y: 75}
+      - - {x: -70, y: 72}
+        - {x: -69, y: 69}
+        - {x: -66, y: 69}
+        - {x: -64, y: 71}
+        - {x: -65, y: 74}
+        - {x: -68, y: 74}
+    - name: fundoEsverdeado
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 506
+        width: 897
+        height: 386
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 63, y: 63, z: 63, w: 63}
+      outline:
+      - - {x: -448.5, y: 193}
+        - {x: -448.5, y: -191}
+        - {x: -446.5, y: -193}
+        - {x: 447.5, y: -193}
+        - {x: 448.5, y: -192}
+        - {x: 448.5, y: 193}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

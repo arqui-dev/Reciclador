@@ -1,0 +1,28 @@
+Situação do entregável
+
+O entregável engloba os seguintes itens que deverão ser rigorosamente cumpridos e serão objetos de avaliação por parte do Comitê Técnico
+para liberação e pagamento da segunda parcela do prêmio:
+
+a) Versão executável com a implementação de 100% do aplicativo proposto, de acordo com o projeto enviado junto com a proposta. O
+proponente deve fornecer todas as informações necessárias para a avaliação do aplicativo, incluindo senhas, usuários e quaisquer outros
+recursos necessários a sua execução. Os aplicativos devem ser disponibilizados nas suas respectivas lojas ou, no caso de versões beta
+para teste, devem ser informados todos os procedimentos para sua instalação.
+
+Android:
+Microsoft:
+Apple:
+
+b) No caso de jogos, devem ser incluídos códigos de acesso (cheat codes) para cada fase do jogo, para permitir a avaliação do jogo de forma
+mais rápida.
+
+Não precisamos, pois não temos fases.
+
+c) A versão final do Projeto com todas as atualizações realizadas durante o desenvolvimento, incluindo as APIs públicas e descrições de
+ferramentas, plug-ins e dependências usados no aplicativo, bem como arquivos contendo as imagens e áudio utilizados.
+
+
+
+
+d) Um vídeo demonstrando a execução do aplicativo ou jogo no dispositivo móvel, ilustrando seu funcionamento.
+
+

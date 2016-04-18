@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Dados
 {
+
+	static public bool musicaLigado = true;
+	static public bool somLigado = true;
+
+	static public string stringSalvar = "Reciclador";
+
 	static public string MensagemCenarioCheio(int qtdMax)
 	{
 		return "Limite de lixo no cenário ("+qtdMax+") alcançado";

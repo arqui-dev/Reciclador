@@ -93,10 +93,12 @@ public class GerenciadorCarregamento : MonoBehaviour
 			i++;
 		}
 
+		/*
 		foreach(Empreendimento e in empreendimentos)
 		{
 			Debug.Log (e.ToString() + "\n");
 		}
+		//*/
 
 
 		return empreendimentos.ToArray();

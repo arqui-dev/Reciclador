@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Jogador : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class Jogador : MonoBehaviour
 	public int dinheiroInicialTestes	= 10000;
 	public int nivelInicialTestes		= 90;
 
+	public float tempoSalvar			= 5;
+	float proximoSave = 0;
+
 
 	static long	_pontos				= 0;
 	static int	_dano				= 1;
@@ -25,7 +29,55 @@ public class Jogador : MonoBehaviour
 
 	static bool inicializado		= false;
 
+	static ulong tempoDeJogo		= 0;
+
 	static GameObject canvasReset	= null;
+
+	static public void Salvar()
+	{
+		string divisor = "|";
+		string saida = "Reciclador";
+
+		tempoDeJogo += (ulong) Time.time;
+
+		saida += divisor + _pontos;
+		saida += divisor + _dano;
+		saida += divisor + _quebrarArmadura;
+		saida += divisor + _xpAtual;
+		saida += divisor + _xpTotal;
+		saida += divisor + _xpProximoNivel;
+		saida += divisor + _nivel;
+		saida += divisor + _resets;
+		saida += divisor + tempoDeJogo;
+
+		PlayerPrefs.SetString(Dados.stringSalvar, saida);
+
+		GerenciadorEmpreendimentos.Salvar();
+
+		Debug.Log ("Jogador Salvo");
+	}
+
+	static void Carregar()
+	{
+		if (PlayerPrefs.HasKey(Dados.stringSalvar) == false)
+			return;
+
+		string entrada = PlayerPrefs.GetString(Dados.stringSalvar);
+		string [] divisor = {"|"};
+		string [] lista = entrada.Split(divisor, System.StringSplitOptions.None);
+
+		_pontos 			= long.Parse(lista[1]);
+		_dano 				= int.Parse(lista[2]);
+		_quebrarArmadura 	= int.Parse(lista[3]);
+		_xpAtual 			= int.Parse(lista[4]);
+		_xpTotal 			= int.Parse(lista[5]);
+		_xpProximoNivel	 	= int.Parse(lista[6]);
+		_nivel 				= int.Parse(lista[7]);
+		_resets 			= int.Parse(lista[8]);
+		tempoDeJogo 		= ulong.Parse(lista[9]);
+
+		Debug.Log ("Jogador Carregado\n"+entrada);
+	}
 
 	static public int	dano
 	{
@@ -176,11 +228,13 @@ public class Jogador : MonoBehaviour
 
 	void Awake()
 	{
+		/*
 #if UNITY_EDITOR
 		_pontos = dinheiroInicialTestes;
 		_nivel = nivelInicialTestes;
 #endif
-
+//*/
+		Debug.Log("Teste amor");
 		if (instancia == null)
 		{
 			instancia	= this;
@@ -189,6 +243,38 @@ public class Jogador : MonoBehaviour
 		if (inicializado == false)
 		{
 			Inicializar();
+			Carregar();
+		}
+		proximoSave = Time.time + tempoSalvar;
+	}
+
+	static public ObjAreaReciclavel recicladoraPapel = null;
+	static public ObjAreaReciclavel recicladoraVidro = null;
+	static public ObjAreaReciclavel recicladoraMetal = null;
+	static public ObjAreaReciclavel recicladoraPlastico = null;
+
+	static bool carregouRecicladoras = false;
+
+	void Update()
+	{
+		if (Application.loadedLevelName == "Jogo" && Time.time > proximoSave)
+		{
+			proximoSave = Time.time + tempoSalvar;
+			Salvar();
+			ObjGerenciadorLixo.instancia.Salvar();
+			recicladoraPapel.Salvar();
+			recicladoraVidro.Salvar();
+			recicladoraMetal.Salvar();
+			recicladoraPlastico.Salvar();
+		}
+
+		if (carregouRecicladoras == false && Application.loadedLevelName == "Jogo")
+		{
+			recicladoraPapel.Carregar();
+			recicladoraVidro.Carregar();
+			recicladoraMetal.Carregar();
+			recicladoraPlastico.Carregar();
+			carregouRecicladoras = true;
 		}
 	}
 }

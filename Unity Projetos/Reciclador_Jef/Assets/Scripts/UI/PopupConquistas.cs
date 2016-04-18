@@ -6,15 +6,18 @@ public class PopupConquistas : MonoBehaviour
 	public PopupEmpreendimentos painelEmpreendimentos;
 	public PopupConfiguracoes painelConfiguracoes;
 
-	public void Fechar()
+	public void Fechar(bool fechadoPorAbrirOutra = false)
 	{
+		if (fechadoPorAbrirOutra == false)
+			Som.Tocar(Som.Tipo.Cancelar);
+
 		gameObject.SetActive(false);
 	}
 	
 	public void Abrir()
 	{
-		painelConfiguracoes.Fechar();
-		painelEmpreendimentos.Fechar();
+		painelConfiguracoes.Fechar(true);
+		painelEmpreendimentos.Fechar(true);
 
 		if (gameObject.activeSelf)
 		{
@@ -23,9 +26,8 @@ public class PopupConquistas : MonoBehaviour
 		else
 		{
 			gameObject.SetActive(true);
+			Som.Tocar(Som.Tipo.Navegar);
 		}
-
-
 	}
 }
 
