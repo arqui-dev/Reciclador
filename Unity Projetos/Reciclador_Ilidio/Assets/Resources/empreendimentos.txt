@@ -1,0 +1,163 @@
+## Modelo de um arquivo de empreendimentos
+## Linhas que comecem com ## (dois sharp/hashtag/sustenido/jogo-da-velha) são comentários e serão descartadas pelo parser.
+		## Apenas linhas inteiras podem ser comentadas, não se deve usar os ## em outro local senão no começo da linha (podem haver espaços e tabulações normalmente)
+
+## Linhas em branco serão descartadas pelo parser.
+
+## O esqueleto de um empreendimento tem a seguinte forma:
+
+##empreendimento		::identificador_do_empreendimento
+	##nome			::Versão amigável do nome real do empreendimento.
+	##descricao		::Resumo do empreendimento. Se o nome não for o nome real, colocar aqui.
+	##nivel maximo	::Número inteiro, entre 1 e 6, representando o nível máximo deste empreendimento.
+	
+	##nivel empreendimento				::Número inteiro, entre 1 e nível máximo, representando o nível que será descrito a seguir. Cada nível deve ser representado, um abaixo do outro, com todas as características.
+		##atributos						::(Nada precisa ser escrito aqui, é apenas um separador)
+			##velocidade reciclagem		::Quatro valores inteiros, entre zero e cem (0-100), separados por ##vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico. Esse valor indica o quanto a velocidade de reciclagem, em porcentagem, da recicladora em questão, será aumentado.
+			##valor venda					::Porcentagem extra do valor de venda dos itens na recicladora em questão. Quatro valores inteiros, entre zero e cem (0-100), separados por vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico.
+			##experiencia					::Valor inteiro indicando a porcentagem extra de experiência que o jogador ganha de todas as fontes.
+			##velocidade aparecer lixo	::Velocidade extra que reduz o tempo de aparição de lixos no cenário.
+			##limite fila					::Quatro valores inteiros, entre zero e cem (0-100), separados por vírgulas, cada um representando uma das quatro recicladoras, na ordem: papel, vidro, metal e plástico. Esses valores aumentam o limite da fila de reciclagem que cada recicladora tem.
+			##lixo minimo					::Nível mínimo de novos lixos que surgem. Valor inteiro.
+			##dinheiro gerado				::Dinheiro gerado por tempo para o jogador. Valor inteiro.
+			##separacao automatica		::Dano causado automaticamente a todos os lixos no cenário. Valor inteiro. (Ainda não implementado)
+			##poder jogador				::Dano extra causado pelo jogador. Valor inteiro.
+		##requisitos						::(Nada precisa ser escrito aqui, é apenas um separador)
+			##preco						::Custo em $ deste nível do empreendimento. Valor inteiro.
+			##nivel sustentabilidade		::Nível mínimo de sustentabilidade que o jogador deve estar para poder comprar esse nível deste empreendimento. Valor inteiro.
+			##empreendimentos construidos	::Lista dos empreendimentos necessários, e seus níveis, para poder comprar este nível deste aprimoramento. Cada empreendimento requisitado é separado por ; (ponto-e-vírgula), e é descrito da maneira "identificador : nível" (sem aspas), sendo que o identificador é um identificador de um empreendimento existente, e o nível é um número inteiro entre 1 e o nível máximo daquele empreendimento. Após o ultimo empreendimento da lista NÃO é colocado o ponto-e-vírgula. Se não houverem emprendimentos requisitados, mesmo assim essa linha deve existir, porém com nada colocado após os ::
+##fim empreendimento	::identificador_do_empreendimento
+
+## Exemplo:
+
+empreendimento		::reciclagem_de_papel
+	nome			::Reciclagem de papel
+	descricao		::A reciclagem de papel é uma atividade industrial que diminui o consumo de recursos naturais, impede que este resíduo acumule em aterros sanitários e gera renda no processo. Nome completo: Empresa de reciclagem de papel.
+	nivel maximo	::6
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::15
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::25
+			nivel sustentabilidade		::2
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::55
+			nivel sustentabilidade		::3
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::75
+			nivel sustentabilidade		::4
+			empreendimentos construidos	:: catadores_de_residuos : 1
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::150
+			nivel sustentabilidade		::5
+			empreendimentos construidos	:: catadores_de_residuos : 1
+	nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::15,15,15,15
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::0
+			limite fila					::2,1,1,1
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::3
+			poder jogador				::0
+		requisitos		::
+			preco						::1080
+			nivel sustentabilidade		::9
+			empreendimentos construidos	:: catadores_de_residuos : 2
+fim empreendimento	::reciclagem_de_papel
+
+empreendimento		::catadores_de_residuos
+	nome			::Associação de catadores
+	descricao		::Nome completo: Associação / Cooperativa de catadores de resíduos de papel 
+	nivel maximo	::2
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::50
+			nivel sustentabilidade		::3
+			empreendimentos construidos	:: 
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::10,10,10,10
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::1,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::1
+			poder jogador				::0
+		requisitos		::
+			preco						::500
+			nivel sustentabilidade		::3
+			empreendimentos construidos	:: reciclagem_de_papel : 2
+fim empreendimento	::reciclagem_de_papel
