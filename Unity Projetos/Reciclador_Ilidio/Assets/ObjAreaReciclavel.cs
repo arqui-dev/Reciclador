@@ -19,6 +19,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 
 	public int 		xpAoMandarReciclar		= 2;
 
+	public static int numMateriaisReciclados	= 0;
+
 	[HideInInspector]
 	public Vector2 area;
 	
@@ -43,6 +45,7 @@ public class ObjAreaReciclavel : MonoBehaviour
 
 	void Update()
 	{
+		Debug.Log (numMateriaisReciclados);
 		VerificarReciclando();
 	}
 
@@ -117,6 +120,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 		{
 			proximoTempoReciclagem = Time.time + DuracaoReciclagemAtual();
 		}
+
+		numMateriaisReciclados++;
 		return true;
 	}
 }
