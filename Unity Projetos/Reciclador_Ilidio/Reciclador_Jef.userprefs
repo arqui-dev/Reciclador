@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Objetos\ObjReset.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilidade\Jogador.cs">
     <Files>
-      <File FileName="Assets\Scripts\Utilidade\Jogador.cs" Line="145" Column="17" />
-      <File FileName="Assets\Scripts\Utilidade\Dados.cs" Line="35" Column="19" />
-      <File FileName="Assets\Scripts\Objetos\ObjReset.cs" Line="17" Column="31" />
+      <File FileName="Assets\Scripts\Utilidade\Jogador.cs" Line="237" Column="1" />
+      <File FileName="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

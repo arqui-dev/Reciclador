@@ -45,9 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ObjAreaReciclavel.cs" />
-     <Compile Include="Assets\PopupAchievements.cs" />
      <Compile Include="Assets\Scripts\Camera\FuncoesCamera.cs" />
+     <Compile Include="Assets\Scripts\Objetos\ObjAreaReciclavel.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjGerenciadorLixo.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjLixoMisturado.cs" />
@@ -57,20 +56,28 @@
      <Compile Include="Assets\Scripts\Tipos\Empreendimento.cs" />
      <Compile Include="Assets\Scripts\Tipos\LixoMisturado.cs" />
      <Compile Include="Assets\Scripts\Tipos\Reciclavel.cs" />
+     <Compile Include="Assets\Scripts\UI\AchievementBase.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_BarraXP.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_Pontos.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_XP.cs" />
+     <Compile Include="Assets\Scripts\UI\PopupAchievements.cs" />
+     <Compile Include="Assets\Scripts\UI\PopupConfiguracoes.cs" />
+     <Compile Include="Assets\Scripts\UI\PopupConquistas.cs" />
      <Compile Include="Assets\Scripts\UI\PopupEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_Achievements.cs" />
+     <Compile Include="Assets\Scripts\UI\UI_Conquistas.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Empreendimento.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Mensanges.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Menu.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\BotaoSomMusica.cs" />
      <Compile Include="Assets\Scripts\Utilidade\CriarListaEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Dados.cs" />
      <Compile Include="Assets\Scripts\Utilidade\GerenciadorCarregamento.cs" />
      <Compile Include="Assets\Scripts\Utilidade\GerenciadorEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\Intro.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Jogador.cs" />
-     <Compile Include="Assets\UI_Achievements.cs" />
-     <None Include="Assets\Resources\achievements.txt" />
+     <Compile Include="Assets\Scripts\Utilidade\Musica.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\Som.cs" />
      <None Include="Assets\Resources\empreendimentos.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

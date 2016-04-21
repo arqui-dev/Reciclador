@@ -16,7 +16,10 @@ public class UI_Empreendimento : MonoBehaviour
 
 	public Empreendimento empreendimento;
 
+	static Scrollbar scrollBar = null;
+
 	Text	textoLocal;
+	int		ajeitarScrollBar = 0;
 
 	void Start()
 	{
@@ -39,6 +42,10 @@ public class UI_Empreendimento : MonoBehaviour
 			posicaoLocalDinheiro = 
 				GameObject.Find("pnlMoeda").transform;
 		}
+		if (scrollBar == null)
+		{
+			scrollBar = GameObject.Find("BarraDescricao").GetComponent<Scrollbar>();
+		}
 
 		textoLocal = GetComponentInChildren<Text>();
 		AjeitarTexto();
@@ -48,10 +55,17 @@ public class UI_Empreendimento : MonoBehaviour
 	void Update()
 	{
 		VerificarBotaoHabilitado();
+
+		if (ajeitarScrollBar > 0)
+		{
+			scrollBar.value = 1;
+			ajeitarScrollBar--;
+		}
 	}
 
 	void AjeitarTexto()
 	{
+		/*
 		if (empreendimento.nivelRequisito < 0)
 		{
 			textoLocal.text = empreendimento.nome+
@@ -64,6 +78,17 @@ public class UI_Empreendimento : MonoBehaviour
 				"\n    Lvl min Jog "+empreendimento.nivelRequisito +
 				"   Custo: "+empreendimento.custo;
 		}
+		*/
+		if (empreendimento.nivelRequisito < 0)
+		{
+			textoLocal.text = empreendimento.nome+
+				"\nLv "+empreendimento.nivel+"  MAX";
+		}
+		else
+		{
+			textoLocal.text = empreendimento.nome + 
+				"\nLv "+empreendimento.nivel;
+		}
 	}
 
 	public void Selecionar()
@@ -72,6 +97,8 @@ public class UI_Empreendimento : MonoBehaviour
 
 		AjeitarDescricao();
 		AjeitarBotaoComprar();
+
+		Som.Tocar(Som.Tipo.Navegar);
 	}
 
 	void AjeitarDescricao()
@@ -104,17 +131,21 @@ public class UI_Empreendimento : MonoBehaviour
 		descricao += Dados.textoDescricao_descricao + ":\n" + empreendimento.descricao;
 
 		txtDescricao.text = descricao;
+
+		ajeitarScrollBar = 10;
 	}
 
 	public void Comprar()
 	{
 		//Debug.Log ("Clicou!");
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	public static void ComprarEstatico()
 	{
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	void SelecionadoComprar()

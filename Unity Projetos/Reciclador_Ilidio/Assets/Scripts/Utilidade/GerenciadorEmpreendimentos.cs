@@ -27,11 +27,22 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 		foreach(Empreendimento e in listaEmpreendimentos)
 		{
 			e.Reiniciar();
-			// TODO: e.Carregar();
+			e.Carregar();
 			dicionarioEmpreendimentos.Add(e.identificador, e);
 		}
 
 		_carregado = true;
+	}
+
+	/// <summary>
+	/// Salva os empreendimentos
+	/// </summary>
+	static public void Salvar()
+	{
+		foreach(string s in dicionarioEmpreendimentos.Keys)
+		{
+			dicionarioEmpreendimentos[s].Salvar();
+		}
 	}
 
 	/// <summary>
