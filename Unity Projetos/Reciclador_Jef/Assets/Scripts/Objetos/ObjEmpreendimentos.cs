@@ -27,6 +27,8 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	float 	proximoTempoReceberPontos = 0;
 
+	bool carregou = false;
+
 	void Awake()
 	{
 #if !UNITY_EDITOR
@@ -41,13 +43,9 @@ public class ObjEmpreendimentos : MonoBehaviour
 		instancia = this;
 		DontDestroyOnLoad(gameObject);
 
-		if (posicaoMostrarGrana == null && Application.loadedLevelName == "Jogo")
-		{
-			posicaoMostrarGrana = 
-				GameObject.Find("pnlMoeda").transform;
-		}
 
-		CalcularTudo();
+
+		//CalcularTudo();
 		proximoTempoReceberPontos = 
 			Time.time + tempoReceberDinheiro;
 	}
@@ -60,18 +58,46 @@ public class ObjEmpreendimentos : MonoBehaviour
 			ReceberPontos();
 			proximoTempoReceberPontos = 
 				Time.time + tempoReceberDinheiro;
+
+			Debug.Log ("Recebeu pontos");
 		}
 
+		if (!carregou && Application.loadedLevelName == "Jogo")
+		{
+			proximoTempoReceberPontos = 
+				Time.time + tempoReceberDinheiro;
+
+			PegarPosicaoGrana();
+
+			carregou = true;
+
+			CalcularTudo();
+		}
+	}
+
+	public void PegarPosicaoGrana()
+	{
+		if (posicaoMostrarGrana == null && Application.loadedLevelName == "Jogo")
+		{
+			posicaoMostrarGrana = 
+				GameObject.Find("pnlMoeda").transform;
+		}
 	}
 
 	void ReceberPontos()
 	{
 		Jogador.Pontuar(dinheiroPorTempo);
 
+		Vector2 pos = new Vector2(Screen.width / 2, Screen.height / 2);
+
+		if (posicaoMostrarGrana != null )
+		{
+			pos = posicaoMostrarGrana.position;
+		}
+
 		Instantiate<GameObject>(objPontos).
 			GetComponent<ObjTextoFlutuante>().Criar(
-				"$"+dinheiroPorTempo, 
-				posicaoMostrarGrana.position);
+				"$"+dinheiroPorTempo, pos);
 	}
 
 	static public void AdicionarEmpreendimento(Empreendimento e)
@@ -91,6 +117,15 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	void CalcularTudo()
 	{
+		listaEmpreendimentos.Clear();
+		foreach(Empreendimento e in GerenciadorEmpreendimentos.dicionarioEmpreendimentos.Values)
+		{
+			if (!listaEmpreendimentos.Contains(e))
+			{
+				listaEmpreendimentos.Add(e);
+			}
+		}
+
 		taxaSeparacaoLixo		= 0;
 		aumentoXP				= 0;
 		dinheiroPorTempo		= 0;

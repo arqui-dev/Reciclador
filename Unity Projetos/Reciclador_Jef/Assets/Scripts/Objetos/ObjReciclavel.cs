@@ -45,6 +45,19 @@ public class ObjReciclavel : MonoBehaviour
 	Image	imagem;
 	
 	Vector2	tamanho;
+
+	int easteregg = -1;
+
+	public void EasterEgg(int easter = 1)
+	{
+		tipo = Reciclavel.Tipo.EasterEgg;
+		easteregg = easter;
+	}
+
+	public int TipoEaster()
+	{
+		return reciclavel.EasterEgg();
+	}
 	
 	void Awake()
 	{
@@ -53,7 +66,7 @@ public class ObjReciclavel : MonoBehaviour
 		imagem.sprite	= sprites[Random.Range(0, sprites.Length)];
 		corNomal		= imagem.color;
 		texto			= GetComponentInChildren<Text>();
-		reciclavel		= new Reciclavel(tipo);
+		reciclavel		= new Reciclavel(tipo, easteregg);
 		tipo			= reciclavel.tipo;
 		AjeitarTexto();
 		Adicionar();
@@ -187,6 +200,12 @@ public class ObjReciclavel : MonoBehaviour
 	void Sumir()
 	{
 		long pontos = pontuacaoConcedidaAoSumir;
+
+		if (tipo == Reciclavel.Tipo.EasterEgg)
+		{
+			pontos = 0;
+		}
+
 		Jogador.Pontuar(pontos);
 
 		Instantiate<GameObject>(objPontuacao).
@@ -211,11 +230,36 @@ public class ObjReciclavel : MonoBehaviour
 
 	public void Segurar()
 	{
+		if (tipo == Reciclavel.Tipo.EasterEgg)
+		{
+			if (GerenciadorEmpreendimentos.VerificarEmpreendimentoEasterEgg(idEaster()))
+			{
+				ObjGerenciadorLixo.CriarXP(xpPerdidaAoSumir, transform);
+
+				Instantiate<GameObject>(objPontuacao).
+					GetComponent<ObjTextoFlutuante>().Criar(
+						"$"+pontuacaoConcedidaAoSumir, transform.position);
+
+				brilhandoReciclar = true;
+				reciclando = true;
+				
+				Som.Tocar(Som.Tipo.AcertarLixeira);
+				
+				Remover();
+				return;
+			}
+		}
+
 		if (reciclando) return;
 		Transform pai = transform.parent;
 		transform.SetParent(null, false);
 		transform.SetParent(pai, false);
 		//transform.position = Input.mousePosition;
+	}
+
+	string idEaster()
+	{
+		return Dados.idsEmpreendimentoEasterEggs[TipoEaster() - 1];
 	}
 	
 	public void Mover()
