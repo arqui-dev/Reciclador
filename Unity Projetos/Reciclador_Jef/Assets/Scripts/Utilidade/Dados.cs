@@ -35,11 +35,19 @@ public class Dados
 	static public string textoDescricao_empreendimentosNecessarios = "Empreendimentos Necessários";
 	static public string textoDescricao_descricao = "Descrição";
 
+	static public string [] idsEmpreendimentoEasterEggs =
+	{
+		"easteregg_pneu"
+	};
+
 
 	static public int bonusResetXP = 5;
 	static public int bonusResetDinheiro = 5;
 	static public int bonusResetDano = 2;
 
 	static public int nivelMaximo = 100;
+
+	static public int nivelMinimoEasterEggs = 2;
+	static public float chanceEasterEgg = 0.5f;
 }
 
