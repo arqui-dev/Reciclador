@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4E095C8F-D4B0-22C7-6C66-A987EA39D1D8}</ProjectGuid>
+    <ProjectGuid>{3EA98918-9CE0-DF03-CDDD-CA20A64CBC03}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,7 +60,6 @@
      <Compile Include="Assets\Scripts\UI\HUD_BarraXP.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_Pontos.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_XP.cs" />
-     <Compile Include="Assets\Scripts\UI\PopupAchievements.cs" />
      <Compile Include="Assets\Scripts\UI\PopupConfiguracoes.cs" />
      <Compile Include="Assets\Scripts\UI\PopupConquistas.cs" />
      <Compile Include="Assets\Scripts\UI\PopupEmpreendimentos.cs" />

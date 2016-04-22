@@ -947,6 +947,27 @@ empreendimento		::recicladora_de_plástico
 			nivel sustentabilidade		::99
 			empreendimentos construidos	:: catadores_de_plastico:6
 fim empreendimento	::usina_plastico
+## easter eggs
+empreendimento		::easteregg_pneu
+	nome			::Reciclador de pneus
+	descricao		::Habilita a reciclagem de pneus
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::0
+			velocidade aparecer lixo	::0
+			limite fila					::0,0,0,6
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 666
+			nivel sustentabilidade		:: 2
+			empreendimentos construidos	::
+fim empreendimento	::easteregg_pneu
 ##==================================================
 ## Empreendimento Geral
 

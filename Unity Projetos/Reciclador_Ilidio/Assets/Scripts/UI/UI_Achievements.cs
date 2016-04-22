@@ -221,6 +221,51 @@ public class UI_Achievements : MonoBehaviour
 			new Vector2(localDosBotoesAchievements.sizeDelta.x, -y);
 	}
 
+	#if UNITY_EDITOR
+	public void atualizarDescricaoDebug (string nome, string descricao, bool unlockedTest) {
+		foreach (BaseadoDinheiro tp in baseadoDinheiro) {
+			if (tp.Nome.Equals(nome)) {
+				if (unlockedTest) {
+					string novaDescricao = descricao + " Conquistado!";
+					Debug.Log (novaDescricao);
+					localDescricaoAchievements.GetComponent<Text> ().text = novaDescricao;
+					break;
+				} else {
+					localDescricaoAchievements.GetComponent<Text> ().text = descricao;
+					break;
+				}
+			}
+		}
+
+		foreach (BaseadoNivel tp in baseadoNivel) {
+			if (tp.Nome.Equals(nome)) {
+				if (unlockedTest) {
+					string novaDescricao = descricao + "\n" + "Conquistado!";
+					localDescricaoAchievements.GetComponent<Text> ().text = novaDescricao;
+					break;
+				} else {
+					localDescricaoAchievements.GetComponent<Text> ().text = descricao;
+					break;
+				}
+			}
+		}
+
+		foreach (BaseadoMateriais tp in baseadoMateriais) {
+			if (tp.Nome.Equals(nome)) {
+				if (unlockedTest) {
+					string novaDescricao = descricao + "\n" + "Conquistado!";
+					localDescricaoAchievements.GetComponent<Text> ().text = novaDescricao;
+					break;
+				} else {
+					localDescricaoAchievements.GetComponent<Text> ().text = descricao;
+					break;
+				}
+			}
+		}
+	}
+	#endif
+
+	#if !UNITY_EDITOR
 	public void atualizarDescricao (string nome, string descricao) {
 		foreach (BaseadoDinheiro tp in baseadoDinheiro) {
 			if (tp.Nome.Equals(nome)) {
@@ -258,4 +303,5 @@ public class UI_Achievements : MonoBehaviour
 			}
 		}
 	}
+	#endif
 }
