@@ -57,16 +57,30 @@ class BaseadoMateriais : AchievementBase {
 	}
 }
 
-class BaseadoEmpreendimento : AchievementBase {
+class BaseadoNivel : AchievementBase {
 
-	public BaseadoEmpreendimento (string nome, string descricao) 
-		: base (nome, descricao) {
+	private int nivelNecessario;
+
+	public BaseadoNivel (string nome, string descricao,
+		int nivelNecessario) : base (nome, descricao) {
+
+		this.nivelNecessario = nivelNecessario;
 	}
 
 	public bool Won () {
-		UI_Mensanges.AdicionarMensagem ("Você desbloqueou a conquista " + Nome);
-		Unlocked = true;
-		return true;
+		if (Jogador.nivel > nivelNecessario) {
+			Unlocked = true;
+			UI_Mensanges.AdicionarMensagem ("Você desbloqueou a conquista " + Nome);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int GetMateriaisNecessario {
+		get {
+			return nivelNecessario;
+		}
 	}
 }
 
@@ -75,18 +89,13 @@ public interface tiposAchievements {}
 public class UI_Achievements : MonoBehaviour
 {
 	private List<BaseadoDinheiro> baseadoDinheiro;
-	private List<BaseadoEmpreendimento> baseadoEmpreendimento;
+	private List<BaseadoNivel> baseadoNivel;
 	private List<BaseadoMateriais> baseadoMateriais;
 
 	private BaseadoDinheiro bemIntencionado;
 	private BaseadoDinheiro naoFoiUmaAposta;
 	private BaseadoDinheiro capitalistaLimpo;
 	private BaseadoDinheiro genioPlayboyFilantropoBilionario;
-
-	private BaseadoEmpreendimento maosAObra;
-	private BaseadoEmpreendimento workWorkWork;
-	private BaseadoEmpreendimento supriseItsAnEasterEgg;
-	private BaseadoEmpreendimento umPorTodosETodosPeloMundo;
 
 	private BaseadoMateriais catadorDeLatinhas;
 	private BaseadoMateriais colecionadorDeTranqueiras;
@@ -102,7 +111,7 @@ public class UI_Achievements : MonoBehaviour
 
 	void Start () {
 		baseadoDinheiro = new List<BaseadoDinheiro> ();
-		baseadoEmpreendimento = new List<BaseadoEmpreendimento> ();
+		baseadoNivel = new List<BaseadoNivel> ();
 		baseadoMateriais = new List<BaseadoMateriais>();
 
 		bemIntencionado = new BaseadoDinheiro ("Bem-intencionado", "Acumule $10.000,00", 10000);
@@ -114,15 +123,6 @@ public class UI_Achievements : MonoBehaviour
 		baseadoDinheiro.Add (naoFoiUmaAposta);
 		baseadoDinheiro.Add (capitalistaLimpo);
 		baseadoDinheiro.Add (genioPlayboyFilantropoBilionario);
-
-		maosAObra = new BaseadoEmpreendimento ("Mãos à obra!", "Obtenha um empreendimento de cada tipo de lixo");
-		workWorkWork = new BaseadoEmpreendimento ("Work, work, work!", "Obtenha dois empreendimentos de cada tipo de lixo");
-		supriseItsAnEasterEgg = new BaseadoEmpreendimento ("SURPRISE! It's an easter egg!", "Obtenha um empreendimento surpresa");
-		umPorTodosETodosPeloMundo = new BaseadoEmpreendimento("Um por todos e todos pelo MUNDO!", "Obtenha todos os empreendimentos");
-		baseadoEmpreendimento.Add (maosAObra);
-		baseadoEmpreendimento.Add (workWorkWork);
-		baseadoEmpreendimento.Add (supriseItsAnEasterEgg);
-		baseadoEmpreendimento.Add (umPorTodosETodosPeloMundo);
 
 		catadorDeLatinhas = new BaseadoMateriais ("Catador de latinha", "Recicle 100 materiais", 100);
 		colecionadorDeTranqueiras = new BaseadoMateriais ("Colecionador de tranqueiras", "Recicle 300 materiais", 300);
@@ -142,7 +142,7 @@ public class UI_Achievements : MonoBehaviour
 				bd.Won ();
 		}
 
-		foreach (BaseadoEmpreendimento be in baseadoEmpreendimento) {
+		foreach (BaseadoNivel be in baseadoNivel) {
 			if (!be.Unlocked)
 				be.Won ();
 		}
@@ -177,7 +177,7 @@ public class UI_Achievements : MonoBehaviour
 			y -= tamanhoBotao + espacoEntreBotoes;
 		}
 
-		foreach (AchievementBase ab in baseadoEmpreendimento) {
+		foreach (AchievementBase ab in baseadoNivel) {
 
 			GameObject novoBotao = 
 				Instantiate<GameObject>(botaoAchievements);
@@ -234,7 +234,7 @@ public class UI_Achievements : MonoBehaviour
 			}
 		}
 
-		foreach (BaseadoEmpreendimento tp in baseadoEmpreendimento) {
+		foreach (BaseadoNivel tp in baseadoNivel) {
 			if (tp.Nome.Equals(nome)) {
 				if (tp.Unlocked) {
 					localDescricaoAchievements.GetComponent<Text> ().text = descricao + "\n" + "Conquistado!";
