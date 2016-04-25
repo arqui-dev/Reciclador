@@ -79,6 +79,33 @@ public class Jogador : MonoBehaviour
 		Debug.Log ("Jogador Carregado\n"+entrada);
 	}
 
+	static public int 	EasterEggMaximo()
+	{
+		if (_nivel < Dados.nivelMinimoEasterEggs || 
+		    ObjGerenciadorLixo.QuantidadeEasterEggs() < 1)
+		{
+			return -1;
+		}
+
+		int intervalo = Dados.nivelMaximo - Dados.nivelMinimoEasterEggs;
+
+		intervalo = intervalo / ObjGerenciadorLixo.QuantidadeEasterEggs();
+
+		int proximoEgg = Dados.nivelMinimoEasterEggs + intervalo;
+
+		int saida = 1;
+		for (int i = Dados.nivelMinimoEasterEggs + 1; i <= _nivel; i++)
+		{
+			if (i >= proximoEgg)
+			{
+				proximoEgg += intervalo;
+				saida++;
+			}
+		}
+
+		return saida;
+	}
+
 	static public int	dano
 	{
 		get 

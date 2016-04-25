@@ -13,6 +13,13 @@ public class AchievementBase : MonoBehaviour {
 	}
 
 	public void mudarDescricao () {
+		#if UNITY_EDITOR
+		Debug.Log(Unlocked);
+		GameObject.FindGameObjectWithTag ("UI_Achievements").GetComponent<UI_Achievements> ().atualizarDescricaoDebug (Nome, Descricao, Unlocked);
+		#endif
+
+		#if !UNITY_EDITOR
 		GameObject.FindGameObjectWithTag ("UI_Achievements").GetComponent<UI_Achievements> ().atualizarDescricao (Nome, Descricao);
+		#endif
 	}
 }

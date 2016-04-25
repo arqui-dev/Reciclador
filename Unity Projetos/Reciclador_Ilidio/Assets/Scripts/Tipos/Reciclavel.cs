@@ -4,13 +4,13 @@ using System.Collections;
 public class Reciclavel
 {
 	public enum Tipo {
-		Papel, Vidro, Metal, Plastico, Aleatorio
+		Papel, Vidro, Metal, Plastico, Aleatorio, EasterEgg
 	}
 
-	const float chancePapel		= 0.35f;
-	const float chanceVidro		= 0.3f;
-	const float chanceMetal 	= 0.2f;
-	const float chancePlastico	= 0.15f;
+	const float chancePapel		= 0.25f;
+	const float chanceVidro		= 0.25f;
+	const float chanceMetal 	= 0.25f;
+	const float chancePlastico	= 0.25f;
 
 	public Tipo tipo
 	{
@@ -24,7 +24,15 @@ public class Reciclavel
 	Tipo	_tipo;
 	int		_dureza = 1;
 
-	public Reciclavel(Tipo tipo = Tipo.Aleatorio)
+	public int EasterEgg()
+	{
+		if (tipo != Tipo.EasterEgg)
+			return -1;
+
+		return _dureza;
+	}
+
+	public Reciclavel(Tipo tipo = Tipo.Aleatorio, int dureza = -1)
 	{
 		if (tipo == Tipo.Aleatorio)
 		{
@@ -35,6 +43,11 @@ public class Reciclavel
 			_tipo = tipo;
 		}
 		Inicializar();
+
+		if (dureza > 0)
+		{
+			_dureza = dureza;
+		}
 	}
 
 	void Inicializar()
