@@ -33,8 +33,8 @@
 ##Catadores de:
 
 empreendimento		::catadores_de_papel
-	nome			::Catadores de papel
-	descricao		::A cooperativa dos catadores é uma iníciativa social que ajuda não só as pessoas mas o meio ambiente. A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda para as famílias envolvidas no processo.
+	nome			::Catadores de reciclávels
+	descricao		:: A cooperativa dos catadores é uma iníciativa social que ajuda não só as pessoas mas o meio ambiente. A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda para as famílias envolvidas no processo.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -129,8 +129,8 @@ empreendimento		::catadores_de_papel
 fim empreendimento	::catadores_de_papel
 ##=================================
 empreendimento		::catadores_de_vidro
-	nome			::Fábrica de Vitrais
-	descricao		::Os cacos de vidro são fundidos a temperaturas acima de 1300ºC, podendo ser reutilizados infinitas vezes, por isso é importante reciclá-los.
+	nome			::Ateliê de vitrais
+	descricao		:: ## Os cacos de vidro são fundidos a temperaturas acima de 1300ºC, podendo ser reutilizados infinitas vezes, por isso é importante coletar e reciclar eles.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -226,7 +226,7 @@ fim empreendimento	::catadores_de_vidro
 ##=====================================
 empreendimento		::catadores_de_metal
 	nome			::Depósito de sucatas ferrosas
-	descricao		::O benefício da reciclagem de metal reduz o consumo de energia para a produção do alumínio, preserva o meio ambiente e movimenta a economia, gerando empregos e fonte de renda.
+	descricao		::## O benefício da reciclagem de metal reduz o consumo de energia para a produção do alumínio, preserva o meio ambiente e movimenta a economia, gerando empregos e fonte de renda.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -321,8 +321,8 @@ empreendimento		::catadores_de_metal
 fim empreendimento	::catadores_de_metal
 ##===============================
 empreendimento		::catadores_de_plastico
-	nome			::Indústria de reciclagem de plástico
-	descricao		::Pláticos podem durar de centenas a milhares de anos para de decompor na natureza, somando isso ao fato de serem matéria prima de inúmeras coisas, sua reciclagem se torna indispensável para saúde do planeta.
+	nome			::Cooperativa de reciclagem de plástico
+	descricao		::##Pláticos podem durar de centenas a milhares de anos para de decompor na natureza, somando isso ao fato de serem matéria prima de inúmeras coisas, sua reciclagem se torna indispensável para saúde do planeta.
 	nivel maximo	::6
 	nivel empreendimento :: 1
 		atributos		::
@@ -436,7 +436,7 @@ empreendimento		::artesanato_papel
 		requisitos		::
 			preco						:: 800
 			nivel sustentabilidade		::6
-			empreendimentos construidos	:: catadores_de_papel : 2
+			empreendimentos construidos	:: catadores_papel : 2 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::3,0,0,0
@@ -451,7 +451,7 @@ empreendimento		::artesanato_papel
 		requisitos		::
 			preco						:: 7000
 			nivel sustentabilidade		::18
-			empreendimentos construidos	:: catadores_de_papel : 3
+			empreendimentos construidos	:: catadores_papel : 3 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::5,0,0,0
@@ -466,7 +466,7 @@ empreendimento		::artesanato_papel
 		requisitos		::
 			preco						:: 1850
 			nivel sustentabilidade		::48
-			empreendimentos construidos	:: catadores_de_papel : 4
+			empreendimentos construidos	:: catadores_papel : 4 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::7,0,0,0
@@ -481,7 +481,7 @@ empreendimento		::artesanato_papel
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::60
-			empreendimentos construidos	:: catadores_de_papel : 5
+			empreendimentos construidos	:: catadores_papel : 5 ;
 fim empreendimento	::artesanato_papel
 ##=============================
 empreendimento		::artesanato_vidro
@@ -502,7 +502,7 @@ empreendimento		::artesanato_vidro
 		requisitos		::
 			preco						:: 800
 			nivel sustentabilidade		::6
-			empreendimentos construidos	:: catadores_de_vidro : 2
+			empreendimentos construidos	:: catadores_vidro : 2 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,3,0,0
@@ -517,7 +517,7 @@ empreendimento		::artesanato_vidro
 		requisitos		::
 			preco						:: 7000
 			nivel sustentabilidade		::18
-			empreendimentos construidos	:: catadores_de_vidro : 3
+			empreendimentos construidos	:: catadores_vidro : 3 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,5,0,0
@@ -532,7 +532,7 @@ empreendimento		::artesanato_vidro
 		requisitos		::
 			preco						:: 1850
 			nivel sustentabilidade		::48
-			empreendimentos construidos	:: catadores_de_vidro : 4
+			empreendimentos construidos	:: catadores_vidro : 4 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,7,0,0
@@ -547,7 +547,7 @@ empreendimento		::artesanato_vidro
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::60
-			empreendimentos construidos	:: catadores_de_vidro : 5
+			empreendimentos construidos	:: catadores_vidro : 5 ;
 fim empreendimento	::artesanato_vidro
 ##===========================
 empreendimento		::artesanato_metal
@@ -568,7 +568,7 @@ empreendimento		::artesanato_metal
 		requisitos		::
 			preco						:: 800
 			nivel sustentabilidade		::6
-			empreendimentos construidos	:: catadores_de_metal : 2
+			empreendimentos construidos	:: catadores_metal : 2 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,0,3,0
@@ -583,7 +583,7 @@ empreendimento		::artesanato_metal
 		requisitos		::
 			preco						:: 7000
 			nivel sustentabilidade		::18
-			empreendimentos construidos	:: catadores_de_metal : 3
+			empreendimentos construidos	:: catadores_metal : 3 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,0,5,0
@@ -598,7 +598,7 @@ empreendimento		::artesanato_metal
 		requisitos		::
 			preco						:: 1850
 			nivel sustentabilidade		::48
-			empreendimentos construidos	:: catadores_de_metal : 4
+			empreendimentos construidos	:: catadores_metal : 4 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,0,7,0
@@ -613,7 +613,7 @@ empreendimento		::artesanato_metal
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::60
-			empreendimentos construidos	:: catadores_de_metal : 5
+			empreendimentos construidos	:: catadores_metal : 5 ;
 fim empreendimento	::artesanato_metal
 ##===========================
 empreendimento		::artesanato_plastico
@@ -634,7 +634,7 @@ empreendimento		::artesanato_plastico
 		requisitos		::
 			preco						:: 800
 			nivel sustentabilidade		::6
-			empreendimentos construidos	:: catadores_de_plastico : 2
+			empreendimentos construidos	:: catadores_plastico : 2 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,0,0,3
@@ -649,7 +649,7 @@ empreendimento		::artesanato_plastico
 		requisitos		::
 			preco						:: 7000
 			nivel sustentabilidade		::18
-			empreendimentos construidos	:: catadores_de_plastico : 3
+			empreendimentos construidos	:: catadores_plastico : 3 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,0,0,5
@@ -664,7 +664,7 @@ empreendimento		::artesanato_plastico
 		requisitos		::
 			preco						:: 1850
 			nivel sustentabilidade		::48
-			empreendimentos construidos	:: catadores_de_plastico : 4
+			empreendimentos construidos	:: catadores_plastico : 4 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,0,0,7
@@ -679,14 +679,14 @@ empreendimento		::artesanato_plastico
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::60
-			empreendimentos construidos	:: catadores_de_plastico : 5
+			empreendimentos construidos	:: catadores_plastico : 5 ;
 fim empreendimento	::artesanato_plastico
 ##====================================================
 ##Usinas de reciclagem de:
 
 empreendimento		::recicladora_de_papel
 	nome			::Usina de reciclagem de papel
-	descricao		::A reciclagem de papel é uma atividade industrial que diminui o consumo de recursos naturais e impede que este resíduo acumule em aterros sanitários, gerando renda no processo.
+	descricao		:: A reciclagem de papel é uma atividade industrial que diminui o consumo de recursos naturais e impede que este resíduo acumule em aterros sanitários, gerando renda no processo.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -702,7 +702,7 @@ empreendimento		::recicladora_de_papel
 		requisitos		::
 			preco						:: 360000
 			nivel sustentabilidade		::36
-			empreendimentos construidos	:: catadores_de_papel:3
+			empreendimentos construidos	:: catadores_papel:3 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::20,0,0,0
@@ -717,7 +717,7 @@ empreendimento		::recicladora_de_papel
 		requisitos		::
 			preco						:: 1080000
 			nivel sustentabilidade		::54
-			empreendimentos construidos	:: catadores_de_papel:4
+			empreendimentos construidos	:: catadores_papel:4 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::30,0,0,0
@@ -732,7 +732,7 @@ empreendimento		::recicladora_de_papel
 		requisitos		::
 			preco						:: 2460000
 			nivel sustentabilidade		::82
-			empreendimentos construidos	:: catadores_de_papel:5
+			empreendimentos construidos	:: catadores_papel:5 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::40,0,0,0
@@ -747,12 +747,12 @@ empreendimento		::recicladora_de_papel
 		requisitos		::
 			preco						:: 3840000
 			nivel sustentabilidade		::96
-			empreendimentos construidos	:: catadores_de_papel:6
+			empreendimentos construidos	:: catadores_papel:6 ;
 fim empreendimento	::usina_papel
 ##============================================
 empreendimento		::recicladora_de_vidro
-	nome			::Recicladora de Vidro
-	descricao		::Na usina o vidro o é limpo, em seguida, é vai para um triturador, que o transforma em cacos, que são submetidos a temperaturas de 1.200ºC centígrados, transformando-os em novos vidros.  
+	nome			::Na usina o vidro o é limpo, em seguida, é vai para um triturador, que o transforma em cacos, que são submetidos a temperaturas de 1.200ºC centígrados, transformando-os em novos vidros. 
+	descricao		:: 
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -768,7 +768,7 @@ empreendimento		::recicladora_de_vidro
 		requisitos		::
 			preco						:: 740000
 			nivel sustentabilidade		::37
-			empreendimentos construidos	:: catadores_de_vidro:3
+			empreendimentos construidos	:: catadores_vidro:3 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,20,0,0
@@ -783,7 +783,7 @@ empreendimento		::recicladora_de_vidro
 		requisitos		::
 			preco						:: 1650000
 			nivel sustentabilidade		::55
-			empreendimentos construidos	:: catadores_de_vidro:4
+			empreendimentos construidos	:: catadores_vidro:4 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,30,0,0
@@ -798,7 +798,7 @@ empreendimento		::recicladora_de_vidro
 		requisitos		::
 			preco						:: 3320000
 			nivel sustentabilidade		::83
-			empreendimentos construidos	:: catadores_de_vidro:5
+			empreendimentos construidos	:: catadores_vidro:5 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,40,0,0
@@ -813,12 +813,12 @@ empreendimento		::recicladora_de_vidro
 		requisitos		::
 			preco						:: 4850000
 			nivel sustentabilidade		::97
-			empreendimentos construidos	:: catadores_de_vidro:6
+			empreendimentos construidos	:: catadores_vidro:6 ;
 fim empreendimento	::usina_vidro
 ##============================================
 empreendimento		::recicladora_de_metal
-	nome			::Recicladora de Metal
-	descricao		::Diferente de outros materiais, a usina recicladora de metal é a que melhor funciona no mundo, todo metal reciclado é submetido ao processo de fundição, onde são transformados em novos metais. 
+	nome			::Diferente de outros materiais, a usina recicladora de metal é a que melhor funciona no mundo, todo metal reciclado é submetido ao processo de fundição, onde são transformados em novos metais.
+	descricao		:: 
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -834,7 +834,7 @@ empreendimento		::recicladora_de_metal
 		requisitos		::
 			preco						:: 1140000
 			nivel sustentabilidade		::38
-			empreendimentos construidos	:: catadores_de_metal:3
+			empreendimentos construidos	:: catadores_metal:3 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,0,20,0
@@ -849,7 +849,7 @@ empreendimento		::recicladora_de_metal
 		requisitos		::
 			preco						:: 2240000
 			nivel sustentabilidade		::56
-			empreendimentos construidos	:: catadores_de_metal:4
+			empreendimentos construidos	:: catadores_metal:4 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,0,30,0
@@ -864,7 +864,7 @@ empreendimento		::recicladora_de_metal
 		requisitos		::
 			preco						:: 4200000
 			nivel sustentabilidade		::84
-			empreendimentos construidos	:: catadores_de_metal:5
+			empreendimentos construidos	:: catadores_metal:5 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,0,40,0
@@ -879,12 +879,12 @@ empreendimento		::recicladora_de_metal
 		requisitos		::
 			preco						:: 5880000
 			nivel sustentabilidade		::98
-			empreendimentos construidos	:: catadores_de_metal:6
+			empreendimentos construidos	:: catadores_metal:6 ;
 fim empreendimento	::usina_metal
 ##============================================
 empreendimento		::recicladora_de_plástico
 	nome			::Usina de reciclagem de plástico
-	descricao		::Depois de separado, enfardado e estocado, o plástico é moído e lavado para voltar ao processamento industrial, onde é seco e transferido para o aglutinador e extrusora gerando gerando grãos de plástico.
+	descricao		:: Depois de separado, enfardado e estocado, o plástico é moído e lavado para voltar ao processamento industrial, onde é seco e transferido para o aglutinador e extrusora gerando gerando grãos de plástico.
 	nivel maximo	::4
 	nivel empreendimento :: 1
 		atributos		::
@@ -900,7 +900,7 @@ empreendimento		::recicladora_de_plástico
 		requisitos		::
 			preco						:: 1560000
 			nivel sustentabilidade		::39
-			empreendimentos construidos	:: catadores_de_plastico:3
+			empreendimentos construidos	:: catadores_plastico:3 ;
 	nivel empreendimento :: 2
 		atributos		::
 			velocidade reciclagem		::0,0,0,20
@@ -915,7 +915,7 @@ empreendimento		::recicladora_de_plástico
 		requisitos		::
 			preco						:: 2850000
 			nivel sustentabilidade		::57
-			empreendimentos construidos	:: catadores_de_plastico:4
+			empreendimentos construidos	:: catadores_plastico:4 ;
 	nivel empreendimento :: 3
 		atributos		::
 			velocidade reciclagem		::0,0,0,30
@@ -930,7 +930,7 @@ empreendimento		::recicladora_de_plástico
 		requisitos		::
 			preco						:: 5100000
 			nivel sustentabilidade		::85
-			empreendimentos construidos	:: catadores_de_plastico:5
+			empreendimentos construidos	:: catadores_plastico:5 ;
 	nivel empreendimento :: 4
 		atributos		::
 			velocidade reciclagem		::0,0,0,40
@@ -945,7 +945,7 @@ empreendimento		::recicladora_de_plástico
 		requisitos		::
 			preco						:: 6930000
 			nivel sustentabilidade		::99
-			empreendimentos construidos	:: catadores_de_plastico:6
+			empreendimentos construidos	:: catadores_plastico:6 ;
 fim empreendimento	::usina_plastico
 ##==================================================
 ## Empreendimento Geral

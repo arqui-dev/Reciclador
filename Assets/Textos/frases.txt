@@ -1,0 +1,36 @@
+Roteiro Tutorial
+Precisa de algo gráfico que indique ao jogador o que ele deve fazer, e quando ele deve clicar para passar a mensagem.
+
+Frases:
+1
+"Olá, bem vinda ao mundo da reciclagem, eu sou a Lixeira de coleta de papel mas pode me chamar de Azul."
+2
+"Sabia que jornais, caixas de papelão, folhas de caderno e embalagens de leite são papeis recicláveis."
+3
+"Olhe um jornal! Arreste e solte-o sobre a lixeira de coleta de papel, para que ele seja encaminhado para reciclagem!"
+4
+"Olá, eu sou o Verdão. Sou responsável pela coleta de vidro, Todos os cacos, copos, garrafas e frascos de vidro arraste para mim."
+5
+"Oi, eu sou a lixeira para coleta de metal, a Amarela. Latas, tampinhas, ferro velho e materiais de alumino são meu trabalho."
+6
+"Ops! Parece que Amarela atingiu seu limite, vamos ter de esperar a reciclagem. Aliás sou o Vermelho, pets e outros plásticos são comigo"
+7
+"Quando um lixo é reciclado ele gera $, olhe o menu aícma de nós."
+8
+"Esta é a sua interface de usuário, vamos conhece-la melhor?Primeiro esse é o seu dinheiro, que você ganha por reciclar o lixo."
+9
+"Com $ você pode comprar e melhorar empreendimentos sustentáveis. Clique no botão acima para conhecermos os empreendimentos."
+10
+"Grrr! Somos monstros saco lixo, quando o lixo  não é separado e reciclado nos surgimos, nos acumulamos e ficando cada vez mais fortes. Mwhahahaha!"
+11
+"Não se preocupe. basta ir clicando sobre os monstros para separar o lixo, se você não deixar eles se acumularem, eles não serão um problema."
+12
+"Mwhahahaha! Quanto mais o tempo passa mais nos acumulamos e maiores ficamos, sempre que 2 de nós se juntam, ficamos mais forte!!!"
+13
+"Lixo acumulado é  um problema, vamos derrotar esses  para aumentarmos o nível de sustentábilidade e liberarmos novos empreendimentos."
+14
+"Parabéns, agora você está pronto para ser sustentável. Isso é uma CONQUISTA. Existem várias conquistas que você pode buscar em sua empreitada"
+15
+"Uma lampada, ela não é reciclável. Para tratar alguns resíduos precisamos de empreendimentos especificos. Acesse os empreendimentos para conhece-los."
+16
+"E lembre, caso você tenha alguma dúvida, nos estaremas prontos para te ensinar. Basta acessa o menú de OPÇÕES. Agora sim, vamos jogar!"
