@@ -71,6 +71,7 @@ public class UI_Mensanges : MonoBehaviour
 			try 
 			{
 				instancia.listaMensagens.Add(mensagem);
+				Debug.Log ("Mensagem adicionada: '"+mensagem+"'");
 				return true;
 			}
 			catch(UnityException e)

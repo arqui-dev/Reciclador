@@ -680,10 +680,13 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					//Som.Tocar(Som.Tipo.ErrarLixeira);
 				}
 			}
+			/*
 			else
 			{
 				ManterNaArea(reciclavel.transform, area);
+				Debug.Log("Nome: " + instancia.gameObject.name + " - Tipo diferente");
 			}
+			*/
 		}
 	}
 

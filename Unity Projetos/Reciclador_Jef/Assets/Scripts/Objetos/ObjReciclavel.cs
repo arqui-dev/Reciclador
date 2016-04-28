@@ -270,6 +270,7 @@ public class ObjReciclavel : MonoBehaviour
 	
 	public void Soltar()
 	{
+		Debug.Log("Nome: " + gameObject.name + " - Reciclando = "+reciclando);
 		if (reciclando) return;
 		ObjGerenciadorLixo.VerificarSoltarReciclavel(this, tamanho);
 	}

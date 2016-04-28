@@ -160,6 +160,7 @@ public class Jogador : MonoBehaviour
 
 	static public int XPAjeitada(int xp)
 	{
+		if (instancia == null) return xp * 100;
 		return xp * instancia.multiplicadorXPGeral;
 	}
 
@@ -224,8 +225,11 @@ public class Jogador : MonoBehaviour
 
 	static void AtualizarXPTotal()
 	{
+		int mu = 50;
+		if (instancia != null)
+			mu = instancia.multiplicadorXPNivel;
 		int valorBase		= (_nivel * (_nivel - 1)) / 2;
-		int multiplicador	= XPAjeitada(instancia.multiplicadorXPNivel);
+		int multiplicador	= XPAjeitada(mu);
 
 		_xpTotal = valorBase * multiplicador + _xpAtual;
 	}
@@ -273,6 +277,15 @@ public class Jogador : MonoBehaviour
 			Carregar();
 		}
 		proximoSave = Time.time + tempoSalvar;
+
+		/*
+		_pontos = dinheiroInicialTestes;
+		_nivel = nivelInicialTestes;
+		//*/
+
+		/*
+		PlayerPrefs.DeleteAll();
+		//*/
 	}
 
 	static public ObjAreaReciclavel recicladoraPapel = null;
@@ -284,24 +297,30 @@ public class Jogador : MonoBehaviour
 
 	void Update()
 	{
-		if (Application.loadedLevelName == "Jogo" && Time.time > proximoSave)
+		if (Application.loadedLevelName == "Jogo")
 		{
-			proximoSave = Time.time + tempoSalvar;
-			Salvar();
-			ObjGerenciadorLixo.instancia.Salvar();
-			recicladoraPapel.Salvar();
-			recicladoraVidro.Salvar();
-			recicladoraMetal.Salvar();
-			recicladoraPlastico.Salvar();
-		}
+			UI_Achievements.VerificarUnlockEstatico();
 
-		if (carregouRecicladoras == false && Application.loadedLevelName == "Jogo")
-		{
-			recicladoraPapel.Carregar();
-			recicladoraVidro.Carregar();
-			recicladoraMetal.Carregar();
-			recicladoraPlastico.Carregar();
-			carregouRecicladoras = true;
+			if (Time.time > proximoSave)
+			{
+				proximoSave = Time.time + tempoSalvar;
+				Salvar();
+				ObjGerenciadorLixo.instancia.Salvar();
+				recicladoraPapel.Salvar();
+				recicladoraVidro.Salvar();
+				recicladoraMetal.Salvar();
+				recicladoraPlastico.Salvar();
+				UI_Achievements.SalvarEstatico();
+			}
+
+			if (carregouRecicladoras == false)
+			{
+				recicladoraPapel.Carregar();
+				recicladoraVidro.Carregar();
+				recicladoraMetal.Carregar();
+				recicladoraPlastico.Carregar();
+				carregouRecicladoras = true;
+			}
 		}
 	}
 }
