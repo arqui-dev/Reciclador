@@ -6,8 +6,8 @@
 ## +1 de xp por nivel
 ##preco 25000* nível do empreendimento * nível de sustentabilidade para liberar
 ##
-empreendimento		::atelie_reciclaveis
-		nome			::Atêlie de Recicláveis
+empreendimento		::recicladora_aluminio
+		nome			::Recicladora de Alumínio
 		descricao		:: 
 		nivel maximo	::10
 		##======================================
