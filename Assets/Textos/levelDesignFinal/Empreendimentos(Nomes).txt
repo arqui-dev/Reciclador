@@ -1,0 +1,14 @@
+Empreendimentos: 
+	#1 Coleta seletiva
+	#2 Associação de catadores
+	#3 Usina de reciclagem
+	#4 Ateliê de recicláveis
+	#5 Ferro velho
+	#6 Prensa de Papel
+	#7 Oficina de brinquedos reciclados
+	#8 Viveiro de garrafas pet
+	#9 Triturador de resíduos sólidos
+	#10 Galeria de arte em metal
+	#11 Recicladora de alumínio
+	#12 Fábrica de vitrais
+	#13 Indústria de reciclagem e processamento

@@ -1,72 +1,7 @@
-Array de níveis para empreendimentos [6,18,24,36,54,60,82,96]
+Array de níveis para empreendimentos [1,2,3,5,8,13,6,18,24,36,54,60,82,96]
 
-Empreendimentos:
-Gerais: Empreendimentos que afetam a todos os lixos
-Comuns: Empreendimentos que possuem uma versão para cada tipo de lixo
-Exclusivos: Empreendimentos únicos para um tipo de lixo
-Easter Egg: Empreendimentos relacionados a um lixo não-reciclável (ou de processo diferente dos gerais)
 ========================================================
-Gerais:
-	Coleta Seletiva:
-		Descrição: Campanhas de coleta seletiva incentivam a população a fazer a parte dela para a sociedade
-		nivel maximo: 10
-		experiencia: 2BaseXP*n
-		velocidade aparecer lixo	:: n
-		nivel máximo do lixo: n
-Comuns:
-	Catadores: 
-		descrição:
-			Papel:
-			Vidro:
-			Metal:
-			Plástico:
-		nivel maximo: 6
-		experiencia: 6n
-		velocidade aparecer lixo	:: n+1
-		limite fila:  2n
-		poder jogador: n 
-		preco: 2^n * base$*N[j] 
-		nivel sustentabilidade	: N[1,6,18,36,48,54]
-	Artesãos:
-		descrição:
-			Papel:
-			Vidro:
-			Metal:
-			Plástico:
-		nivel maximo: 4
-		velocidade reciclagem: 2n tipo
-		valor venda: 2n
-		experiencia: 10n*N[j]
-		dinheiro gerado: n
-		separacao automatica: n
-		preco: (N[j]+100+t)*((Base$^n)
-		nivel sustentabilidade	: N[6,18,48,60] + 2t
-		empreendimentos construidos: catadores_TIPO : n+1 ;
-	Usinas de reciclagem:
-		descrição:
-			Papel:
-			Vidro:
-			Metal:
-			Plástico:
-		nivel maximo: 4
-		velocidade reciclagem		::0,0,10,0
-			valor venda					::0,0,5,0
-			experiencia					::3800
-			velocidade aparecer lixo	::10
-			limite fila					::0,0,6,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::4
-		requisitos		::
-			preco						:: (10^5) * (N[j]+t) * (n+t)
-			nivel sustentabilidade: N[36,56,82,96] + t
-			empreendimentos construidos: catadores_metal:n+2
-	Exclusivos:
-		Depósito de sucatas ferrosas
-		Fábrica de vitrais
-		Horta vertical e mudas de garrafas pet
-		Triturador e prensa de papel
+
 	Easter Eggs:
 		Usina de Incineração	(seringa)
 			Descrição: Lixo hospitalar não pode ser reciclado, porém, existem tratamentos melhores que o descarte, como a incineração. Durante a incineração não destruídos além do objeto, todos os microorganismos que podem existir nele. 
