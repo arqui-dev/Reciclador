@@ -1,0 +1,44 @@
+##Coleta seletiva, aumenta em: 
+##(começando do 1, logo nível do mosntro = 1+nível do empreendimento) o nível máximo do mosntro que pode surgir 
+## ##(sim chama lixo mínimo, reclame com o jé)  
+##o poder do jogador em +1 por nível do empreendimento 
+##libera nos seguintes níveis de sustentábilidade: [1 2 3 6 9 15 24 39 53 92] 
+## não possui outros pré-requisitos
+##preco 24 * nível do empreendimento * nível de sustentábilidade para liberar
+##
+empreendimento		::coleta_seletiva
+	nome			::Coleta seletiva
+	descricao		:: 
+	nivel maximo	::10
+	##======================================
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::10
+			velocidade aparecer lixo	::
+			limite fila					::0,0,0,0
+			lixo minimo					::2
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 24
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: ;
+	##======================================
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::20
+			velocidade aparecer lixo	::
+			limite fila					::0,0,0,0
+			lixo minimo					::3
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 96
+			nivel sustentabilidade		:: 2
+			empreendimentos construidos	:: ;
