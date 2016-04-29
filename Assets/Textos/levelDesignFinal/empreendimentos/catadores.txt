@@ -1,0 +1,44 @@
+##Associação de catadores, aumenta em: 
+##+1 de limite das filas por nível
+##+ de velocidade para aparecer lixos 
+##libera nos seguintes níveis de sustentábilidade: [1 2 7 17 29 41 53 67 79 97] 
+## não possui outros pré-requisitos
+## +1 de xp por nivel
+##preco 32 * nível do empreendimento * nível de sustentábilidade para liberar
+##
+empreendimento		::catadores
+	nome			::Associação de catadores
+	descricao		:: 
+	nivel maximo	::10
+	##======================================
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::1
+			velocidade aparecer lixo	:: 2
+			limite fila					::1,1,1,1
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 32
+			nivel sustentabilidade		::1
+			empreendimentos construidos	:: ;
+	##======================================
+	nivel empreendimento :: 2
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::1
+			velocidade aparecer lixo	:: 2
+			limite fila					::1,1,1,1
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 128
+			nivel sustentabilidade		:: 2
+			empreendimentos construidos	:: ;
