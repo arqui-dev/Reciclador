@@ -37,7 +37,8 @@ public class Dados
 
 	static public string [] idsEmpreendimentoEasterEggs =
 	{
-		"easteregg_pneu"
+		"easteregg_lampada", "easteregg_lata_tinta", "easteregg_madeira", "easteregg_fralda", 
+		"easteregg_borracha", "easteregg_seringa", "easteregg_pneu", "easteregg_isopor"
 	};
 
 
@@ -48,6 +49,10 @@ public class Dados
 	static public int nivelMaximo = 100;
 
 	static public int nivelMinimoEasterEggs = 2;
-	static public float chanceEasterEgg = 0.5f;
+	static public float chanceEasterEgg = 0.05f;
+
+	static public int [] niveisEasterEggs = {
+		1, 2, 3, 4, 5, 6, 7, 8
+	};
 }
 

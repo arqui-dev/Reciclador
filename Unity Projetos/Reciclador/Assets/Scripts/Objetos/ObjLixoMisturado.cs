@@ -6,7 +6,7 @@ public class ObjLixoMisturado : MonoBehaviour
 {
 	LixoMisturado lixoMisturado;
 
-	Text	texto;
+	//Text	texto;
 
 	bool	adicionar	= false;
 	bool 	remover		= false;
@@ -34,10 +34,10 @@ public class ObjLixoMisturado : MonoBehaviour
 		tamanho			= GetComponent<RectTransform>().sizeDelta;
 		imagem			= GetComponent<Image>();
 		corNomal		= imagem.color;
-		texto			= GetComponentInChildren<Text>();
+		//texto			= GetComponentInChildren<Text>();
 		lixoMisturado	= new LixoMisturado(
 			ObjEmpreendimentos.nivelMinimoLixo);
-		AjeitarTexto();
+		//AjeitarTexto();
 		Adicionar();
 	}
 
@@ -116,17 +116,26 @@ public class ObjLixoMisturado : MonoBehaviour
 		imagem.color = cor;
 	}
 
+	/*
 	void AjeitarTexto()
 	{
+
 		texto.text = "Monstro\nNível "+lixoMisturado.nivel+
 			"\nHP "+lixoMisturado.vida;
 	}
+	*/
 
 	void Quebrar()
 	{
 		for (int i = 0; i < Nivel() + 1; i++)
 		{
 			ObjGerenciadorLixo.CriarReciclavel();
+		}
+
+		if (Jogador.nivel >= Dados.nivelMinimoEasterEggs && 
+		    Random.Range(0f,1f) <= Dados.chanceEasterEgg)
+		{
+			ObjGerenciadorLixo.CriarReciclavelEasterEgg();
 		}
 
 		ObjGerenciadorLixo.CriarXP(XP(), transform);
@@ -171,9 +180,11 @@ public class ObjLixoMisturado : MonoBehaviour
 		bool derrotado		=
 			lixoMisturado.ReceberDano(dano, redutorArmadura);
 		
-		AjeitarTexto();
+		//AjeitarTexto();
 
 		ObjGerenciadorLixo.CriarTextoDano(dano, transform);
+
+		Som.Tocar(Som.Tipo.AcertarMonstro);
 		
 		if (derrotado)
 		{
@@ -189,7 +200,6 @@ public class ObjLixoMisturado : MonoBehaviour
 		//transform.position = Input.mousePosition;
 	}
 
-	// TODO JECA
 	bool movendo = false;
 	public void Mover()
 	{

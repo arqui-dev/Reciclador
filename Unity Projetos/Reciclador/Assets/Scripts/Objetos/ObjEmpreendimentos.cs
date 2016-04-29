@@ -6,6 +6,8 @@ public class ObjEmpreendimentos : MonoBehaviour
 {
 	static public ObjEmpreendimentos instancia = null;
 
+	public bool destruir = false;
+
 	static public int		taxaSeparacaoLixo		= 0;
 	static public float 	aumentoXP				= 0;
 	static public long 		dinheiroPorTempo		= 0;
@@ -25,17 +27,25 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	float 	proximoTempoReceberPontos = 0;
 
+	bool carregou = false;
+
 	void Awake()
 	{
-		instancia = this;
+#if !UNITY_EDITOR
+		if (destruir)
+			DestroyImmediate(gameObject);
+#endif
 
-		if (posicaoMostrarGrana == null)
+		if (instancia != null && instancia != this)
 		{
-			posicaoMostrarGrana = 
-				GameObject.Find("pnlMoeda").transform;
+			DestroyImmediate(gameObject);
 		}
+		instancia = this;
+		DontDestroyOnLoad(gameObject);
 
-		CalcularTudo();
+
+
+		//CalcularTudo();
 		proximoTempoReceberPontos = 
 			Time.time + tempoReceberDinheiro;
 	}
@@ -48,6 +58,29 @@ public class ObjEmpreendimentos : MonoBehaviour
 			ReceberPontos();
 			proximoTempoReceberPontos = 
 				Time.time + tempoReceberDinheiro;
+
+			Debug.Log ("Recebeu pontos");
+		}
+
+		if (!carregou && Application.loadedLevelName == "Jogo")
+		{
+			proximoTempoReceberPontos = 
+				Time.time + tempoReceberDinheiro;
+
+			PegarPosicaoGrana();
+
+			carregou = true;
+
+			CalcularTudo();
+		}
+	}
+
+	public void PegarPosicaoGrana()
+	{
+		if (posicaoMostrarGrana == null && Application.loadedLevelName == "Jogo")
+		{
+			posicaoMostrarGrana = 
+				GameObject.Find("pnlMoeda").transform;
 		}
 	}
 
@@ -55,10 +88,16 @@ public class ObjEmpreendimentos : MonoBehaviour
 	{
 		Jogador.Pontuar(dinheiroPorTempo);
 
+		Vector2 pos = new Vector2(Screen.width / 2, Screen.height / 2);
+
+		if (posicaoMostrarGrana != null )
+		{
+			pos = posicaoMostrarGrana.position;
+		}
+
 		Instantiate<GameObject>(objPontos).
 			GetComponent<ObjTextoFlutuante>().Criar(
-				"$"+dinheiroPorTempo, 
-				posicaoMostrarGrana.position);
+				"$"+dinheiroPorTempo, pos);
 	}
 
 	static public void AdicionarEmpreendimento(Empreendimento e)
@@ -78,6 +117,15 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	void CalcularTudo()
 	{
+		listaEmpreendimentos.Clear();
+		foreach(Empreendimento e in GerenciadorEmpreendimentos.dicionarioEmpreendimentos.Values)
+		{
+			if (!listaEmpreendimentos.Contains(e))
+			{
+				listaEmpreendimentos.Add(e);
+			}
+		}
+
 		taxaSeparacaoLixo		= 0;
 		aumentoXP				= 0;
 		dinheiroPorTempo		= 0;
@@ -121,6 +169,7 @@ public class ObjEmpreendimentos : MonoBehaviour
 		return tempo * (1 - velocidadeCriarLixo);
 	}
 
+	// TODO: ta de 0 a 1, mudar pra ser de zero a 100
 	static public int QuantidadeXPAlterada(int xp)
 	{
 		float fxp = (float) xp;

@@ -82,12 +82,12 @@ public class UI_Empreendimento : MonoBehaviour
 		if (empreendimento.nivelRequisito < 0)
 		{
 			textoLocal.text = empreendimento.nome+
-				"\nLv "+empreendimento.nivel+"  MAX";
+				" Lv "+empreendimento.nivel+"  MAX";
 		}
 		else
 		{
 			textoLocal.text = empreendimento.nome + 
-				"\nLv "+empreendimento.nivel;
+				" Lv "+empreendimento.nivel;
 		}
 	}
 

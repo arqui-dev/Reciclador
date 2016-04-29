@@ -16,7 +16,10 @@ public class UI_Empreendimento : MonoBehaviour
 
 	public Empreendimento empreendimento;
 
+	static Scrollbar scrollBar = null;
+
 	Text	textoLocal;
+	int		ajeitarScrollBar = 0;
 
 	void Start()
 	{
@@ -39,6 +42,10 @@ public class UI_Empreendimento : MonoBehaviour
 			posicaoLocalDinheiro = 
 				GameObject.Find("pnlMoeda").transform;
 		}
+		if (scrollBar == null)
+		{
+			scrollBar = GameObject.Find("BarraDescricao").GetComponent<Scrollbar>();
+		}
 
 		textoLocal = GetComponentInChildren<Text>();
 		AjeitarTexto();
@@ -48,10 +55,17 @@ public class UI_Empreendimento : MonoBehaviour
 	void Update()
 	{
 		VerificarBotaoHabilitado();
+
+		if (ajeitarScrollBar > 0)
+		{
+			scrollBar.value = 1;
+			ajeitarScrollBar--;
+		}
 	}
 
 	void AjeitarTexto()
 	{
+		/*
 		if (empreendimento.nivelRequisito < 0)
 		{
 			textoLocal.text = empreendimento.nome+
@@ -64,25 +78,74 @@ public class UI_Empreendimento : MonoBehaviour
 				"\n    Lvl min Jog "+empreendimento.nivelRequisito +
 				"   Custo: "+empreendimento.custo;
 		}
+		*/
+		if (empreendimento.nivelRequisito < 0)
+		{
+			textoLocal.text = empreendimento.nome+
+				" Lv "+empreendimento.nivel+"  MAX";
+		}
+		else
+		{
+			textoLocal.text = empreendimento.nome + 
+				" Lv "+empreendimento.nivel;
+		}
 	}
 
 	public void Selecionar()
 	{
 		selecionado = this;
 
-		txtDescricao.text = empreendimento.descricao;
+		AjeitarDescricao();
 		AjeitarBotaoComprar();
+
+		Som.Tocar(Som.Tipo.Navegar);
+	}
+
+	void AjeitarDescricao()
+	{
+		string descricao = "";
+
+		if (empreendimento.nivelMaximo > empreendimento.nivel)
+		{
+			descricao += Dados.textoDescricao_custo + ": " + empreendimento.custo + "\n";
+
+			//descricao += Dados.textoDescricao_requisitos + ":\n";
+			descricao += Dados.textoDescricao_sustentabilidade + ": " +
+				empreendimento.nivelRequisito + "\n";
+
+			if (empreendimento._empreendimentosRequisitos[empreendimento.nivel+1].Count > 0)
+			{
+				descricao += Dados.textoDescricao_empreendimentosNecessarios + ":\n";
+				foreach(string empreendimentoNecessario in empreendimento.
+				        _empreendimentosRequisitos[empreendimento.nivel + 1].Keys)
+				{
+					descricao += "  " + GerenciadorEmpreendimentos.dicionarioEmpreendimentos
+						[empreendimentoNecessario].nome + ": " + 
+							empreendimento._empreendimentosRequisitos[empreendimento.nivel + 1]
+							[empreendimentoNecessario] + "\n";
+				}
+				//descricao += "\n";
+			}
+			descricao += "\n";
+		}
+		descricao += Dados.textoDescricao_descricao + ":\n" + empreendimento.descricao;
+
+		txtDescricao.text = descricao;
+
+		ajeitarScrollBar = 10;
 	}
 
 	public void Comprar()
 	{
 		//Debug.Log ("Clicou!");
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	public static void ComprarEstatico()
 	{
 		selecionado.SelecionadoComprar();
+		Som.Tocar(Som.Tipo.Comprar);
 	}
 
 	void SelecionadoComprar()
@@ -110,6 +173,7 @@ public class UI_Empreendimento : MonoBehaviour
 		}
 
 		AjeitarBotaoComprar();
+		AjeitarDescricao();
 	}
 
 	void VerificarBotaoHabilitado()

@@ -13,6 +13,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 	public GameObject		objXPPositivo;
 	public GameObject		objXPNegativo;
 
+	public GameObject []	objEasterEggs;
+
 	public GameObject		objDanoJogador;
 
 	public float	tempoJuntarLixos		= 60;
@@ -43,6 +45,85 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	Rect	area;
 
+	string 	nomeArquivoCenario		= "Cenario";
+
+	public void Salvar()
+	{
+		string divisor = "|";
+		string saida = "Lixos";
+
+		saida += divisor + listaLixos.Count;
+
+		foreach(ObjLixoMisturado lixo in listaLixos)
+		{
+			saida += divisor + lixo.Nivel();
+		}
+
+		saida += divisor + "Reciclaveis";
+
+		saida += divisor + listaReciclaveis.Count;
+		
+		foreach(ObjReciclavel reciclavel in listaReciclaveis)
+		{
+			if (reciclavel.tipo != Reciclavel.Tipo.EasterEgg)
+			{
+				saida += divisor + ((int)reciclavel.tipo);
+			}
+			else
+			{
+				saida += divisor + (100 + reciclavel.TipoEaster());
+			}
+		}
+
+		PlayerPrefs.SetString(nomeArquivoCenario, saida);
+		Debug.Log ("Saida "+saida);
+	}
+
+	void Carregar()
+	{
+		if (PlayerPrefs.HasKey(nomeArquivoCenario) == false)
+			return;
+
+		string [] divisor = {"|"};
+		string entrada = PlayerPrefs.GetString(nomeArquivoCenario);
+		string [] lista = entrada.Split(divisor, System.StringSplitOptions.None);
+
+		Debug.Log ("Entrada "+entrada);
+
+		int indiceGeral = 1;
+		int qtd = int.Parse(lista[indiceGeral]);
+
+		indiceGeral++;
+
+		for (int i = 0; i < qtd; i++)
+		{
+			int nivel = int.Parse(lista[indiceGeral]);
+			indiceGeral++;
+
+			if (nivel < 100)
+			{
+				CriarLixo(nivel, true);
+			}
+			else
+			{
+				CriarReciclavelEasterEgg(nivel - 100);
+			}
+		}
+
+		indiceGeral ++;
+		qtd = int.Parse(lista[indiceGeral]);
+		
+		indiceGeral++;
+		
+		for (int i = 0; i < qtd; i++)
+		{
+			int tipo = int.Parse(lista[indiceGeral]);
+			indiceGeral++;
+			CriarReciclavel(tipo);
+		}
+
+	}
+
 	void Awake()
 	{
 		area			= GetComponent<RectTransform>().rect;
@@ -59,8 +140,15 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		proximoTempoJuntarLixo =
 			Time.time  + tempoJuntarLixos;
 
-		CriarLixo();
-		CriarLixo();
+		if (PlayerPrefs.HasKey(nomeArquivoCenario))
+		{
+			Carregar();
+		}
+		else
+		{
+			CriarLixo();
+			CriarLixo();
+		}
 	}
 
 	void ProximoTempoLixo()
@@ -144,9 +232,14 @@ public class ObjGerenciadorLixo : MonoBehaviour
 	{
 		posicaoNovoLixo = pos;
 		instancia.CriarLixo(nivel);
+
+		float x = Random.Range(0f,1f) * instancia.area.width + instancia.area.x;
+		float y = Random.Range(0f,1f) * instancia.area.height + instancia.area.y;
+		
+		posicaoNovoLixo = new Vector2(x,y);
 	}
 
-	void CriarLixo(int novoNivel = -1)
+	void CriarLixo(int novoNivel = -1, bool aleatorioForcado = false)
 	{
 		if (listaLixos.Count >= quantidadeMaximaLixos)
 		{
@@ -173,6 +266,11 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		{
 			pos = posicaoNovoLixo;
 			nivel = novoNivel - 1;
+		}
+
+		if (aleatorioForcado)
+		{
+			pos = new Vector2(x,y);
 		}
 
 		if (nivel >= objLixos.Length)
@@ -220,6 +318,9 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		ManterNaArea(
 			lixo.transform, 
 			lixo.GetComponent<RectTransform>().sizeDelta);
+
+		if (novoNivel < 0)
+			Som.Tocar(Som.Tipo.AparecerMonstro);
 
 		//Adicionar(novoLixo.GetComponent<ObjLixoMisturado>());
 	}
@@ -406,6 +507,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		int pontos = lixoPuxando.Nivel() + lixoSendoPuxado.Nivel();
 		CriarXP(-pontos, lixoPuxando.transform, false);
 
+		Som.Tocar(Som.Tipo.JuntarMonstro);
+
 		lixoPuxando.Juntar(lixoSendoPuxado);
 		PararJuncao();
 	}
@@ -568,13 +671,22 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					if (!oar.Reciclar(reciclavel))
 					{
 						ManterNaArea(reciclavel.transform, area);
+						Som.Tocar(Som.Tipo.ErrarLixeira);
 					}
 				}
 				else
 				{
 					ManterNaArea(reciclavel.transform, area);
+					//Som.Tocar(Som.Tipo.ErrarLixeira);
 				}
 			}
+			/*
+			else
+			{
+				ManterNaArea(reciclavel.transform, area);
+				Debug.Log("Nome: " + instancia.gameObject.name + " - Tipo diferente");
+			}
+			*/
 		}
 	}
 
@@ -601,6 +713,103 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		
 		reciclavel.transform.localPosition = new Vector2(x,y);
 
+		ManterNaArea(
+			reciclavel.transform,
+			reciclavel.GetComponent<RectTransform>().sizeDelta);
+	}
+
+	static public void CriarReciclavel(Reciclavel.Tipo tipo)
+	{
+		GameObject reciclavel	= Instantiate<GameObject>(
+			instancia.objReciclaveis[(int) tipo]);
+		
+		reciclavel.transform.SetParent(instancia.transform, false);
+		
+		float x = Random.Range(0f,1f) * instancia.area.width +
+			instancia.area.x;
+		float y = Random.Range(0f,1f) * instancia.area.height +
+			instancia.area.y;
+		
+		reciclavel.transform.localPosition = new Vector2(x,y);
+		
+		ManterNaArea(
+			reciclavel.transform,
+			reciclavel.GetComponent<RectTransform>().sizeDelta);
+	}
+
+	static public int QuantidadeEasterEggs()
+	{
+		if (instancia == null)
+		{
+			return 0;
+		}
+
+		return instancia.objEasterEggs.Length;
+	}
+
+	// JEF
+	static public void CriarReciclavelEasterEgg(int easteregg = -1, bool aleatorio = true)
+	{
+		if (easteregg > Jogador.EasterEggMaximo())
+		{
+			easteregg = Jogador.EasterEggMaximo();
+		}
+
+		if (easteregg >= instancia.objEasterEggs.Length)
+		{
+			easteregg = instancia.objEasterEggs.Length;
+		}
+
+		int i = Random.Range(0, easteregg);
+		if (aleatorio == false)
+		{
+			i = easteregg - 1;
+		}
+
+		if (i < 0)
+		{
+			i = 0;
+		}
+
+		GameObject reciclavel	= Instantiate<GameObject>(
+			instancia.objEasterEggs[i]);
+
+		reciclavel.GetComponent<ObjReciclavel>().EasterEgg(i + 1);
+		
+		reciclavel.transform.SetParent(instancia.transform, false);
+		
+		float x = Random.Range(0f,1f) * instancia.area.width +
+			instancia.area.x;
+		float y = Random.Range(0f,1f) * instancia.area.height +
+			instancia.area.y;
+		
+		reciclavel.transform.localPosition = new Vector2(x,y);
+		
+		ManterNaArea(
+			reciclavel.transform,
+			reciclavel.GetComponent<RectTransform>().sizeDelta);
+	}
+
+	static public void CriarReciclavel(int tipo)
+	{
+		if (tipo > 3)
+		{
+			CriarReciclavelEasterEgg();
+			return;
+		}
+
+		GameObject reciclavel	= Instantiate<GameObject>(
+			instancia.objReciclaveis[tipo]);
+		
+		reciclavel.transform.SetParent(instancia.transform, false);
+		
+		float x = Random.Range(0f,1f) * instancia.area.width +
+			instancia.area.x;
+		float y = Random.Range(0f,1f) * instancia.area.height +
+			instancia.area.y;
+		
+		reciclavel.transform.localPosition = new Vector2(x,y);
+		
 		ManterNaArea(
 			reciclavel.transform,
 			reciclavel.GetComponent<RectTransform>().sizeDelta);

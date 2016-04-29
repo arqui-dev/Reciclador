@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: f8413bb833200a94a9222116a7e1cb04
+timeCreated: 1460899649
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: btPlayGrande
+    21300002: fundoCinza
+    21300004: btEmpreendimentos
+    21300006: btConquistas
+    21300008: btSom
+    21300010: btEstrela
+    21300012: btPlay
+    21300014: btRank
+    21300016: btPause
+    21300018: btCompleto
+    21300020: btMusica
+    21300022: btFacebook
+    21300024: btHome
+    21300026: btLeaderboards
+    21300028: btPremio
+    21300030: btConfig
+    21300032: bvtTwitter
+    21300034: btGplus
+    21300036: btAvancar
+    21300038: btSair
+    21300040: btAjuda
+    21300042: btFechar
+    21300044: btLista
+    21300046: btLista2
+    21300048: btRetornar
+    21300050: fundoEsverdeado
+    21300052: fundoBordaCinza
+    21300054: fundoBordaAzul
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: btPlayGrande
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 1159
+        width: 247
+        height: 250
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fundoCinza
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 59
+        width: 881
+        height: 374
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 9, y: 9, z: 9, w: 9}
+    - name: btEmpreendimentos
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btConquistas
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btSom
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btEstrela
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btPlay
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btRank
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btPause
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btCompleto
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btMusica
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btFacebook
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btHome
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1283
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btLeaderboards
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btPremio
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btConfig
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bvtTwitter
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btGplus
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btAvancar
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btSair
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btAjuda
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btFechar
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btLista
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btLista2
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 1133
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: btRetornar
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 983
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fundoEsverdeado
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 506
+        width: 887
+        height: 381
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 9, y: 9, z: 9, w: 9}
+    - name: fundoBordaCinza
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 44
+        width: 918
+        height: 408
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 21, y: 21, z: 21, w: 21}
+    - name: fundoBordaAzul
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 496
+        width: 918
+        height: 408
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 21, y: 21, z: 21, w: 21}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

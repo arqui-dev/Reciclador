@@ -77,6 +77,7 @@
      <Compile Include="Assets\Scripts\Utilidade\Jogador.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Musica.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Som.cs" />
+     <None Include="Assets\Fontes\OFL.txt" />
      <None Include="Assets\Resources\empreendimentos.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
