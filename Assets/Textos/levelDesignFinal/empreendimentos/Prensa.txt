@@ -1,7 +1,7 @@
 ##Prensa de Papel, aumenta em: 
 ##+1 de limite das filas por nível
 ##+1 de velocidade para aparecer lixos 
-##libera nos seguintes níveis de sustentabilidade: [12 20 29 38 46 52 60 66 78 86 94] 
+##libera nos seguintes níveis de sustentabilidade: [12 20 29 38 46 52 60 66 78 86] 
 ## não possui outros pré-requisitos
 ## +1 de xp por nivel
 ##preco 1000* nível do empreendimento * nível de sustentabilidade para liberar
