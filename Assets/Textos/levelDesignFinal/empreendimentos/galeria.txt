@@ -8,7 +8,7 @@
 ##
 empreendimento		::galeria_arte
 		nome			::Galeria de Arte em Metal
-		descricao		:: 
+		descricao		::Para Esculturas em sucatam os artistas utilizam apenas metal reciclado para sua produção criando peças maravilhosas a partir de materiais descartados.
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

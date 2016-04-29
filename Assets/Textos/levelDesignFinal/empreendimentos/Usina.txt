@@ -8,7 +8,7 @@
 ##
 empreendimento		::usina_reciclagem
 		nome			::Usina de Reciclagem
-		descricao		:: 
+		descricao		::A reciclagem é uma atividade industrial que diminui o consumo de recursos naturais e impede que estes resíduos acumulem em aterros sanitários e gera renda no processo.
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

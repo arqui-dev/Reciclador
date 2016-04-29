@@ -8,7 +8,7 @@
 ##
 empreendimento		::ferro_velho
 		nome			::Ferro Velho
-		descricao		:: 
+		descricao		::O benefício da reciclagem e do reaproveitamento de sucatas de metal reduz o consumo de energia para a produção do alumínio e outros metais, preserva o meio ambiente e movimenta a economia, gerando empregos e fonte de renda.
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

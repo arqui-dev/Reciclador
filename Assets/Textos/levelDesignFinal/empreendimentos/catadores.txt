@@ -8,7 +8,7 @@
 ##
 empreendimento		::catadores
 	nome			::Associação de catadores
-	descricao		:: 
+	descricao		::A cooperativa dos catadores é uma iníciativa social que ajuda não só as pessoas mas o meio ambiente. A reciclagem de papel é uma atividade que diminui tanto o consumo de recursos naturais, quanto sua presença nos aterros sanitários e gera renda para as famílias envolvidas no processo.
 	nivel maximo	::10
 	##======================================
 	nivel empreendimento :: 1
