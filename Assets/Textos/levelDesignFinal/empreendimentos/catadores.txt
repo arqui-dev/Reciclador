@@ -1,13 +1,13 @@
-##AssociaÁ„o de catadores, aumenta em: 
-##+1 de limite das filas por nÌvel
+##Associa√ß√£o de catadores, aumenta em: 
+##+1 de limite das filas por n√≠vel
 ##+ de velocidade para aparecer lixos 
-##libera nos seguintes nÌveis de sustent·bilidade: [1 2 7 17 29 41 53 67 79 97] 
-## n„o possui outros prÈ-requisitos
+##libera nos seguintes n√≠veis de sustentabilidade: [1 2 7 17 29 41 53 67 79 97] 
+## n√£o possui outros pr√©-requisitos
 ## +1 de xp por nivel
-##preco 32 * nÌvel do empreendimento * nÌvel de sustent·bilidade para liberar
+##preco 32 * n√≠vel do empreendimento * n√≠vel de sustentabilidade para liberar
 ##
 empreendimento		::catadores
-	nome			::AssociaÁ„o de catadores
+	nome			::Associa√ß√£o de catadores
 	descricao		:: 
 	nivel maximo	::10
 	##======================================
@@ -31,9 +31,9 @@ empreendimento		::catadores
 		atributos		::
 			velocidade reciclagem		::0,0,0,0
 			valor venda					::0,0,0,0
-			experiencia					::1
+			experiencia					::2
 			velocidade aparecer lixo	:: 2
-			limite fila					::1,1,1,1
+			limite fila					::2,2,2,2
 			lixo minimo					::0
 			dinheiro gerado				::0
 			separacao automatica		::0
@@ -41,4 +41,132 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 128
 			nivel sustentabilidade		:: 2
+			empreendimentos construidos	:: ;
+	##======================================
+	nivel empreendimento :: 3
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::3
+			velocidade aparecer lixo	:: 2
+			limite fila					::3,3,3,3
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 672
+			nivel sustentabilidade		:: 7
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 4
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::4
+			velocidade aparecer lixo	:: 2
+			limite fila					::4,4,4,4
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 2176
+			nivel sustentabilidade		:: 17
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 5
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	:: 2
+			limite fila					::5,5,5,5
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 4640
+			nivel sustentabilidade		:: 29
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 6
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::6
+			velocidade aparecer lixo	:: 2
+			limite fila					::6,6,6,6
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 7872
+			nivel sustentabilidade		:: 41
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 7
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::7
+			velocidade aparecer lixo	:: 2
+			limite fila					::7,7,7,7
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 11872
+			nivel sustentabilidade		:: 53
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 8
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::8
+			velocidade aparecer lixo	:: 2
+			limite fila					::8,8,8,8
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 17152
+			nivel sustentabilidade		:: 67
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 9
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::9
+			velocidade aparecer lixo	:: 2
+			limite fila					::9,9,9,9
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 22752
+			nivel sustentabilidade		:: 79
+			empreendimentos construidos	:: ;
+		##======================================
+	nivel empreendimento :: 10
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::10
+			velocidade aparecer lixo	:: 2
+			limite fila					::10,10,10,10
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::1
+		requisitos		::
+			preco						:: 31040
+			nivel sustentabilidade		:: 97
 			empreendimentos construidos	:: ;
