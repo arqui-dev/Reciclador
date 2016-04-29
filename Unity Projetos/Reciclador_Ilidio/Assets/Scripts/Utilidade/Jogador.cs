@@ -6,7 +6,7 @@ public class Jogador : MonoBehaviour
 {
 	static public Jogador instancia = null;
 
-	public GameObject _canvasReset;
+	//public GameObject _canvasReset;
 
 	public int 	multiplicadorXPNivel	= 50;
 	public int 	multiplicadorXPGeral	= 100;
@@ -269,7 +269,7 @@ public class Jogador : MonoBehaviour
 		if (instancia == null)
 		{
 			instancia	= this;
-			canvasReset = _canvasReset;
+			//canvasReset = _canvasReset;
 		}
 		if (inicializado == false)
 		{
@@ -294,6 +294,7 @@ public class Jogador : MonoBehaviour
 	static public ObjAreaReciclavel recicladoraPlastico = null;
 
 	static bool carregouRecicladoras = false;
+	static bool pegouCanvasReset = false;
 
 	void Update()
 	{
@@ -320,6 +321,13 @@ public class Jogador : MonoBehaviour
 				recicladoraMetal.Carregar();
 				recicladoraPlastico.Carregar();
 				carregouRecicladoras = true;
+			}
+
+			if (pegouCanvasReset == false)
+			{
+				canvasReset = GameObject.Find("CanvasReset").gameObject;
+				canvasReset.SetActive(false);
+				pegouCanvasReset = true;
 			}
 		}
 	}
