@@ -12,13 +12,3 @@ Empreendimentos:
 	#11 Recicladora de alumínio
 	#12 Fábrica de vitrais
 	#13 Indústria de reciclagem e processamento
-	
-Easter eggs:
-	1	Máquina descaracterização de lâmpadas (lampada)
-	12	Máquina de trituração de madeira (ripa de madeira tipo o plank)
-	23	Usina de reciclagem de isopor (Caixa de isopor quebrada)
-	36	Máquina de reciclagem de fraldas (fralda suja)
-	49	Usina de Blendagem (lata de tinta)
-	65	Triturador de borracha (Pato)
-	84	Usina de Incineração	(seringa)
-	99	Fábrica de móveis de pneu (Pneu)

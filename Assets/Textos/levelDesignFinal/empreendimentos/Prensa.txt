@@ -8,7 +8,7 @@
 ##
 empreendimento		::prensa_papel	
 		nome			::Prensa de Papel
-		descricao		::O papel é enfardado em prensas e depois encaminhado aos aparistas, que classificam as aparas e revendem para as fábricas de papel como matéria-prima.
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

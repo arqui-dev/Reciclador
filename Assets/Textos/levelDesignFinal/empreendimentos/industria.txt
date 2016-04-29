@@ -6,9 +6,9 @@
 ## +1 de xp por nivel
 ##preco 100000* nível do empreendimento * nível de sustentabilidade para liberar
 ##
-empreendimento		::industria_reciclagem
-		nome			::Indústria de reciclagem e processamento
-		descricao		:: Essa indústria vira mais uma página na história da destinação dos resíduos sólidos da cidade. Em vez de enterrar e desperdiçar lixo em aterros sanitários, Você entra na era da indústria da transformação do lixo. Trata-se de uma indústria limpa, que tem grande potencial de atrair outras indústrias de reciclagem para as suas imediações. O estímulo à atividade tende a elevar o preço dos materiais recicláveis, melhorando também a renda dos ecocidadãos.
+empreendimento		::atelie_reciclaveis
+		nome			::Atêlie de Recicláveis
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

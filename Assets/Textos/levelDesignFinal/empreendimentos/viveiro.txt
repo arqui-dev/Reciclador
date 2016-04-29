@@ -8,7 +8,7 @@
 ##
 empreendimento		::viveiro_garrafas
 		nome			::Viveiros de Garrafas Pet
-		descricao		::As garrafas pet, antes de serem enviadas para reciclagem, podem ser utilizadas em diversas atividades. Uma prática muito comum é a utilização das garrafas pets para produção de mudas. As garrafas são lavadas e cortadas, deixando apenas a parte inferior para o uso (potes). A parte superior é enviada para reciclagem. São inseridos terra e adubo nos potes e em seguida as sementes, que em alguns meses estarão prontas para plantio.
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

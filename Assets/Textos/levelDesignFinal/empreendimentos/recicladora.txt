@@ -6,10 +6,9 @@
 ## +1 de xp por nivel
 ##preco 25000* nível do empreendimento * nível de sustentabilidade para liberar
 ##
-empreendimento		::recicladora_aluminio
-		nome			::Recicladora de alumínio
-		descricao		::A lata de alumínio pode ser reciclada infinitas vezes e sempre volta como lata. O benefício da reciclagem reduz o consumo de energia para a produção do alumínio, preserva o meio ambiente e movimenta a economia, gerando empregos e fonte de renda na coleta e promovendo a educação dos cidadãos para o desenvolvimento sustentável. Hoje, 95% das bebidas vendidas em lata no nosso País utilizam a embalagem de alumínio.
- 
+empreendimento		::atelie_reciclaveis
+		nome			::Atêlie de Recicláveis
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

@@ -8,7 +8,7 @@
 ##
 empreendimento		::oficina_brinquedos
 		nome			::Oficina de Brinquedos Reciclados
-		descricao		::Além de ensinar como organizar atividades que ajudem na preservação da natureza, usando materiais recicláveis as oficinas colaboram para a formação de crianças conscientes e no desenvolvimento do potencial artístico.
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

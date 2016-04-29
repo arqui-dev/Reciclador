@@ -8,7 +8,7 @@
 ##
 empreendimento		::atelie_reciclaveis
 		nome			::Atêlie de Recicláveis
-		descricao		::Recicláveis são reciclado são materiais super versáteis, podendo ser usado para fazer inúmeros novos objetos, como bijuterias, embalagens, jogos, brinquedos entre outros.
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

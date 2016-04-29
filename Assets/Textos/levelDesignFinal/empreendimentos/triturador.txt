@@ -8,7 +8,7 @@
 ##
 empreendimento		::triturador_residuos	
 		nome			::Triturador de Resíduos Sólidos
-		descricao		::As necessidades de grandes áreas para criação de aterros sanitários e elevado volume de lixo produzido pelas metrópoles fez-se necessário a trituração e processamento dos mesmos. Através destes equipamentos pode-se obter redução de volume, separação de materiais que possam virar matéria prima tais como metais, plásticos, papéis entre outros recicláveis envolvidos.
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1

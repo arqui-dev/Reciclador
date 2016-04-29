@@ -8,7 +8,7 @@
 ##
 empreendimento		::fabrica_vitrais
 		nome			::Fábrica de Vitrais
-		descricao		::O vidro pode passar por esse processo infinitas vezes sem perda de qualidade ou pureza do produto. Isso tudo nos mostra a importância da conscientização de todos, para que realizem em suas residências a coleta seletiva do vidro para a sua reciclagem. 
+		descricao		:: 
 		nivel maximo	::10
 		##======================================
 		nivel empreendimento :: 1
