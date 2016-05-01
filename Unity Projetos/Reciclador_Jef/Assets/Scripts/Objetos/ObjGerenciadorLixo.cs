@@ -784,7 +784,7 @@ public class ObjGerenciadorLixo : MonoBehaviour
 			instancia.area.y;
 		
 		reciclavel.transform.localPosition = new Vector2(x,y);
-		
+
 		ManterNaArea(
 			reciclavel.transform,
 			reciclavel.GetComponent<RectTransform>().sizeDelta);

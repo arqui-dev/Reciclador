@@ -50,6 +50,12 @@ public class Jogador : MonoBehaviour
 		saida += divisor + _resets;
 		saida += divisor + tempoDeJogo;
 
+		// JEF AQUI
+		for (int i = 0; i < Dados.easterJaAberto.Length; i++)
+		{
+			saida += divisor + Dados.easterJaAberto[i];
+		}
+
 		PlayerPrefs.SetString(Dados.stringSalvar, saida);
 
 		GerenciadorEmpreendimentos.Salvar();
@@ -76,6 +82,15 @@ public class Jogador : MonoBehaviour
 		_resets 			= int.Parse(lista[8]);
 		tempoDeJogo 		= ulong.Parse(lista[9]);
 
+		// JEF AQUI
+		if (lista.Length >= 10 + Dados.easterJaAberto.Length)
+		{
+			for (int i = 0; i < Dados.easterJaAberto.Length; i++)
+			{
+				Dados.easterJaAberto[i] = bool.Parse(lista[i + 10]);
+			}
+		}
+
 		Debug.Log ("Jogador Carregado\n"+entrada);
 	}
 
@@ -96,6 +111,20 @@ public class Jogador : MonoBehaviour
 		}
 
 		return Dados.niveisEasterEggs[Dados.niveisEasterEggs.Length - 1];
+	}
+
+	// JEF AQUI
+	static void VerificarEasterEgg()
+	{
+		for (int i = 0; i < Dados.niveisEasterEggs.Length; i++)
+		{
+			if (Dados.easterJaAberto[i] == false &&
+				_nivel >= Dados.niveisEasterEggs[i])
+			{
+				Dados.easterJaAberto[i] = true;
+				ObjGerenciadorLixo.CriarReciclavelEasterEgg(i + 1, false);
+			}
+		}
 	}
 
 	static public int	dano
@@ -173,6 +202,10 @@ public class Jogador : MonoBehaviour
 		{
 			_xpAtual -= _xpProximoNivel;
 			_nivel++;
+
+
+			// JEF AQUI
+			VerificarEasterEgg();
 
 			AtualizarXPProximoNivel();
 			subiuDeNivel = true;
