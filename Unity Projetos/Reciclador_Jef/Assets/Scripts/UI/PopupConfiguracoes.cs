@@ -35,5 +35,10 @@ public class PopupConfiguracoes : MonoBehaviour
 
 	}
 
+
+	public void AbrirTutorial()
+	{
+		Jogador.RodarTutorial();
+	}
 }
 

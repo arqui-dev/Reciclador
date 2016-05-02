@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\Utilidade\MensagensAleatorias.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Musica.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Som.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\Tutorial.cs" />
      <None Include="Assets\Fontes\OFL.txt" />
      <None Include="Assets\Resources\empreendimentos.txt" />
  <Reference Include="UnityEngine.UI">

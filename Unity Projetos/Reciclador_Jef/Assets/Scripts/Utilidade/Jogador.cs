@@ -58,13 +58,24 @@ public class Jogador : MonoBehaviour
 
 		PlayerPrefs.SetString(Dados.stringSalvar, saida);
 
+		int tuto = 0;
+		if (tutorialCompleto) tuto = 1;
+		PlayerPrefs.SetInt(tutorialNome, tuto);
+
 		GerenciadorEmpreendimentos.Salvar();
 
 		Debug.Log ("Jogador Salvo");
 	}
 
+	static string tutorialNome = "Tutorial";
+
 	static void Carregar()
 	{
+		if (PlayerPrefs.HasKey(tutorialNome))
+		{
+			tutorialCompleto = PlayerPrefs.GetInt(tutorialNome) == 1;
+		}
+
 		if (PlayerPrefs.HasKey(Dados.stringSalvar) == false)
 			return;
 
@@ -245,7 +256,9 @@ public class Jogador : MonoBehaviour
 
 	static int CalcularXPProximoNivel(int pnivel)
 	{
-		return pnivel * XPAjeitada(instancia.multiplicadorXPNivel);
+		if (instancia)
+			return pnivel * XPAjeitada(instancia.multiplicadorXPNivel);
+		return pnivel * XPAjeitada(50);
 	}
 
 	static void AtualizarXPTotal()
@@ -319,7 +332,7 @@ public class Jogador : MonoBehaviour
 	static public ObjAreaReciclavel recicladoraPlastico = null;
 
 	static bool carregouRecicladoras = false;
-	static bool pegouCanvasReset = false;
+	public static bool pegouCanvasReset = false;
 
 	void Update()
 	{
@@ -354,6 +367,8 @@ public class Jogador : MonoBehaviour
 				canvasReset.SetActive(false);
 				pegouCanvasReset = true;
 			}
+
+			VerificarReset();
 		}
 	}
 
@@ -432,6 +447,30 @@ public class Jogador : MonoBehaviour
 
 		instancia = null;
 		Application.LoadLevel("Menu");
+	}
+
+	public static bool tutorialRodando = true;
+	public static bool tutorialCompleto = false;
+
+	static public void RodarTutorial()
+	{
+		tutorialRodando = true;
+
+		LimparCenario();
+
+		ObjGerenciadorLixo.instancia = null;
+
+		Application.LoadLevel("Tutorial");
+	}
+
+	static public void LimparCenario()
+	{
+		ObjGerenciadorLixo.LimparCenario();
+
+		recicladoraPapel.Limpar();
+		recicladoraVidro.Limpar();
+		recicladoraMetal.Limpar();
+		recicladoraPlastico.Limpar();
 	}
 }
 

@@ -146,8 +146,11 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		}
 		else
 		{
-			CriarLixo();
-			CriarLixo();
+			if (!Jogador.tutorialRodando)
+			{
+				CriarLixo();
+				CriarLixo();
+			}
 		}
 	}
 
@@ -160,9 +163,12 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	void Update()
 	{
-		VerificarAproximarLixos();
-		VerificarTempoJuntarLixo();
-		VerificarTempoCriarLixo();
+		if (!Jogador.tutorialRodando)
+		{
+			VerificarAproximarLixos();
+			VerificarTempoJuntarLixo();
+			VerificarTempoCriarLixo();
+		}
 	}
 
 	void VerificarAproximarLixos()

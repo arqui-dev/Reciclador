@@ -31,7 +31,14 @@ public class ObjAreaReciclavel : MonoBehaviour
 	float proximoTempoReciclagem = 0;
 	float ultimaDuracao = 0;
 
-
+	public void EncherLista()
+	{
+		int qtd = tamanhoListaReciclagem - listaReciclando.Count;
+		for (int i = 0; i < qtd; i++)
+		{
+			listaReciclando.Add(new ObjReciclavel());
+		}
+	}
 
 	public void Salvar()
 	{
@@ -159,7 +166,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 	{
 		foreach(ObjReciclavel reci in listaReciclando)
 		{
-			Destroy(reci.gameObject);
+			if (reci)
+				Destroy(reci.gameObject);
 		}
 		listaReciclando.Clear();
 	}
