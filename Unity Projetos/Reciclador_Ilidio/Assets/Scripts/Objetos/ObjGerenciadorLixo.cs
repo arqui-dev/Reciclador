@@ -853,5 +853,11 @@ public class ObjGerenciadorLixo : MonoBehaviour
 				GetComponent<ObjTextoFlutuante>().Criar(
 					texto, local.position);
 	}
+
+	public void limpaLixos () {
+		foreach (ObjLixoMisturado olm in listaLixos) {
+			Remover (olm);
+		}
+	}
 }
 

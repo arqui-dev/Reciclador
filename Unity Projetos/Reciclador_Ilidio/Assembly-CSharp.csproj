@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5087CDF3-0E92-1896-AC0D-6951B842D197}</ProjectGuid>
+    <ProjectGuid>{4E095C8F-D4B0-22C7-6C66-A987EA39D1D8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -77,6 +77,8 @@
      <Compile Include="Assets\Scripts\Utilidade\Jogador.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Musica.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Som.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\Tutorial.cs" />
+     <None Include="Assets\Fontes\OFL.txt" />
      <None Include="Assets\Resources\empreendimentos.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
