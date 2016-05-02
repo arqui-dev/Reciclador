@@ -25,7 +25,7 @@
 		##requisitos						::(Nada precisa ser escrito aqui, é apenas um separador)
 			##preco						::Custo em $ deste nível do empreendimento. Valor inteiro.
 			##nivel sustentabilidade		::Nível mínimo de sustentabilidade que o jogador deve estar para poder comprar esse nível deste empreendimento. Valor inteiro.
-			##empreendimentos construidos	::Lista dos empreendimentos necessários, e seus níveis, para poder comprar este nível deste aprimoramento. Cada empreendimento requisitado é separado por ; (ponto-e-vírgula), e é descrito da maneira "identificador : nível" (sem aspas), sendo que o identificador é um identificador de um empreendimento existente, e o nível é um número inteiro entre 1 e o nível máximo daquele empreendimento. Após o ultimo empreendimento da lista NÃO é colocado o ponto-e-vírgula. Se não houverem emprendimentos requisitados, mesmo assim essa linha deve existir, porém com nada colocado após os ::
+			##empreendimentos construidos	::Lista dos empreendimentos necessários, e seus níveis, para poder comprar este nível deste aprimoramento. Cada empreendimento requisitado é separado por  (ponto-e-vírgula), e é descrito da maneira "identificador : nível" (sem aspas), sendo que o identificador é um identificador de um empreendimento existente, e o nível é um número inteiro entre 1 e o nível máximo daquele empreendimento. Após o ultimo empreendimento da lista NÃO é colocado o ponto-e-vírgula. Se não houverem emprendimentos requisitados, mesmo assim essa linha deve existir, porém com nada colocado após os ::
 ##fim empreendimento	::identificador_do_empreendimento
 
 ##iníco do arquivo
@@ -55,6 +55,7 @@ empreendimento		::lampada
 			preco						:: 900
 			nivel sustentabilidade		::9
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##2
 empreendimento		::madeira
 	nome			::Máquina de trituração de madeira
@@ -75,6 +76,7 @@ empreendimento		::madeira
 			preco						:: 4800
 			nivel sustentabilidade		::12
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##3
 empreendimento		::isopor
 	nome			::Usina de reciclagem de isopor
@@ -95,6 +97,7 @@ empreendimento		::isopor
 			preco						::
 			nivel sustentabilidade		::20700
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##4
 empreendimento		::fraldas
 	nome			::Máquina de reciclagem de fraldas
@@ -115,6 +118,7 @@ empreendimento		::fraldas
 			preco						::86400
 			nivel sustentabilidade		::36
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##5
 empreendimento		::lata_tinta
 	nome			::Usina de Blendagem
@@ -135,6 +139,7 @@ empreendimento		::lata_tinta
 			preco						::220500
 			nivel sustentabilidade		::49
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##6
 empreendimento		::pato
 	nome			::Triturador de borracha
@@ -155,6 +160,7 @@ empreendimento		::pato
 			preco						::585000
 			nivel sustentabilidade		::65
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##7
 empreendimento		::seringa
 	nome			::Usina de Incineração
@@ -175,6 +181,7 @@ empreendimento		::seringa
 			preco						::1411200
 			nivel sustentabilidade		::84
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##8
 empreendimento		::pneu
 	nome			::Fábrica de móveis de pneu
@@ -195,6 +202,7 @@ empreendimento		::pneu
 			preco						:: 3088800
 			nivel sustentabilidade		::99
 			empreendimentos construidos	:: 
+fim empreendimento	::
 ##_______________________________________________##			
 ## empreendimentos:
 ##================================
@@ -225,7 +233,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 24
 			nivel sustentabilidade		::1
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 2
 		atributos		::
@@ -241,7 +249,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 96
 			nivel sustentabilidade		:: 2
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 3
 		atributos		::
@@ -257,7 +265,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 216
 			nivel sustentabilidade		:: 3
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 4
 		atributos		::
@@ -273,7 +281,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 576
 			nivel sustentabilidade		:: 6
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 5
 		atributos		::
@@ -289,7 +297,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 1080
 			nivel sustentabilidade		:: 9
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 6
 		atributos		::
@@ -305,7 +313,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 2160
 			nivel sustentabilidade		:: 15
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 7
 		atributos		::
@@ -321,7 +329,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 4032
 			nivel sustentabilidade		:: 24
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 8
 		atributos		::
@@ -337,7 +345,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 7488
 			nivel sustentabilidade		:: 39
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento ::9
 		atributos		::
@@ -353,7 +361,7 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 11448
 			nivel sustentabilidade		:: 53
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 10
 		atributos		::
@@ -369,7 +377,8 @@ empreendimento		::coleta_seletiva
 		requisitos		::
 			preco						:: 22080
 			nivel sustentabilidade		:: 92
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
+fim empreendimento	::
 ##_______________________________________##
 ##Associação de catadores, aumenta em: 
 ##+1 de limite das filas por nível
@@ -398,7 +407,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 32
 			nivel sustentabilidade		::1
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 2
 		atributos		::
@@ -414,7 +423,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 128
 			nivel sustentabilidade		:: 2
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 	##======================================
 	nivel empreendimento :: 3
 		atributos		::
@@ -430,7 +439,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 672
 			nivel sustentabilidade		:: 7
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 4
 		atributos		::
@@ -446,7 +455,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 2176
 			nivel sustentabilidade		:: 17
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 5
 		atributos		::
@@ -462,7 +471,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 4640
 			nivel sustentabilidade		:: 29
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 6
 		atributos		::
@@ -478,7 +487,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 7872
 			nivel sustentabilidade		:: 41
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 7
 		atributos		::
@@ -494,7 +503,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 11872
 			nivel sustentabilidade		:: 53
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 8
 		atributos		::
@@ -510,7 +519,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 17152
 			nivel sustentabilidade		:: 67
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 9
 		atributos		::
@@ -526,7 +535,7 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 22752
 			nivel sustentabilidade		:: 79
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 	nivel empreendimento :: 10
 		atributos		::
@@ -542,7 +551,8 @@ empreendimento		::catadores
 		requisitos		::
 			preco						:: 31040
 			nivel sustentabilidade		:: 97
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
+fim empreendimento	::
 ##_________________________________________##
 ##Atêlie de recicláveis, aumenta em: 
 ##+1 de limite das filas por nível
@@ -571,7 +581,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 			preco						:: 55
 			nivel sustentabilidade		::1
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -587,7 +597,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 			preco						:: 440
 			nivel sustentabilidade		:: 4
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -603,7 +613,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 			preco						:: 1320
 			nivel sustentabilidade		:: 8
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -619,7 +629,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 3080
 				nivel sustentabilidade		:: 14
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -635,7 +645,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 6050
 				nivel sustentabilidade		:: 22
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -651,7 +661,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 12210
 				nivel sustentabilidade		:: 37
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -667,7 +677,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 19250
 				nivel sustentabilidade		:: 50
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -683,7 +693,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 28600
 				nivel sustentabilidade		:: 65
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -699,7 +709,7 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 40095
 				nivel sustentabilidade		:: 81
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -715,7 +725,8 @@ empreendimento		::atelie_reciclaveis
 		requisitos		::
 				preco						:: 51150
 				nivel sustentabilidade		:: 93
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##_____________________________________________##
 ##Ferro Velho, aumenta em: 
 ##+1 de limite das filas por nível
@@ -744,7 +755,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 			preco						:: 80
 			nivel sustentabilidade		::11
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -760,7 +771,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 			preco						:: 3680
 			nivel sustentabilidade		:: 23
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -776,7 +787,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 			preco						:: 7200
 			nivel sustentabilidade		::30
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -792,7 +803,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 13440
 				nivel sustentabilidade		:: 42
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -808,7 +819,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 20400
 				nivel sustentabilidade		:: 51
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -824,7 +835,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 29760
 				nivel sustentabilidade		:: 62
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -840,7 +851,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 38080
 				nivel sustentabilidade		:: 68
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -856,7 +867,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 47360
 				nivel sustentabilidade		:: 74
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -872,7 +883,7 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 61200
 				nivel sustentabilidade		:: 85
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -888,7 +899,8 @@ empreendimento		::ferro_velho
 		requisitos		::
 				preco						:: 72800
 				nivel sustentabilidade		:: 91
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##__________________________________________________##
 ##Usina de Reciclagem, aumenta em: 
 ##+1 de limite das filas por nível
@@ -917,7 +929,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 			preco						:: 48
 			nivel sustentabilidade		::1
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -933,7 +945,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 			preco						:: 192
 			nivel sustentabilidade		:: 2
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -949,7 +961,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 			preco						:: 720
 			nivel sustentabilidade		:: 5
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -965,7 +977,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 3072
 				nivel sustentabilidade		:: 26
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -981,7 +993,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 7440
 				nivel sustentabilidade		:: 31
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -997,7 +1009,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 12384
 				nivel sustentabilidade		:: 43
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1013,7 +1025,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 19152
 				nivel sustentabilidade		:: 57
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1029,7 +1041,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 26496
 				nivel sustentabilidade		:: 69
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1045,7 +1057,7 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 35424
 				nivel sustentabilidade		:: 82
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1061,7 +1073,8 @@ empreendimento		::usina_reciclagem
 		requisitos		::
 				preco						:: 45600
 				nivel sustentabilidade		:: 95
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##___________________________________________##
 ##Prensa de Papel, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1090,7 +1103,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 			preco						:: 1000
 			nivel sustentabilidade		::12
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1106,7 +1119,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 			preco						:: 40000
 			nivel sustentabilidade		:: 20
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1122,7 +1135,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 			preco						:: 87000
 			nivel sustentabilidade		:: 29
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -1138,7 +1151,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 144000
 				nivel sustentabilidade		:: 36
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -1154,7 +1167,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 230000
 				nivel sustentabilidade		:: 46
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -1170,7 +1183,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 312000
 				nivel sustentabilidade		:: 52
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1186,7 +1199,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 420000
 				nivel sustentabilidade		:: 60
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1202,7 +1215,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 528000
 				nivel sustentabilidade		:: 66
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1218,7 +1231,7 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 702000
 				nivel sustentabilidade		:: 78
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1234,7 +1247,8 @@ empreendimento		::prensa_papel
 		requisitos		::
 				preco						:: 860000
 				nivel sustentabilidade		:: 86
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##____________________________________________##
 ##Oficina de brinquedos reciclados, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1263,7 +1277,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 			preco						:: 2000
 			nivel sustentabilidade		::14
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1279,7 +1293,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 			preco						:: 92000
 			nivel sustentabilidade		:: 23
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1295,7 +1309,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 			preco						:: 204000
 			nivel sustentabilidade		:: 34
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -1311,7 +1325,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 320000
 				nivel sustentabilidade		:: 40
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -1327,7 +1341,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 490000
 				nivel sustentabilidade		:: 49
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -1343,7 +1357,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 696000
 				nivel sustentabilidade		:: 58
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1359,7 +1373,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 938000
 				nivel sustentabilidade		:: 67
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1375,7 +1389,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 1216000
 				nivel sustentabilidade		:: 76
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1391,7 +1405,7 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 1476000
 				nivel sustentabilidade		:: 82
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1407,7 +1421,8 @@ empreendimento		::oficina_brinquedos
 		requisitos		::
 				preco						:: 1920000
 				nivel sustentabilidade		:: 96
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##_____________________________________________##
 ##Viveiro de garrafas pet, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1436,7 +1451,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 			preco						:: 3000
 			nivel sustentabilidade		::16
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1452,7 +1467,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 			preco						:: 126000
 			nivel sustentabilidade		:: 21
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1468,7 +1483,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 			preco						:: 297000
 			nivel sustentabilidade		:: 33
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -1484,7 +1499,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 468000
 				nivel sustentabilidade		:: 39
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -1500,7 +1515,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 675000
 				nivel sustentabilidade		:: 45
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -1516,7 +1531,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 972000
 				nivel sustentabilidade		:: 54
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1532,7 +1547,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 1365000
 				nivel sustentabilidade		:: 65
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1548,7 +1563,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 1704000
 				nivel sustentabilidade		:: 71
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1564,7 +1579,7 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 2349000
 				nivel sustentabilidade		:: 87
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1580,7 +1595,8 @@ empreendimento		::viveiro_garrafas
 		requisitos		::
 				preco						:: 2940000
 				nivel sustentabilidade		:: 98
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##___________________________________________##
 ##Triturador de resíduos sólidos, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1609,7 +1625,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 			preco						:: 5000
 			nivel sustentabilidade		::17
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1625,7 +1641,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 			preco						:: 260000
 			nivel sustentabilidade		:: 26
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1641,7 +1657,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 			preco						:: 510000
 			nivel sustentabilidade		:: 34
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -1657,7 +1673,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 820000
 				nivel sustentabilidade		:: 41
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -1673,7 +1689,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 1200000
 				nivel sustentabilidade		:: 48
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -1689,7 +1705,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 1590000
 				nivel sustentabilidade		:: 53
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1705,7 +1721,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 2205000
 				nivel sustentabilidade		:: 63
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1721,7 +1737,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 2800000
 				nivel sustentabilidade		:: 70
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1737,7 +1753,7 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 3945000
 				nivel sustentabilidade		:: 81
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1753,7 +1769,8 @@ empreendimento		::triturador_residuos
 		requisitos		::
 				preco						:: 4600000
 				nivel sustentabilidade		:: 92
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##______________________________________________##
 ##Galeria de arte em metal, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1782,7 +1799,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 			preco						:: 10000
 			nivel sustentabilidade		::18
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1798,7 +1815,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 			preco						:: 600000
 			nivel sustentabilidade		:: 30
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1814,7 +1831,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 			preco						:: 1110000
 			nivel sustentabilidade		:: 37
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -1830,7 +1847,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 1800000
 				nivel sustentabilidade		:: 45
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -1846,7 +1863,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 2500000
 				nivel sustentabilidade		:: 50
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -1862,7 +1879,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 3480000
 				nivel sustentabilidade		:: 58
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -1878,7 +1895,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 4620000
 				nivel sustentabilidade		:: 66
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -1894,7 +1911,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 5920000
 				nivel sustentabilidade		:: 74
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -1910,7 +1927,7 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 7200000
 				nivel sustentabilidade		:: 80
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -1926,7 +1943,8 @@ empreendimento		::galeria_arte
 		requisitos		::
 				preco						:: 9000000
 				nivel sustentabilidade		:: 90
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##____________________________________________##
 ##Indústria de reciclagem e processamento, aumenta em: 
 ##+1 de limite das filas por nível
@@ -1955,7 +1973,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 			preco						:: 100000
 			nivel sustentabilidade		::50
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -1971,7 +1989,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 			preco						::12000000
 			nivel sustentabilidade		:: 60
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -1987,7 +2005,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 			preco						:: 19500000
 			nivel sustentabilidade		:: 65
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -2003,7 +2021,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 28000000
 				nivel sustentabilidade		:: 70
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -2019,7 +2037,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 37500000
 				nivel sustentabilidade		:: 75
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -2035,7 +2053,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 48000000
 				nivel sustentabilidade		:: 80
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -2051,7 +2069,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 59500000
 				nivel sustentabilidade		:: 85
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -2067,7 +2085,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 72000000
 				nivel sustentabilidade		:: 90
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -2083,7 +2101,7 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 85500000
 				nivel sustentabilidade		:: 95
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -2099,7 +2117,8 @@ empreendimento		::industria_reciclagem
 		requisitos		::
 				preco						:: 99000000
 				nivel sustentabilidade		:: 99
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##_______________________________________________##
 ##Fábrica de vitrais, aumenta em: 
 ##+1 de limite das filas por nível
@@ -2128,7 +2147,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 			preco						:: 50000
 			nivel sustentabilidade		::15
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -2144,7 +2163,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 			preco						:: 2600000
 			nivel sustentabilidade		:: 26
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -2160,7 +2179,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 			preco						:: 5850000
 			nivel sustentabilidade		:: 39
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -2176,7 +2195,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 9400000
 				nivel sustentabilidade		:: 47
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -2192,7 +2211,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 13250000
 				nivel sustentabilidade		::53
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -2208,7 +2227,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 18000000
 				nivel sustentabilidade		:: 60
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -2224,7 +2243,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 25200000
 				nivel sustentabilidade		:: 72
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -2240,7 +2259,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 34800000
 				nivel sustentabilidade		:: 87
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -2256,7 +2275,7 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 41400000
 				nivel sustentabilidade		:: 92
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -2272,7 +2291,8 @@ empreendimento		::fabrica_vitrais
 		requisitos		::
 				preco						:: 49000000
 				nivel sustentabilidade		:: 98
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::
 ##_____________________________________________##
 ##Recicladora de alumínio, aumenta em: 
 ##+1 de limite das filas por nível
@@ -2302,7 +2322,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 			preco						:: 25000
 			nivel sustentabilidade		::13
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 2
 		atributos		::
@@ -2318,7 +2338,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 			preco						:: 1100000
 			nivel sustentabilidade		:: 22
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 3
 		atributos		::
@@ -2334,7 +2354,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 			preco						:: 2175000
 			nivel sustentabilidade		:: 29
-			empreendimentos construidos	:: ;
+			empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 4
 		atributos		::
@@ -2350,7 +2370,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 3800000
 				nivel sustentabilidade		:: 38
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 5
 		atributos		::
@@ -2366,7 +2386,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 5500000
 				nivel sustentabilidade		:: 44
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 6
 		atributos		::
@@ -2382,7 +2402,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 8400000
 				nivel sustentabilidade		:: 56
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 7
 		atributos		::
@@ -2398,7 +2418,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 10675000
 				nivel sustentabilidade		:: 61
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 8
 		atributos		::
@@ -2414,7 +2434,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 14000000
 				nivel sustentabilidade		:: 70
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 9
 		atributos		::
@@ -2430,7 +2450,7 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 17775000
 				nivel sustentabilidade		:: 79
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
 		##======================================
 		nivel empreendimento :: 10
 		atributos		::
@@ -2446,4 +2466,5 @@ empreendimento		::recicladora_aluminio
 		requisitos		::
 				preco						:: 22250000
 				nivel sustentabilidade		:: 89
-				empreendimentos construidos	:: ;
+				empreendimentos construidos	:: 
+fim empreendimento	::

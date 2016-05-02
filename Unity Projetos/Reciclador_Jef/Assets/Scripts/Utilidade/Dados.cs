@@ -37,10 +37,9 @@ public class Dados
 
 	static public string [] idsEmpreendimentoEasterEggs =
 	{
-		"easteregg_lampada", "easteregg_lata_tinta", "easteregg_madeira", "easteregg_fralda", 
-		"easteregg_borracha", "easteregg_seringa", "easteregg_pneu", "easteregg_isopor"
+		"easteregg_lampada", "easteregg_madeira", "easteregg_isopor", "easteregg_fralda",
+		"easteregg_lata_tinta", "easteregg_borracha", "easteregg_seringa", "easteregg_pneu"
 	};
-
 
 	static public int bonusResetXP = 5;
 	static public int bonusResetDinheiro = 5;
@@ -48,11 +47,18 @@ public class Dados
 
 	static public int nivelMaximo = 100;
 
-	static public int nivelMinimoEasterEggs = 2;
-	static public float chanceEasterEgg = 0.05f;
+	static public int nivelMinimoEasterEggs = 9;
+	static public float chanceEasterEgg = 0.1f;
 
 	static public int [] niveisEasterEggs = {
-		1, 2, 3, 4, 5, 6, 7, 8
+		9, 12, 23, 36, 49, 65, 84, 99
 	};
+
+	static public bool [] easterJaAberto = {
+		false, false, false, false,
+		false, false, false, false
+	};
+
+	// TODO: fazer salvar os easter eggs
 }
 
