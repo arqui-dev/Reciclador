@@ -37,8 +37,8 @@ public class Dados
 
 	static public string [] idsEmpreendimentoEasterEggs =
 	{
-		"easteregg_lampada", "easteregg_madeira", "easteregg_isopor", "easteregg_fralda",
-		"easteregg_lata_tinta", "easteregg_borracha", "easteregg_seringa", "easteregg_pneu"
+		"lampada", "madeira", "isopor", "fraldas",
+		"lata_tinta", "pato", "seringa", "pneu"
 	};
 
 	static public int bonusResetXP = 5;
