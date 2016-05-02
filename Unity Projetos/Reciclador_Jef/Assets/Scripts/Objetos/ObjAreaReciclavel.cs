@@ -154,6 +154,14 @@ public class ObjAreaReciclavel : MonoBehaviour
 		return true;
 	}
 
-
+	// TODO: JEF
+	public void Limpar()
+	{
+		foreach(ObjReciclavel reci in listaReciclando)
+		{
+			Destroy(reci.gameObject);
+		}
+		listaReciclando.Clear();
+	}
 }
 

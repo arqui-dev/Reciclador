@@ -21,6 +21,8 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	/// </summary>
 	void Awake()
 	{
+		if (_carregado) return;
+
 		Empreendimento [] listaEmpreendimentos = 	
 			GerenciadorCarregamento.CarregarEmpreendimentos();
 
@@ -42,6 +44,14 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Salvar();
+		}
+	}
+
+	static public void Reiniciar()
+	{
+		foreach(string s in dicionarioEmpreendimentos.Keys)
+		{
+			dicionarioEmpreendimentos[s].Reiniciar();
 		}
 	}
 

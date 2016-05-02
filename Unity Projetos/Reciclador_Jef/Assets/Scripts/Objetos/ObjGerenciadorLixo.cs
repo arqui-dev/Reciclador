@@ -538,6 +538,31 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		return false;
 	}
 
+	// TODO: JEF
+	static public void LimparMonstros()
+	{
+		foreach(ObjLixoMisturado lixo in instancia.listaLixos)
+		{
+			Destroy(lixo.gameObject);
+		}
+		instancia.listaLixos.Clear();
+	}
+
+	static public void LimparReciclaveis()
+	{
+		foreach(ObjReciclavel reci in instancia.listaReciclaveis)
+		{
+			Destroy(reci.gameObject);
+		}
+		instancia.listaReciclaveis.Clear();
+	}
+
+	static public void LimparCenario()
+	{
+		LimparMonstros();
+		LimparReciclaveis();
+	}
+
 	static public bool Remover(ObjLixoMisturado lixo)
 	{
 		if (instancia == null) return false;

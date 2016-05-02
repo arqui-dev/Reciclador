@@ -356,5 +356,82 @@ public class Jogador : MonoBehaviour
 			}
 		}
 	}
+
+	// Jef
+	static public void CheatNivel1()
+	{
+		_nivel = 1;
+		_xpAtual = 0;
+		_xpTotal = 0;
+		Inicializar();
+	}
+
+	static public void CheatNivelSomar(int quantidade)
+	{
+		_nivel += quantidade;
+		_xpAtual = 0;
+		AtualizarXPTotal();
+	}
+
+	static public void CheatDinheiroZero()
+	{
+		_pontos = 0;
+	}
+
+	static public void CheatDinheiroSomar(int quantidade)
+	{
+		Pontuar(quantidade);
+	}
+
+	static public void CheatReciclarZerar()
+	{
+		ObjAreaReciclavel.numMateriaisReciclados = 0;
+	}
+
+	static public void CheatReciclarMateriais(int quantidade)
+	{
+		ObjAreaReciclavel.numMateriaisReciclados += quantidade;
+	}
+
+	static public void Reset()
+	{
+		PlayerPrefs.DeleteAll();
+
+		ObjGerenciadorLixo.LimparCenario();
+
+		recicladoraPapel.Limpar();
+		recicladoraVidro.Limpar();
+		recicladoraMetal.Limpar();
+		recicladoraPlastico.Limpar();
+
+		GerenciadorEmpreendimentos.Reiniciar();
+
+		Destroy(GameObject.Find("_ControleSom"));
+		Destroy(GameObject.Find("_ControleMusica"));
+		Destroy(ObjEmpreendimentos.instancia.gameObject);
+		Destroy(instancia.gameObject);
+
+		carregouRecicladoras = false;
+		pegouCanvasReset = false;
+
+		canvasReset = null;
+		recicladoraPapel = null;
+		recicladoraVidro = null;
+		recicladoraMetal = null;
+		recicladoraPlastico = null;
+
+		_pontos				= 0;
+		_dano				= 1;
+		_quebrarArmadura	= 0;
+		_xpAtual			= 0;
+		_xpTotal			= 0;
+		_xpProximoNivel		= 1;
+		_nivel				= 1;
+
+		inicializado = false;
+
+		instancia = null;
+		Application.LoadLevel("Menu");
+	}
 }
 
