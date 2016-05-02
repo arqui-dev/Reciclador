@@ -169,6 +169,7 @@ public class ObjEmpreendimentos : MonoBehaviour
 		return tempo * (1 - velocidadeCriarLixo);
 	}
 
+	// TODO: ta de 0 a 1, mudar pra ser de zero a 100
 	static public int QuantidadeXPAlterada(int xp)
 	{
 		float fxp = (float) xp;
