@@ -2,7 +2,7 @@
 
 Coordenado por Marielle Rezende de Andrade e produzido pela parceria entre as equipes [Zugbahn](http://zugbahn.com/) e Arca Brasil.
 
-###O Reciclador é um jogo mobile disponível para Android, iOS e Windows Phone nas respectivas stores: [GooglePaly](https://play.google.com/store/apps/details?id=com.zugbahn.reciclador&ah=0pLaeSaaogRE_g2PMIkdGCxhVwI), [AppStore](https://itunes.apple.com/nz/app/o-reciclador/id1103375639?mt=8) e [Windows Store](https://www.microsoft.com/pt-br/store/games/o-reciclador/9nblggh4nmhx#app-details).
+###O Reciclador é um jogo mobile disponível para Android, iOS e Windows Phone nas respectivas stores: [GooglePlay](https://play.google.com/store/apps/details?id=com.zugbahn.reciclador&ah=0pLaeSaaogRE_g2PMIkdGCxhVwI), [AppStore](https://itunes.apple.com/nz/app/o-reciclador/id1103375639?mt=8) e [Windows Store](https://www.microsoft.com/pt-br/store/games/o-reciclador/9nblggh4nmhx#app-details).
 
 Uma versão para testes rápidos do aplicativo está disponível para web no seguinte link:
 
