@@ -6,7 +6,7 @@ public class Jogador : MonoBehaviour
 {
 	static public Jogador instancia = null;
 
-	public GameObject _canvasReset;
+	//public GameObject _canvasReset;
 
 	public int 	multiplicadorXPNivel	= 50;
 	public int 	multiplicadorXPGeral	= 100;
@@ -33,6 +33,9 @@ public class Jogador : MonoBehaviour
 
 	static GameObject canvasReset	= null;
 
+
+	public bool resetarDados = false;
+
 	static public void Salvar()
 	{
 		string divisor = "|";
@@ -50,15 +53,32 @@ public class Jogador : MonoBehaviour
 		saida += divisor + _resets;
 		saida += divisor + tempoDeJogo;
 
+		// JEF AQUI
+		for (int i = 0; i < Dados.easterJaAberto.Length; i++)
+		{
+			saida += divisor + Dados.easterJaAberto[i];
+		}
+
 		PlayerPrefs.SetString(Dados.stringSalvar, saida);
+
+		int tuto = 0;
+		if (tutorialCompleto) tuto = 1;
+		PlayerPrefs.SetInt(tutorialNome, tuto);
 
 		GerenciadorEmpreendimentos.Salvar();
 
 		Debug.Log ("Jogador Salvo");
 	}
 
+	static string tutorialNome = "Tutorial";
+
 	static void Carregar()
 	{
+		if (PlayerPrefs.HasKey(tutorialNome))
+		{
+			tutorialCompleto = PlayerPrefs.GetInt(tutorialNome) == 1;
+		}
+
 		if (PlayerPrefs.HasKey(Dados.stringSalvar) == false)
 			return;
 
@@ -76,7 +96,49 @@ public class Jogador : MonoBehaviour
 		_resets 			= int.Parse(lista[8]);
 		tempoDeJogo 		= ulong.Parse(lista[9]);
 
+		// JEF AQUI
+		if (lista.Length >= 10 + Dados.easterJaAberto.Length)
+		{
+			for (int i = 0; i < Dados.easterJaAberto.Length; i++)
+			{
+				Dados.easterJaAberto[i] = bool.Parse(lista[i + 10]);
+			}
+		}
+
 		Debug.Log ("Jogador Carregado\n"+entrada);
+	}
+
+	static public int 	EasterEggMaximo()
+	{
+		if (_nivel < Dados.nivelMinimoEasterEggs || 
+		    ObjGerenciadorLixo.QuantidadeEasterEggs() < 1)
+		{
+			return -1;
+		}
+
+		for (int i = 1; i < Dados.niveisEasterEggs.Length; i++)
+		{
+			if (_nivel < Dados.niveisEasterEggs[i])
+			{
+				return Dados.niveisEasterEggs[i-1];
+			}
+		}
+
+		return Dados.niveisEasterEggs[Dados.niveisEasterEggs.Length - 1];
+	}
+
+	// JEF AQUI
+	static void VerificarEasterEgg()
+	{
+		for (int i = 0; i < Dados.niveisEasterEggs.Length; i++)
+		{
+			if (Dados.easterJaAberto[i] == false &&
+				_nivel >= Dados.niveisEasterEggs[i])
+			{
+				Dados.easterJaAberto[i] = true;
+				ObjGerenciadorLixo.CriarReciclavelEasterEgg(i + 1, false);
+			}
+		}
 	}
 
 	static public int	dano
@@ -133,6 +195,7 @@ public class Jogador : MonoBehaviour
 
 	static public int XPAjeitada(int xp)
 	{
+		if (instancia == null) return xp * 100;
 		return xp * instancia.multiplicadorXPGeral;
 	}
 
@@ -153,6 +216,10 @@ public class Jogador : MonoBehaviour
 		{
 			_xpAtual -= _xpProximoNivel;
 			_nivel++;
+
+
+			// JEF AQUI
+			VerificarEasterEgg();
 
 			AtualizarXPProximoNivel();
 			subiuDeNivel = true;
@@ -192,13 +259,18 @@ public class Jogador : MonoBehaviour
 
 	static int CalcularXPProximoNivel(int pnivel)
 	{
-		return pnivel * XPAjeitada(instancia.multiplicadorXPNivel);
+		if (instancia)
+			return pnivel * XPAjeitada(instancia.multiplicadorXPNivel);
+		return pnivel * XPAjeitada(50);
 	}
 
 	static void AtualizarXPTotal()
 	{
+		int mu = 50;
+		if (instancia != null)
+			mu = instancia.multiplicadorXPNivel;
 		int valorBase		= (_nivel * (_nivel - 1)) / 2;
-		int multiplicador	= XPAjeitada(instancia.multiplicadorXPNivel);
+		int multiplicador	= XPAjeitada(mu);
 
 		_xpTotal = valorBase * multiplicador + _xpAtual;
 	}
@@ -234,11 +306,18 @@ public class Jogador : MonoBehaviour
 		_nivel = nivelInicialTestes;
 #endif
 //*/
+		#if UNITY_EDITOR
+		if (resetarDados)
+		{
+			PlayerPrefs.DeleteAll();
+		}
+		#endif
+
 		Debug.Log("Teste amor");
 		if (instancia == null)
 		{
 			instancia	= this;
-			canvasReset = _canvasReset;
+			//canvasReset = _canvasReset;
 		}
 		if (inicializado == false)
 		{
@@ -246,6 +325,15 @@ public class Jogador : MonoBehaviour
 			Carregar();
 		}
 		proximoSave = Time.time + tempoSalvar;
+
+		/*
+		_pontos = dinheiroInicialTestes;
+		_nivel = nivelInicialTestes;
+		//*/
+
+		/*
+		PlayerPrefs.DeleteAll();
+		//*/
 	}
 
 	static public ObjAreaReciclavel recicladoraPapel = null;
@@ -254,27 +342,147 @@ public class Jogador : MonoBehaviour
 	static public ObjAreaReciclavel recicladoraPlastico = null;
 
 	static bool carregouRecicladoras = false;
+	public static bool pegouCanvasReset = false;
 
 	void Update()
 	{
-		if (Application.loadedLevelName == "Jogo" && Time.time > proximoSave)
+		if (Application.loadedLevelName == "Jogo")
 		{
-			proximoSave = Time.time + tempoSalvar;
-			Salvar();
-			ObjGerenciadorLixo.instancia.Salvar();
-			recicladoraPapel.Salvar();
-			recicladoraVidro.Salvar();
-			recicladoraMetal.Salvar();
-			recicladoraPlastico.Salvar();
-		}
+			UI_Achievements.VerificarUnlockEstatico();
 
-		if (carregouRecicladoras == false && Application.loadedLevelName == "Jogo")
+			if (Time.time > proximoSave)
+			{
+				proximoSave = Time.time + tempoSalvar;
+				Salvar();
+				ObjGerenciadorLixo.instancia.Salvar();
+				recicladoraPapel.Salvar();
+				recicladoraVidro.Salvar();
+				recicladoraMetal.Salvar();
+				recicladoraPlastico.Salvar();
+				UI_Achievements.SalvarEstatico();
+			}
+
+			if (carregouRecicladoras == false)
+			{
+				recicladoraPapel.Carregar();
+				recicladoraVidro.Carregar();
+				recicladoraMetal.Carregar();
+				recicladoraPlastico.Carregar();
+				carregouRecicladoras = true;
+			}
+
+			if (pegouCanvasReset == false)
+			{
+				canvasReset = GameObject.Find("CanvasReset").gameObject;
+				canvasReset.SetActive(false);
+				pegouCanvasReset = true;
+			}
+
+			VerificarReset();
+		}
+	}
+
+	// Jef
+	static public void CheatNivel1()
+	{
+		_nivel = 1;
+		_xpAtual = 0;
+		_xpTotal = 0;
+		Inicializar();
+	}
+
+	static public void CheatNivelSomar(int quantidade)
+	{
+		_nivel += quantidade;
+		_xpAtual = 0;
+		AtualizarXPTotal();
+	}
+
+	static public void CheatDinheiroZero()
+	{
+		_pontos = 0;
+	}
+
+	static public void CheatDinheiroSomar(int quantidade)
+	{
+		Pontuar(quantidade);
+	}
+
+	static public void CheatReciclarZerar()
+	{
+		ObjAreaReciclavel.numMateriaisReciclados = 0;
+	}
+
+	static public void CheatReciclarMateriais(int quantidade)
+	{
+		ObjAreaReciclavel.numMateriaisReciclados += quantidade;
+	}
+
+	static public void Reset()
+	{
+		PlayerPrefs.DeleteAll();
+
+		ObjGerenciadorLixo.LimparCenario();
+
+		recicladoraPapel.Limpar();
+		recicladoraVidro.Limpar();
+		recicladoraMetal.Limpar();
+		recicladoraPlastico.Limpar();
+
+		GerenciadorEmpreendimentos.Reiniciar();
+
+		Destroy(GameObject.Find("_ControleSom"));
+		Destroy(GameObject.Find("_ControleMusica"));
+		Destroy(ObjEmpreendimentos.instancia.gameObject);
+		Destroy(instancia.gameObject);
+
+		carregouRecicladoras = false;
+		pegouCanvasReset = false;
+
+		canvasReset = null;
+		recicladoraPapel = null;
+		recicladoraVidro = null;
+		recicladoraMetal = null;
+		recicladoraPlastico = null;
+
+		_pontos				= 0;
+		_dano				= 1;
+		_quebrarArmadura	= 0;
+		_xpAtual			= 0;
+		_xpTotal			= 0;
+		_xpProximoNivel		= 1;
+		_nivel				= 1;
+
+		inicializado = false;
+
+		instancia = null;
+		Application.LoadLevel("Menu");
+	}
+
+	public static bool tutorialRodando = true;
+	public static bool tutorialCompleto = false;
+
+	static public void RodarTutorial()
+	{
+		tutorialRodando = true;
+
+		LimparCenario();
+
+		ObjGerenciadorLixo.instancia = null;
+
+		Application.LoadLevel("Tutorial");
+	}
+
+	static public void LimparCenario()
+	{
+		ObjGerenciadorLixo.LimparCenario();
+
+		if (recicladoraMetal)
 		{
-			recicladoraPapel.Carregar();
-			recicladoraVidro.Carregar();
-			recicladoraMetal.Carregar();
-			recicladoraPlastico.Carregar();
-			carregouRecicladoras = true;
+			recicladoraPapel.Limpar();
+			recicladoraVidro.Limpar();
+			recicladoraMetal.Limpar();
+			recicladoraPlastico.Limpar();
 		}
 	}
 }

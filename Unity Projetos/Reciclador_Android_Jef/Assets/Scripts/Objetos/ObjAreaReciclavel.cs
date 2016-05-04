@@ -19,6 +19,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 
 	public int 		xpAoMandarReciclar		= 2;
 
+	public static int numMateriaisReciclados = 0;
+
 	[HideInInspector]
 	public Vector2 area;
 	
@@ -29,7 +31,14 @@ public class ObjAreaReciclavel : MonoBehaviour
 	float proximoTempoReciclagem = 0;
 	float ultimaDuracao = 0;
 
-
+	public void EncherLista()
+	{
+		int qtd = tamanhoListaReciclagem - listaReciclando.Count;
+		for (int i = 0; i < qtd; i++)
+		{
+			listaReciclando.Add(new ObjReciclavel());
+		}
+	}
 
 	public void Salvar()
 	{
@@ -79,6 +88,11 @@ public class ObjAreaReciclavel : MonoBehaviour
 		imgBarraCarregamento.fillAmount = 0;
 		if (listaReciclando.Count > 0)
 		{
+			if (Jogador.tutorialRodando && Tutorial.pararReciclagem)
+			{
+				proximoTempoReciclagem = 
+					Time.time + DuracaoReciclagemAtual();
+			}
 			if (Time.time > proximoTempoReciclagem)
 			{
 				Pronto();
@@ -94,6 +108,10 @@ public class ObjAreaReciclavel : MonoBehaviour
 					(proximoTempoReciclagem - Time.time) / 
 						ultimaDuracao;
 			}
+			if (Jogador.tutorialRodando && Tutorial.reciclarInstantaneo)
+			{
+				Pronto();
+			}
 		}
 		txtLimiteListaReciclagem.text = "" +
 			listaReciclando.Count + "/" + TamanhoLista();
@@ -107,19 +125,29 @@ public class ObjAreaReciclavel : MonoBehaviour
 		return ultimaDuracao;
 	}
 
+	public void ReciclarUm()
+	{
+		listaReciclando.RemoveAt(0);
+		Pronto();
+	}
+
 	void Pronto()
 	{
-		long pontos = 
-			ObjEmpreendimentos.
-				ValorVendaAjeitado(pontuacaoBasica, (int) tipo);
+		if (!Jogador.tutorialRodando ||
+			(Jogador.tutorialRodando && !Tutorial.reciclarInstantaneo))
+		{
+			long pontos = 
+				ObjEmpreendimentos.
+					ValorVendaAjeitado(pontuacaoBasica, (int) tipo);
 
-		Jogador.Pontuar(pontos);
+			Jogador.Pontuar(pontos);
 
-		Som.Tocar(Som.Tipo.CompletarReciclagem);
+			Som.Tocar(Som.Tipo.CompletarReciclagem);
 
-		Instantiate<GameObject>(objPontuacao).
-			GetComponent<ObjTextoFlutuante>().Criar(
-				"$"+pontos, transform.position);
+			Instantiate<GameObject>(objPontuacao).
+				GetComponent<ObjTextoFlutuante>().Criar(
+					"$"+pontos, transform.position);
+		}
 
 		listaReciclando.RemoveAt(0);
 	}
@@ -147,9 +175,20 @@ public class ObjAreaReciclavel : MonoBehaviour
 		{
 			proximoTempoReciclagem = Time.time + DuracaoReciclagemAtual();
 		}
+
+		numMateriaisReciclados++;
 		return true;
 	}
 
-
+	// TODO: JEF
+	public void Limpar()
+	{
+		foreach(ObjReciclavel reci in listaReciclando)
+		{
+			if (reci)
+				Destroy(reci.gameObject);
+		}
+		listaReciclando.Clear();
+	}
 }
 

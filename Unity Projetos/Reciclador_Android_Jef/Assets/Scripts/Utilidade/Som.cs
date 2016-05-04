@@ -47,7 +47,8 @@ public class Som : MonoBehaviour
 
 	public static void Tocar(int clip)
 	{
-		if (clip >= 0 && clip < sons.Length && som && Dados.somLigado)
+		if (sons != null && clip >= 0 && clip < sons.Length && 
+			som != null && Dados.somLigado)
 		{
 			som.PlayOneShot(sons[clip]);
 		}

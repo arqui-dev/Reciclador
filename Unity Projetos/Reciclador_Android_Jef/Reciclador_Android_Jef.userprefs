@@ -1,0 +1,14 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Utilidade\Tutorial.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Utilidade\Jogador.cs" Line="311" Column="4" />
+      <File FileName="Assets\Scripts\Objetos\ObjGerenciadorLixo.cs" Line="676" Column="1" />
+      <File FileName="Assets\Scripts\Utilidade\Tutorial.cs" Line="437" Column="40" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

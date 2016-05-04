@@ -21,6 +21,8 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	/// </summary>
 	void Awake()
 	{
+		if (_carregado) return;
+
 		Empreendimento [] listaEmpreendimentos = 	
 			GerenciadorCarregamento.CarregarEmpreendimentos();
 
@@ -42,6 +44,14 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Salvar();
+		}
+	}
+
+	static public void Reiniciar()
+	{
+		foreach(string s in dicionarioEmpreendimentos.Keys)
+		{
+			dicionarioEmpreendimentos[s].Reiniciar();
 		}
 	}
 
@@ -69,6 +79,24 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	public void Comprar()
 	{
 		UI_Empreendimento.ComprarEstatico();
+	}
+
+	/// <summary>
+	/// Verifica se o jogador possui o empreendimento relacionado ao easter egg
+	/// </summary>
+	/// <returns><c>true</c>, if empreendimento tiver nivel 1 ou mais, <c>false</c> otherwise.</returns>
+	/// <param name="id">Identificador do empreendimento</param>
+	static public bool VerificarEmpreendimentoEasterEgg(string id)
+	{
+		if (dicionarioEmpreendimentos.ContainsKey(id))
+		{
+			Debug.Log ("Nivel empreendimento "+id+": "+dicionarioEmpreendimentos[id].nivel);
+			if (dicionarioEmpreendimentos[id].nivel > 0)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 }
 

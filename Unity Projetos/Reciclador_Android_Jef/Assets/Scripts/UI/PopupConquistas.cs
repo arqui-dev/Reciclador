@@ -29,5 +29,10 @@ public class PopupConquistas : MonoBehaviour
 			Som.Tocar(Som.Tipo.Navegar);
 		}
 	}
+
+	void Awake()
+	{
+		//gameObject.SetActive(false);
+	}
 }
 

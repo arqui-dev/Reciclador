@@ -13,6 +13,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 	public GameObject		objXPPositivo;
 	public GameObject		objXPNegativo;
 
+	public GameObject []	objEasterEggs;
+
 	public GameObject		objDanoJogador;
 
 	public float	tempoJuntarLixos		= 60;
@@ -63,7 +65,14 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		
 		foreach(ObjReciclavel reciclavel in listaReciclaveis)
 		{
-			saida += divisor + ((int)reciclavel.tipo);
+			if (reciclavel.tipo != Reciclavel.Tipo.EasterEgg)
+			{
+				saida += divisor + ((int)reciclavel.tipo);
+			}
+			else
+			{
+				saida += divisor + (100 + reciclavel.TipoEaster());
+			}
 		}
 
 		PlayerPrefs.SetString(nomeArquivoCenario, saida);
@@ -90,7 +99,15 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		{
 			int nivel = int.Parse(lista[indiceGeral]);
 			indiceGeral++;
-			CriarLixo(nivel, true);
+
+			if (nivel < 100)
+			{
+				CriarLixo(nivel, true);
+			}
+			else
+			{
+				CriarReciclavelEasterEgg(nivel - 100);
+			}
 		}
 
 		indiceGeral ++;
@@ -129,8 +146,11 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		}
 		else
 		{
-			CriarLixo();
-			CriarLixo();
+			if (!Jogador.tutorialRodando)
+			{
+				CriarLixo();
+				CriarLixo();
+			}
 		}
 	}
 
@@ -143,9 +163,17 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	void Update()
 	{
-		VerificarAproximarLixos();
-		VerificarTempoJuntarLixo();
-		VerificarTempoCriarLixo();
+		if (!Jogador.tutorialRodando)
+		{
+			VerificarAproximarLixos();
+			VerificarTempoJuntarLixo();
+			VerificarTempoCriarLixo();
+		}
+		else if (Jogador.tutorialRodando && Tutorial.juntando)
+		{
+			VerificarAproximarLixos();
+			VerificarTempoJuntarLixo();
+		}
 	}
 
 	void VerificarAproximarLixos()
@@ -211,15 +239,30 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	public static int ultimoNivelCriadoLixo = 1;
 	static Vector2 posicaoNovoLixo = Vector2.zero;
-	static public void CriarLixoEstatico(int nivel, Vector2 pos)
+	static public void CriarLixoEstatico(int nivel, Vector2 pos, bool aleatorio = false)
 	{
 		posicaoNovoLixo = pos;
-		instancia.CriarLixo(nivel);
+
+		if (!aleatorio)
+		{
+			instancia.CriarLixo(nivel);
+		}
 
 		float x = Random.Range(0f,1f) * instancia.area.width + instancia.area.x;
 		float y = Random.Range(0f,1f) * instancia.area.height + instancia.area.y;
 		
 		posicaoNovoLixo = new Vector2(x,y);
+
+		if (aleatorio)
+		{
+			instancia.CriarLixo(nivel);
+		}
+	}
+
+	static public void AtribuirProximaJuncao(float tempo)
+	{
+		instancia.proximoTempoJuntarLixo = tempo + Time.time;
+		instancia.podeJuntarLixo = true;
 	}
 
 	void CriarLixo(int novoNivel = -1, bool aleatorioForcado = false)
@@ -308,11 +351,17 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		//Adicionar(novoLixo.GetComponent<ObjLixoMisturado>());
 	}
 
+	static public void JuntarEstatico()
+	{
+		instancia.JuntarLixo();
+	}
+
 	void JuntarLixo()
 	{
 		PararJuncao();
 		if (listaLixos.Count > 1)
 		{
+			Debug.Log("Os baguio é doido");
 			// -1: aleatorio; 0: menor; 1: maior;
 			int tipoDeBusca = -1;
 			if (Random.value < 0.6f)
@@ -494,6 +543,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 		lixoPuxando.Juntar(lixoSendoPuxado);
 		PararJuncao();
+
+		Tutorial.juntando = false;
 	}
 
 	static public bool Adicionar(ObjLixoMisturado lixo)
@@ -519,6 +570,31 @@ public class ObjGerenciadorLixo : MonoBehaviour
 			}
 		}
 		return false;
+	}
+
+	// TODO: JEF
+	static public void LimparMonstros()
+	{
+		foreach(ObjLixoMisturado lixo in instancia.listaLixos)
+		{
+			Destroy(lixo.gameObject);
+		}
+		instancia.listaLixos.Clear();
+	}
+
+	static public void LimparReciclaveis()
+	{
+		foreach(ObjReciclavel reci in instancia.listaReciclaveis)
+		{
+			Destroy(reci.gameObject);
+		}
+		instancia.listaReciclaveis.Clear();
+	}
+
+	static public void LimparCenario()
+	{
+		LimparMonstros();
+		LimparReciclaveis();
 	}
 
 	static public bool Remover(ObjLixoMisturado lixo)
@@ -655,6 +731,13 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					{
 						ManterNaArea(reciclavel.transform, area);
 						Som.Tocar(Som.Tipo.ErrarLixeira);
+
+						/*
+						if (Jogador.tutorialRodando && Tutorial.esperarTentarJogarNaLixeira)
+						{
+							Tutorial.esperarTentarJogarNaLixeira = false;
+						}
+						//*/
 					}
 				}
 				else
@@ -663,6 +746,13 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					//Som.Tocar(Som.Tipo.ErrarLixeira);
 				}
 			}
+			/*
+			else
+			{
+				ManterNaArea(reciclavel.transform, area);
+				Debug.Log("Nome: " + instancia.gameObject.name + " - Tipo diferente");
+			}
+			*/
 		}
 	}
 
@@ -713,8 +803,67 @@ public class ObjGerenciadorLixo : MonoBehaviour
 			reciclavel.GetComponent<RectTransform>().sizeDelta);
 	}
 
+	static public int QuantidadeEasterEggs()
+	{
+		if (instancia == null)
+		{
+			return 0;
+		}
+
+		return instancia.objEasterEggs.Length;
+	}
+
+	// JEF
+	static public void CriarReciclavelEasterEgg(int easteregg = -1, bool aleatorio = true)
+	{
+		if (easteregg > Jogador.EasterEggMaximo())
+		{
+			easteregg = Jogador.EasterEggMaximo();
+		}
+
+		if (easteregg >= instancia.objEasterEggs.Length)
+		{
+			easteregg = instancia.objEasterEggs.Length;
+		}
+
+		int i = Random.Range(0, easteregg);
+		if (aleatorio == false)
+		{
+			i = easteregg - 1;
+		}
+
+		if (i < 0)
+		{
+			i = 0;
+		}
+
+		GameObject reciclavel	= Instantiate<GameObject>(
+			instancia.objEasterEggs[i]);
+
+		reciclavel.GetComponent<ObjReciclavel>().EasterEgg(i + 1);
+		
+		reciclavel.transform.SetParent(instancia.transform, false);
+		
+		float x = Random.Range(0f,1f) * instancia.area.width +
+			instancia.area.x;
+		float y = Random.Range(0f,1f) * instancia.area.height +
+			instancia.area.y;
+		
+		reciclavel.transform.localPosition = new Vector2(x,y);
+
+		ManterNaArea(
+			reciclavel.transform,
+			reciclavel.GetComponent<RectTransform>().sizeDelta);
+	}
+
 	static public void CriarReciclavel(int tipo)
 	{
+		if (tipo > 3)
+		{
+			CriarReciclavelEasterEgg();
+			return;
+		}
+
 		GameObject reciclavel	= Instantiate<GameObject>(
 			instancia.objReciclaveis[tipo]);
 		

@@ -35,11 +35,30 @@ public class Dados
 	static public string textoDescricao_empreendimentosNecessarios = "Empreendimentos Necessários";
 	static public string textoDescricao_descricao = "Descrição";
 
+	static public string [] idsEmpreendimentoEasterEggs =
+	{
+		"lampada", "madeira", "isopor", "fraldas",
+		"lata_tinta", "pato", "seringa", "pneu"
+	};
 
 	static public int bonusResetXP = 5;
 	static public int bonusResetDinheiro = 5;
 	static public int bonusResetDano = 2;
 
 	static public int nivelMaximo = 100;
+
+	static public int nivelMinimoEasterEggs = 9;
+	static public float chanceEasterEgg = 0.1f;
+
+	static public int [] niveisEasterEggs = {
+		9, 12, 23, 36, 49, 65, 84, 99
+	};
+
+	static public bool [] easterJaAberto = {
+		false, false, false, false,
+		false, false, false, false
+	};
+
+	// TODO: fazer salvar os easter eggs
 }
 

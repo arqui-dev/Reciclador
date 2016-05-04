@@ -9,7 +9,14 @@ public class UI_Menu : MonoBehaviour
 	public void Jogar()
 	{
 		Som.Tocar(Som.Tipo.Navegar);
-		Application.LoadLevel("Jogo");
+		if (Jogador.tutorialCompleto == true)
+		{
+			Application.LoadLevel("Jogo");
+		}
+		else
+		{
+			Application.LoadLevel("Tutorial");
+		}
 	}
 
 	public void Config()

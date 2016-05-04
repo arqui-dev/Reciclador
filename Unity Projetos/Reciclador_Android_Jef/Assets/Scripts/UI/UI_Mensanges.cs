@@ -7,7 +7,9 @@ public class UI_Mensanges : MonoBehaviour
 {
 	static UI_Mensanges instancia = null;
 
-	public float 	duracaoMensagem	= 5;
+	public float 	_duracaoMensagem	= 5;
+
+	float duracaoMensagem = 5;
 
 	Text txtMensagem;
 
@@ -21,6 +23,7 @@ public class UI_Mensanges : MonoBehaviour
 	{
 		instancia	= this;
 		txtMensagem = GetComponent<Text>();
+		duracaoMensagem = _duracaoMensagem;
 	}
 
 	void Update()
@@ -64,13 +67,23 @@ public class UI_Mensanges : MonoBehaviour
 		txtMensagem.text = mensagemAtual;
 	}
 
-	static public bool AdicionarMensagem(string mensagem)
+	static public bool AdicionarMensagem(string mensagem, float duracao = -1)
 	{
+		if (Jogador.tutorialRodando) return false;
 		lock(instancia.listaMensagens)
 		{
 			try 
 			{
+				if (duracao > 0)
+				{
+					instancia.duracaoMensagem = duracao;
+				}
+				else
+				{
+					instancia.duracaoMensagem = instancia._duracaoMensagem;
+				}
 				instancia.listaMensagens.Add(mensagem);
+				Debug.Log ("Mensagem adicionada: '"+mensagem+"'");
 				return true;
 			}
 			catch(UnityException e)
