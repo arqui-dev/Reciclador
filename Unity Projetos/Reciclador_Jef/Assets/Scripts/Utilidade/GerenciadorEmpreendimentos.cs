@@ -16,6 +16,9 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	/// <summary> 	/// Usado para mostrar os empreendimentos apenas quando estiverem carregados.	/// </summary>
 	public static bool carregado { get { return _carregado; } }
 
+
+	static public Empreendimento [] listaEmpreendimentosEstatica = null;
+
 	/// <summary>
 	/// Carrega a lista dos empreendimentos e a coloca em um dicionario
 	/// </summary>
@@ -23,10 +26,16 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	{
 		if (_carregado) return;
 
-		Empreendimento [] listaEmpreendimentos = 	
-			GerenciadorCarregamento.CarregarEmpreendimentos();
+		//Empreendimento [] listaEmpreendimentos = GerenciadorCarregamento.CarregarEmpreendimentos();
+		//Empreendimento [] listaEmpreendimentos = Jogador.lista
 
-		foreach(Empreendimento e in listaEmpreendimentos)
+		if (listaEmpreendimentosEstatica == null)
+		{
+			listaEmpreendimentosEstatica = GerenciadorCarregamento.CarregarEmpreendimentos();
+		}
+
+		//foreach(Empreendimento e in listaEmpreendimentos)
+		foreach(Empreendimento e in listaEmpreendimentosEstatica)
 		{
 			e.Reiniciar();
 			e.Carregar();
@@ -34,6 +43,7 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 		}
 
 		_carregado = true;
+
 	}
 
 	/// <summary>

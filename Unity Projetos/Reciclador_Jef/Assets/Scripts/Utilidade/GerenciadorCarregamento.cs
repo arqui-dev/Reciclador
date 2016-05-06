@@ -44,6 +44,10 @@ public class GerenciadorCarregamento : MonoBehaviour
 	static string parseEmpreendimentosConstruidos = "empreendimentosconstruidos";
 	static string parseFimEmpreendimento = "fimempreendimento";
 
+	static public int porcentagemAtual = 0;
+	static public int porcentagemMaxima = 1;
+	static public int porcentagemMinima = 0;
+
 	/// <summary>
 	/// Carrega todos os empreendimentos de um arquivo de texto.
 	/// </summary>
@@ -53,6 +57,7 @@ public class GerenciadorCarregamento : MonoBehaviour
 	{
 		string textoBruto;
 
+		/*
 		switch(tipo)
 		{
 		default:
@@ -60,14 +65,26 @@ public class GerenciadorCarregamento : MonoBehaviour
 				caminhoEmpreendimentos);
 			break;
 		}
+		//*/
+
+		textoBruto = ArquivoStrings.empreendimentos;
 
 		string [] linhas = RemoverLinhasComentarios(textoBruto);
 
 		List<Empreendimento> empreendimentos = new List<Empreendimento>();
 
+		porcentagemMaxima = linhas.Length;
+
 		int i = 0;
 		while(i < linhas.Length)
 		{
+			if (CarregamentoAssincrono.pronto == false)
+			{
+				porcentagemMinima = i;
+			}
+			porcentagemAtual = i;
+
+			Debug.Log("Max: "+porcentagemMaxima + ", Min: "+porcentagemMinima+", Atual: "+porcentagemAtual);
 			if (linhas[i].StartsWith(parseEmpreendimento))
 			{
 				string identificador = linhas[i].Split(

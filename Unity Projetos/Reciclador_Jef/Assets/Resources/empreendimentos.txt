@@ -30,179 +30,6 @@
 
 ##iníco do arquivo
 
-## Início dos easter eggs
-##[9, 12, 23, 36, 49, 65, 84, 99]
-##derrota o tipo de lixo específico
-##preco numero do empreendimento * nível de sustentabilidade para liberar * 100
-##Valor de $ por derrotar lixo nível de sustentabilidade para liberar
-##1
-empreendimento		::lampada
-	nome			::Máquina descaracterização de lâmpadas
-	descricao		::A descontaminação das lâmpadas é feita no local da coleta, com uma máquina portátil, e após isso ela é triturada. filtrada e aspirada, garantindo a destinação correta dos passivos ambientais.
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						:: 900
-			nivel sustentabilidade		::9
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##2
-empreendimento		::madeira
-	nome			::Máquina de trituração de madeira
-	descricao		::A madeira é triturada e acaba por ser enviada ao reuso na fabricação de placas aglomeradas que são utilizadas por indústrias de móveis. Parte por ser encaminhada ao aquecimento dos fornos e caldeiras, bem como no fabrico de papéis e celulose. 
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						:: 4800
-			nivel sustentabilidade		::12
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##3
-empreendimento		::isopor
-	nome			::Usina de reciclagem de isopor
-	descricao		::Após a coleta seletiva o isopor passa pela máquina de reciclagem, e é compactado em fardos, que passam por um segundo processo de reciclagem, onde o isopor é triturado, derretido, granulado e volta a ser matéria-prima de novos produtos.
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						::20700
-			nivel sustentabilidade		::23
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##4
-empreendimento		::fraldas
-	nome			::Máquina de reciclagem de fraldas
-	descricao		:: Após a coleta de objetos como fraldas e absorventes, a máquina esteriliza seus componentes e então os transforma em novos produtos, como madeira plástica, telhas e materiais de absorção.
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						::86400
-			nivel sustentabilidade		::36
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##5
-empreendimento		::lata_tinta
-	nome			::Usina de Blendagem
-	descricao		::Na blendagem, o resíduo é totalmente descaracterizado e misturado junto a outros resíduos que recebemos de forma a produzir uma mistura líquido ou sólido com alto poder calorífero (blend).
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						::220500
-			nivel sustentabilidade		::49
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##6
-empreendimento		::pato
-	nome			::Triturador de borracha
-	descricao		::O processo de reciclagem de borrachas é realizado através do triturador de pneu e borracha e tem se tornado cada vez mais importante e lucrativo no mundo.
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						::585000
-			nivel sustentabilidade		::65
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##7
-empreendimento		::seringa
-	nome			::Usina de Incineração
-	descricao		::Lixo hospitalar não pode ser reciclado, porém, existem tratamentos melhores que o descarte, como a incineração. Durante a incineração não destruídos além do objeto, todos os microorganismos que podem existir nele. 
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						::1411200
-			nivel sustentabilidade		::84
-			empreendimentos construidos	:: 
-fim empreendimento	::
-##8
-empreendimento		::pneu
-	nome			::Fábrica de móveis de pneu
-	descricao		::Os pneus pode ser reutilizados entre muitas outras coisas, em tiras usadas em móveis estofados, o que além de preservar o meio ambiente ajuda na geração de centenas de empregos.
-	nivel maximo	::1
-	nivel empreendimento :: 1
-		atributos		::
-			velocidade reciclagem		::0,0,0,0
-			valor venda					::0,0,0,0
-			experiencia					::5
-			velocidade aparecer lixo	::1
-			limite fila					::0,0,0,0
-			lixo minimo					::0
-			dinheiro gerado				::0
-			separacao automatica		::0
-			poder jogador				::0
-		requisitos		::
-			preco						:: 3088800
-			nivel sustentabilidade		::99
-			empreendimentos construidos	:: 
-fim empreendimento	::
 ##_______________________________________________##			
 ## empreendimentos:
 ##================================
@@ -2467,4 +2294,179 @@ empreendimento		::recicladora_aluminio
 				preco						:: 22250000
 				nivel sustentabilidade		:: 89
 				empreendimentos construidos	:: 
+fim empreendimento	::
+## Fim dos empreendimentos normais
+
+## Início dos easter eggs
+##[9, 12, 23, 36, 49, 65, 84, 99]
+##derrota o tipo de lixo específico
+##preco numero do empreendimento * nível de sustentabilidade para liberar * 100
+##Valor de $ por derrotar lixo nível de sustentabilidade para liberar
+##1
+empreendimento		::lampada
+	nome			::Máquina descaracterização de lâmpadas
+	descricao		::A descontaminação das lâmpadas é feita no local da coleta, com uma máquina portátil, e após isso ela é triturada. filtrada e aspirada, garantindo a destinação correta dos passivos ambientais.
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 900
+			nivel sustentabilidade		::9
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##2
+empreendimento		::madeira
+	nome			::Máquina de trituração de madeira
+	descricao		::A madeira é triturada e acaba por ser enviada ao reuso na fabricação de placas aglomeradas que são utilizadas por indústrias de móveis. Parte por ser encaminhada ao aquecimento dos fornos e caldeiras, bem como no fabrico de papéis e celulose. 
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 4800
+			nivel sustentabilidade		::12
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##3
+empreendimento		::isopor
+	nome			::Usina de reciclagem de isopor
+	descricao		::Após a coleta seletiva o isopor passa pela máquina de reciclagem, e é compactado em fardos, que passam por um segundo processo de reciclagem, onde o isopor é triturado, derretido, granulado e volta a ser matéria-prima de novos produtos.
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						::20700
+			nivel sustentabilidade		::23
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##4
+empreendimento		::fraldas
+	nome			::Máquina de reciclagem de fraldas
+	descricao		:: Após a coleta de objetos como fraldas e absorventes, a máquina esteriliza seus componentes e então os transforma em novos produtos, como madeira plástica, telhas e materiais de absorção.
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						::86400
+			nivel sustentabilidade		::36
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##5
+empreendimento		::lata_tinta
+	nome			::Usina de Blendagem
+	descricao		::Na blendagem, o resíduo é totalmente descaracterizado e misturado junto a outros resíduos que recebemos de forma a produzir uma mistura líquido ou sólido com alto poder calorífero (blend).
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						::220500
+			nivel sustentabilidade		::49
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##6
+empreendimento		::pato
+	nome			::Triturador de borracha
+	descricao		::O processo de reciclagem de borrachas é realizado através do triturador de pneu e borracha e tem se tornado cada vez mais importante e lucrativo no mundo.
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						::585000
+			nivel sustentabilidade		::65
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##7
+empreendimento		::seringa
+	nome			::Usina de Incineração
+	descricao		::Lixo hospitalar não pode ser reciclado, porém, existem tratamentos melhores que o descarte, como a incineração. Durante a incineração não destruídos além do objeto, todos os microorganismos que podem existir nele. 
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						::1411200
+			nivel sustentabilidade		::84
+			empreendimentos construidos	:: 
+fim empreendimento	::
+##8
+empreendimento		::pneu
+	nome			::Fábrica de móveis de pneu
+	descricao		::Os pneus pode ser reutilizados entre muitas outras coisas, em tiras usadas em móveis estofados, o que além de preservar o meio ambiente ajuda na geração de centenas de empregos.
+	nivel maximo	::1
+	nivel empreendimento :: 1
+		atributos		::
+			velocidade reciclagem		::0,0,0,0
+			valor venda					::0,0,0,0
+			experiencia					::5
+			velocidade aparecer lixo	::1
+			limite fila					::0,0,0,0
+			lixo minimo					::0
+			dinheiro gerado				::0
+			separacao automatica		::0
+			poder jogador				::0
+		requisitos		::
+			preco						:: 3088800
+			nivel sustentabilidade		::99
+			empreendimentos construidos	:: 
 fim empreendimento	::

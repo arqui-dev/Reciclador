@@ -33,6 +33,9 @@ public class Jogador : MonoBehaviour
 
 	static GameObject canvasReset	= null;
 
+
+	public bool resetarDados = false;
+
 	static public void Salvar()
 	{
 		string divisor = "|";
@@ -63,6 +66,24 @@ public class Jogador : MonoBehaviour
 		PlayerPrefs.SetInt(tutorialNome, tuto);
 
 		GerenciadorEmpreendimentos.Salvar();
+
+		if (ObjGerenciadorLixo.instancia)
+			ObjGerenciadorLixo.instancia.Salvar();
+
+		if (recicladoraPapel)
+			recicladoraPapel.Salvar();
+
+		if (recicladoraVidro)
+			recicladoraVidro.Salvar();
+
+		if (recicladoraMetal)
+			recicladoraMetal.Salvar();
+
+		if (recicladoraPlastico)
+			recicladoraPlastico.Salvar();
+
+
+		UI_Achievements.SalvarEstatico();
 
 		Debug.Log ("Jogador Salvo");
 	}
@@ -303,6 +324,13 @@ public class Jogador : MonoBehaviour
 		_nivel = nivelInicialTestes;
 #endif
 //*/
+		#if UNITY_EDITOR
+		if (resetarDados)
+		{
+			PlayerPrefs.DeleteAll();
+		}
+		#endif
+
 		Debug.Log("Teste amor");
 		if (instancia == null)
 		{
@@ -331,7 +359,7 @@ public class Jogador : MonoBehaviour
 	static public ObjAreaReciclavel recicladoraMetal = null;
 	static public ObjAreaReciclavel recicladoraPlastico = null;
 
-	static bool carregouRecicladoras = false;
+	public static bool carregouRecicladoras = false;
 	public static bool pegouCanvasReset = false;
 
 	void Update()
@@ -344,15 +372,11 @@ public class Jogador : MonoBehaviour
 			{
 				proximoSave = Time.time + tempoSalvar;
 				Salvar();
-				ObjGerenciadorLixo.instancia.Salvar();
-				recicladoraPapel.Salvar();
-				recicladoraVidro.Salvar();
-				recicladoraMetal.Salvar();
-				recicladoraPlastico.Salvar();
-				UI_Achievements.SalvarEstatico();
+
 			}
 
-			if (carregouRecicladoras == false)
+			if (carregouRecicladoras == false && recicladoraPapel != null &&
+				recicladoraVidro != null && recicladoraMetal != null && recicladoraPlastico != null)
 			{
 				recicladoraPapel.Carregar();
 				recicladoraVidro.Carregar();
@@ -369,6 +393,66 @@ public class Jogador : MonoBehaviour
 			}
 
 			VerificarReset();
+		}
+		VerificarBotaoBack();
+	}
+
+	public static void VerificarBotaoBack()
+	{
+		//(KeyCode.Escape is code for native "Back" button on Android):
+
+		if (Input.GetKeyUp(KeyCode.Escape))
+		{
+			Debug.Log("Pressionou back (esc)");
+			if (Application.loadedLevelName == "Jogo")
+			{
+				if (PopupConquistas.instancia && PopupConquistas.instancia.gameObject.activeSelf)
+				{
+					PopupConquistas.instancia.Fechar();
+				}
+				else if (PopupEmpreendimentos.instancia && PopupEmpreendimentos.instancia.gameObject.activeSelf)
+				{
+					PopupEmpreendimentos.instancia.Fechar();
+				}
+				else if (PopupConfiguracoes.instancia != null)
+				{
+					if (PopupConfiguracoes.instancia.gameObject.activeSelf == false)
+					{
+						PopupConfiguracoes.instancia.Abrir();
+					}
+					else
+					{
+						PopupConfiguracoes.instancia.Fechar();
+					}
+				}
+			}
+			else if (Application.loadedLevelName == "Menu")
+			{
+				if (PopupConfiguracoes.instancia != null)
+				{
+					if (PopupConfiguracoes.instancia.gameObject.activeSelf == false)
+					{
+						Application.Quit();
+					}
+					else
+					{
+						PopupConfiguracoes.instancia.Fechar();
+					}
+				}
+			}
+			else if (Application.loadedLevelName == "Tutorial")
+			{
+				Jogador.tutorialRodando = false;
+				Jogador.pegouCanvasReset = false;
+				ObjGerenciadorLixo.instancia = null;
+				Jogador.tutorialCompleto = true;
+
+				Application.LoadLevel("Jogo");
+			}
+			else
+			{
+				Application.Quit();
+			}
 		}
 	}
 
@@ -459,6 +543,7 @@ public class Jogador : MonoBehaviour
 		LimparCenario();
 
 		ObjGerenciadorLixo.instancia = null;
+		carregouRecicladoras = false;
 
 		Application.LoadLevel("Tutorial");
 	}
@@ -467,10 +552,17 @@ public class Jogador : MonoBehaviour
 	{
 		ObjGerenciadorLixo.LimparCenario();
 
-		recicladoraPapel.Limpar();
-		recicladoraVidro.Limpar();
-		recicladoraMetal.Limpar();
-		recicladoraPlastico.Limpar();
+		if (recicladoraMetal)
+		{
+			recicladoraPapel.Limpar();
+			recicladoraVidro.Limpar();
+			recicladoraMetal.Limpar();
+			recicladoraPlastico.Limpar();
+		}
 	}
+
+
+
+
 }
 

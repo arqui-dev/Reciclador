@@ -163,11 +163,16 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	void Update()
 	{
-		if (!Jogador.tutorialRodando)
+		if (Application.loadedLevelName == "Jogo")
 		{
 			VerificarAproximarLixos();
 			VerificarTempoJuntarLixo();
 			VerificarTempoCriarLixo();
+		}
+		else if (Application.loadedLevelName == "Tutorial" && Tutorial.juntando)
+		{
+			VerificarAproximarLixos();
+			VerificarTempoJuntarLixo();
 		}
 	}
 
@@ -234,15 +239,30 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	public static int ultimoNivelCriadoLixo = 1;
 	static Vector2 posicaoNovoLixo = Vector2.zero;
-	static public void CriarLixoEstatico(int nivel, Vector2 pos)
+	static public void CriarLixoEstatico(int nivel, Vector2 pos, bool aleatorio = false)
 	{
 		posicaoNovoLixo = pos;
-		instancia.CriarLixo(nivel);
+
+		if (!aleatorio)
+		{
+			instancia.CriarLixo(nivel);
+		}
 
 		float x = Random.Range(0f,1f) * instancia.area.width + instancia.area.x;
 		float y = Random.Range(0f,1f) * instancia.area.height + instancia.area.y;
 		
 		posicaoNovoLixo = new Vector2(x,y);
+
+		if (aleatorio)
+		{
+			instancia.CriarLixo(nivel);
+		}
+	}
+
+	static public void AtribuirProximaJuncao(float tempo)
+	{
+		instancia.proximoTempoJuntarLixo = tempo + Time.time;
+		instancia.podeJuntarLixo = true;
 	}
 
 	void CriarLixo(int novoNivel = -1, bool aleatorioForcado = false)
@@ -331,18 +351,24 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		//Adicionar(novoLixo.GetComponent<ObjLixoMisturado>());
 	}
 
+	static public void JuntarEstatico()
+	{
+		instancia.JuntarLixo();
+	}
+
 	void JuntarLixo()
 	{
 		PararJuncao();
 		if (listaLixos.Count > 1)
 		{
+			//Debug.Log("Os baguio é doido");
 			// -1: aleatorio; 0: menor; 1: maior;
 			int tipoDeBusca = -1;
-			if (Random.value < 0.6f)
+			if (Random.value < 0.05f)
 			{
 				tipoDeBusca = 0;
 			}
-			else if (tipoDeBusca < 0.8f)
+			else if (tipoDeBusca < 0.75f)
 			{
 				tipoDeBusca = 1;
 			}
@@ -517,6 +543,8 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 		lixoPuxando.Juntar(lixoSendoPuxado);
 		PararJuncao();
+
+		Tutorial.juntando = false;
 	}
 
 	static public bool Adicionar(ObjLixoMisturado lixo)
@@ -547,6 +575,7 @@ public class ObjGerenciadorLixo : MonoBehaviour
 	// TODO: JEF
 	static public void LimparMonstros()
 	{
+		if (!instancia) return;
 		foreach(ObjLixoMisturado lixo in instancia.listaLixos)
 		{
 			Destroy(lixo.gameObject);
@@ -556,6 +585,7 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 	static public void LimparReciclaveis()
 	{
+		if (!instancia) return;
 		foreach(ObjReciclavel reci in instancia.listaReciclaveis)
 		{
 			Destroy(reci.gameObject);
@@ -703,6 +733,13 @@ public class ObjGerenciadorLixo : MonoBehaviour
 					{
 						ManterNaArea(reciclavel.transform, area);
 						Som.Tocar(Som.Tipo.ErrarLixeira);
+
+						/*
+						if (Jogador.tutorialRodando && Tutorial.esperarTentarJogarNaLixeira)
+						{
+							Tutorial.esperarTentarJogarNaLixeira = false;
+						}
+						//*/
 					}
 				}
 				else

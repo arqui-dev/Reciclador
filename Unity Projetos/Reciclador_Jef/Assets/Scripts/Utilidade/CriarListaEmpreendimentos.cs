@@ -34,6 +34,11 @@ public class CriarListaEmpreendimentos : MonoBehaviour
 		}
 	}
 
+	void OnDisable()
+	{
+		pronto = false;
+	}
+
 	/// <summary>
 	/// Cria os botões dos empreendimentos no local adequado.
 	/// </summary>
@@ -41,10 +46,20 @@ public class CriarListaEmpreendimentos : MonoBehaviour
 	{
 		float y = -espacoEntreBotoes;
 
+		for (int i = 0; i < transform.childCount; i++)
+		{
+			Destroy(transform.GetChild(i).gameObject);
+		}
+
 		foreach (Empreendimento e in 
 		         GerenciadorEmpreendimentos.
 		         dicionarioEmpreendimentos.Values)
 		{
+			if (e.NivelMinimo() > Jogador.nivel)
+			{
+				continue;
+			}
+
 			GameObject novoBotao = 
 				Instantiate<GameObject>(botaoEmpreendimento);
 

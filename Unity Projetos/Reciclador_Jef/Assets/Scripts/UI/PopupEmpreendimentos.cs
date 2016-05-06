@@ -3,8 +3,16 @@ using System.Collections;
 
 public class PopupEmpreendimentos : MonoBehaviour
 {
+	public static PopupEmpreendimentos instancia = null;
+
 	public PopupConquistas painelConquistas;
 	public PopupConfiguracoes painelConfiguracoes;
+
+	void Awake()
+	{
+		instancia = this;
+		gameObject.SetActive(false);
+	}
 	
 	public void Fechar(bool fechadoPorAbrirOutra = false)
 	{

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F735289F-51B2-8108-D34C-C2C2304C9539}</ProjectGuid>
+    <ProjectGuid>{EA7547B7-87B8-A56C-5390-F91EDABECC74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -68,7 +68,9 @@
      <Compile Include="Assets\Scripts\UI\UI_Empreendimento.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Mensanges.cs" />
      <Compile Include="Assets\Scripts\UI\UI_Menu.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\ArquivoStrings.cs" />
      <Compile Include="Assets\Scripts\Utilidade\BotaoSomMusica.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\CarregamentoAssincrono.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Cheats.cs" />
      <Compile Include="Assets\Scripts\Utilidade\CriarListaEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Dados.cs" />

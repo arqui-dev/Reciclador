@@ -63,6 +63,11 @@ public class Empreendimento// : MonoBehaviour
 		}
 	}
 
+	public int NivelMinimo()
+	{
+		return _nivelRequisito[0];
+	}
+
 	public string 	descricao{
 		get { return _descricao[_nivel]; }
 	}

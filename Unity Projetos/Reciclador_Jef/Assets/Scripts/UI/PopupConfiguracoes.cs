@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PopupConfiguracoes : MonoBehaviour
 {
+	static public PopupConfiguracoes instancia = null;
+
 	public PopupEmpreendimentos painelEmpreendimentos;
 	public PopupConquistas painelConquistas;
 	
@@ -39,6 +41,44 @@ public class PopupConfiguracoes : MonoBehaviour
 	public void AbrirTutorial()
 	{
 		Jogador.RodarTutorial();
+	}
+
+
+	public void FecharJogo()
+	{
+		Jogador.Salvar();
+		if (Application.loadedLevelName == "Jogo")
+		{
+			//Jogador.LimparCenario();
+
+			Destroy(GameObject.Find("_ControleSom"));
+			Destroy(GameObject.Find("_ControleMusica"));
+
+			ObjGerenciadorLixo.instancia = null;
+			Jogador.recicladoraPapel = null;
+			Jogador.recicladoraMetal = null;
+			Jogador.recicladoraPlastico = null;
+			Jogador.recicladoraVidro = null;
+
+			Jogador.carregouRecicladoras = false;
+			Jogador.pegouCanvasReset = false;
+
+			Destroy(Jogador.instancia.gameObject);
+			Jogador.instancia = null;
+
+			Application.LoadLevel("Menu");
+		}
+		else
+		{
+			Application.Quit();	
+		}
+	}
+
+
+	void Awake()
+	{
+		instancia = this;
+		gameObject.SetActive(false);
 	}
 }
 

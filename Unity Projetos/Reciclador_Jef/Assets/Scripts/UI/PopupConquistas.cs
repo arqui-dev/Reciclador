@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PopupConquistas : MonoBehaviour
 {
+	static public PopupConquistas instancia = null;
+
 	public PopupEmpreendimentos painelEmpreendimentos;
 	public PopupConfiguracoes painelConfiguracoes;
 
@@ -32,6 +34,7 @@ public class PopupConquistas : MonoBehaviour
 
 	void Awake()
 	{
+		instancia = this;
 		//gameObject.SetActive(false);
 	}
 }
