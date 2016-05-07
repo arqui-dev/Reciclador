@@ -6,12 +6,13 @@ public class CarregamentoAssincrono : MonoBehaviour
 {
 	public static bool pronto = false;
 
-	System.Threading.Thread thread = null;
+	//System.Threading.Thread thread = null;
 
 	void Awake()
 	{
-		thread = new System.Threading.Thread(PegarEmpreendimentos);
-		thread.Start();
+		//thread = new System.Threading.Thread(PegarEmpreendimentos);
+		//thread.Start();
+		PegarEmpreendimentos();
 	}
 
 	float tempo = 0;

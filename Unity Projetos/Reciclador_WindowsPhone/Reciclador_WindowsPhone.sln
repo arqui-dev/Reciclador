@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{78495906-43FC-2DCE-72DB-28D5773C8CD5}") = "Reciclador_WindowsPhone", "Assembly-CSharp.csproj", "{07115889-7EA3-3201-8FE7-A649C46C2745}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07115889-7EA3-3201-8FE7-A649C46C2745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07115889-7EA3-3201-8FE7-A649C46C2745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07115889-7EA3-3201-8FE7-A649C46C2745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07115889-7EA3-3201-8FE7-A649C46C2745}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
