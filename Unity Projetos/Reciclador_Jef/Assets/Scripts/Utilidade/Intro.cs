@@ -53,13 +53,14 @@ public class Intro : MonoBehaviour
 				{
 					logos[logos.Length - 1].SetActive(true);
 					proximoTempo = 0;
-					//Application.LoadLevel("Menu");
-					podeCarregar = true;
-					proximoTempo = Time.time + tempoPassos;
-					tempoEsperar = Time.time + tempoPassos * (maxPassosPorcentagem + 1);
+					Application.LoadLevel("Menu");
+					//podeCarregar = true;
+					//proximoTempo = Time.time + tempoPassos;
+					//tempoEsperar = Time.time + tempoPassos * (maxPassosPorcentagem + 1);
 				}
 			}
 		}
+		/*
 		else
 		{
 			string texto = "";
@@ -82,6 +83,7 @@ public class Intro : MonoBehaviour
 				Application.LoadLevel("Menu");
 			}
 		}
+		//*/
 
 		Jogador.VerificarBotaoBack();
 	}
