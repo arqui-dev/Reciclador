@@ -75,7 +75,7 @@ public class Empreendimento// : MonoBehaviour
 
 	public int		nivelMaximo {
 		//get { return _custos.Length; }
-		get { return int.MaxValue; }
+		get { return 1000000; }
 	}
 	public long		custo {
 		get 
@@ -246,8 +246,8 @@ public class Empreendimento// : MonoBehaviour
 	public bool PodeComprar()
 	{
 		if (custo <= Jogador.pontos && custo > 0 &&
-		    nivelRequisito > 0 && nivelRequisito <= Jogador.nivel &&
-		    TemRequisitos())
+		    nivelRequisito >= 0 && nivelRequisito <= Jogador.nivel
+			)//&& TemRequisitos())
 		{
 			return true;
 		}

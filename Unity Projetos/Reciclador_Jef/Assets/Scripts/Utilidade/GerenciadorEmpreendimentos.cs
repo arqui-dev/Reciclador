@@ -31,9 +31,9 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 
 		if (listaEmpreendimentosEstatica == null)
 		{
-			// TODO: ajeitar a lista de empreendimentos para ela funcionar no jogo
-			listaEmpreendimentosEstatica = GerenciadorCarregamento.CarregarEmpreendimentos();
-			//listaEmpreendimentosEstatica = FuncoesEmpreendimentos.CriarEmpreendimentos();
+			// TODO: Ajeitar para não mostrar que já está no nível máximo
+			//listaEmpreendimentosEstatica = GerenciadorCarregamento.CarregarEmpreendimentos();
+			listaEmpreendimentosEstatica = FuncoesEmpreendimentos.CriarEmpreendimentos();
 		}
 
 		//foreach(Empreendimento e in listaEmpreendimentos)

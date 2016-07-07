@@ -12,6 +12,7 @@ public class FuncoesEmpreendimentos : MonoBehaviour
 		// Os empreendimentos deverão ser criados na classe ClassesDosEmpreendimentos
 		// Para adicionar todos os empreendimentos é só copiar a linha abaixo, e alterar o nome da classe "EmpreendimentoExemplo", para a classe criada.
 		new /**/ EmpreendimentoExemplo /**/();
+		new CatadoresDePokebolas();
 
 
 		// ******************************************************** //
