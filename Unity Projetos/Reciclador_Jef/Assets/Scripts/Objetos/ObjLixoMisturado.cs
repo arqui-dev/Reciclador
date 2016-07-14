@@ -132,7 +132,19 @@ public class ObjLixoMisturado : MonoBehaviour
 			Tutorial.esperarDerrotarMonstro = false;
 		}
 
-		for (int i = 0; i < Nivel() + 1; i++)
+		for (int i = 0; i < 2; i++)
+		{
+			ObjGerenciadorLixo.CriarReciclavel();
+		}
+		if (Nivel() > 5)
+		{
+			ObjGerenciadorLixo.CriarReciclavel();
+		}
+		if (Nivel() > 10)
+		{
+			ObjGerenciadorLixo.CriarReciclavel();
+		}
+		if (Nivel() > 20)
 		{
 			ObjGerenciadorLixo.CriarReciclavel();
 		}
@@ -241,7 +253,7 @@ public class ObjLixoMisturado : MonoBehaviour
 
 	public int XP()
 	{
-		return Nivel() * 3;
+		return Nivel() * Jogador.multiplicadorXPNivelMonstro;
 	}
 
 	public void BrilharJuntar()
@@ -263,6 +275,11 @@ public class ObjLixoMisturado : MonoBehaviour
 	public void Juntar(ObjLixoMisturado outro)
 	{
 		int novoNivel = this.Nivel() + outro.Nivel();
+
+		if (novoNivel > Jogador.NivelMaximoMonstro())
+		{
+			novoNivel = Jogador.NivelMaximoMonstro();
+		}
 
 		Vector2 pos = (Vector2) transform.position;
 

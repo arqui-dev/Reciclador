@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ObjGerenciadorLixo : MonoBehaviour
 {
@@ -280,8 +281,15 @@ public class ObjGerenciadorLixo : MonoBehaviour
 			return;
 		}
 
-		int nivel = 
-			Random.Range(0, ObjEmpreendimentos.nivelMinimoLixo);
+		//TODO: Jef, arruma isso
+		int min = Jogador.nivel / Jogador.divisorNiveisNivelMinimoMonstrosAparecem;
+		int max = Jogador.nivel / Jogador.divisorNiveisNivelMaximoMonstrosAparecem;
+		int nivel = Random.Range(min, max);
+		if (nivel < 0)
+		{
+			nivel = 0;
+		}
+		Debug.Log("Lixo criado, nível: "+nivel);
 
 		float x = Random.Range(0f,1f) * area.width + area.x;
 		float y = Random.Range(0f,1f) * area.height + area.y;
@@ -306,8 +314,11 @@ public class ObjGerenciadorLixo : MonoBehaviour
 
 		ultimoNivelCriadoLixo = nivel + 1;
 
-		GameObject novoLixo		= Instantiate<GameObject>(
-			objLixos[nivel]);
+		int indice = nivel % 10;
+		int indiceCor = ((nivel - 1) / 10) % Jogador.coresMonstros.Length;
+
+		GameObject novoLixo		= Instantiate<GameObject>(objLixos[indice]);
+		novoLixo.GetComponent<Image>().color = Jogador.coresMonstros[indiceCor];
 
 		novoLixo.transform.SetParent(transform, false);
 		

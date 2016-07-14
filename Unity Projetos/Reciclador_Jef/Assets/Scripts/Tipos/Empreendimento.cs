@@ -101,9 +101,12 @@ public class Empreendimento// : MonoBehaviour
 		}
 	}
 
-	public int NivelMinimo()
+	public int NivelMinimo(int niv = -1)
 	{
-		return valores.NivelRequisito(1);
+		if (nivel >= 0)
+			return valores.NivelRequisito(niv);
+		
+		return valores.NivelRequisito(_nivel);
 	}
 
 	public string 	descricao{

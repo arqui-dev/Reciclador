@@ -60,25 +60,25 @@ public class TesteNovoModeloEmpreendimentos : MonoBehaviour
 		txtReq.text 		= "Requisito: "+lista[ind].nivelRequisito;
 		txtPoder.text 		= "Poder Jogador: "+lista[ind].taxaSeparacaoLixo;
 		txtDinTempo.text 	= "Dinheiro por Tempo: "+lista[ind].dinheiroPorTempo;
-		txtXP.text 			= "Aumento XP: "+lista[ind].aumentoXP.ToString("0.0");
+		txtXP.text 			= "Aumento XP: "+lista[ind].aumentoXP.ToString("0.00");
 		txtNivellixo.text 	= "Nivel extra Lixo: "+lista[ind].nivelMinimoLixo;
 		txtDanoTempo.text 	= "Dano por tempo: "+lista[ind].separacaoAutomatica;
-		txtVelLixo.text		= "Velocidade aparecer Lixo: "+lista[ind].velocidadeAparecerLixo.ToString("0.0");
+		txtVelLixo.text		= "Velocidade aparecer Lixo: "+lista[ind].velocidadeAparecerLixo.ToString("0.00");
 		txtLimRec.text 		= 
 			"Papel["+lista[ind].limiteRecicladoras[0]+"], "+
 			"Vidro["+lista[ind].limiteRecicladoras[1]+"], "+
 			"Metal["+lista[ind].limiteRecicladoras[2]+"], "+
 			"Plástico["+lista[ind].limiteRecicladoras[3]+"]";
 		txtValorVenda.text 	= 
-			"Papel["+lista[ind].valorDeVenda[0].ToString("0.0")+"], "+
-			"Vidro["+lista[ind].valorDeVenda[1].ToString("0.0")+"], "+
-			"Metal["+lista[ind].valorDeVenda[2].ToString("0.0")+"], "+
-			"Plástico["+lista[ind].valorDeVenda[3].ToString("0.0")+"]";
+			"Papel["+lista[ind].valorDeVenda[0].ToString("0.00")+"], "+
+			"Vidro["+lista[ind].valorDeVenda[1].ToString("0.00")+"], "+
+			"Metal["+lista[ind].valorDeVenda[2].ToString("0.00")+"], "+
+			"Plástico["+lista[ind].valorDeVenda[3].ToString("0.00")+"]";
 		txtVelRec.text 		= 
-			"Papel["+lista[ind].velocidadeReciclagem[0].ToString("0.0")+"], "+
-			"Vidro["+lista[ind].velocidadeReciclagem[1].ToString("0.0")+"], "+
-			"Metal["+lista[ind].velocidadeReciclagem[2].ToString("0.0")+"], "+
-			"Plástico["+lista[ind].velocidadeReciclagem[3].ToString("0.0")+"]";
+			"Papel["+lista[ind].velocidadeReciclagem[0].ToString("0.00")+"], "+
+			"Vidro["+lista[ind].velocidadeReciclagem[1].ToString("0.00")+"], "+
+			"Metal["+lista[ind].velocidadeReciclagem[2].ToString("0.00")+"], "+
+			"Plástico["+lista[ind].velocidadeReciclagem[3].ToString("0.00")+"]";
 		txtDescri.text 		= "Descrição: '"+lista[ind].descricao+"'";
 	}
 }

@@ -58,7 +58,7 @@ public class Dados
 		false, false, false, false,
 		false, false, false, false
 	};
-
+		
 	// TODO: fazer salvar os easter eggs
 }
 

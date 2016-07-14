@@ -36,6 +36,7 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 			listaEmpreendimentosEstatica = FuncoesEmpreendimentos.CriarEmpreendimentos();
 		}
 
+		dicionarioEmpreendimentos.Clear();
 		//foreach(Empreendimento e in listaEmpreendimentos)
 		foreach(Empreendimento e in listaEmpreendimentosEstatica)
 		{
@@ -53,17 +54,31 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	/// </summary>
 	static public void Salvar()
 	{
+		/*
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Salvar();
+		}
+		//*/
+
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Salvar();
 		}
 	}
 
 	static public void Reiniciar()
 	{
+		/*
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Reiniciar();
+		}
+		//*/
+
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Reiniciar();
 		}
 	}
 

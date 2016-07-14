@@ -11,9 +11,25 @@ public class FuncoesEmpreendimentos : MonoBehaviour
 		// ******************************************************** //
 		// Os empreendimentos deverão ser criados na classe ClassesDosEmpreendimentos
 		// Para adicionar todos os empreendimentos é só copiar a linha abaixo, e alterar o nome da classe "EmpreendimentoExemplo", para a classe criada.
-		new /**/ EmpreendimentoExemplo /**/();
-		new CatadoresDePokebolas();
+		//new EmpreendimentoExemplo();
+		new ColetaSeletiva();
+		new OficinaBrinquedosReciclaveis();
+		new PrensaPapel();
+		new FabricaVitrais();
+		new FerroVelho();
+		new ViveiroGarrafasPet();
+		new TrituradorResiduosSolidos();
+		new UsinaReciclagem();
 
+		// EasterEggs
+		new EasterEggLampada();
+		new EasterEggMadeira();
+		new EasterEggIsopor();
+		new EasterEggFraldas();
+		new EasterEggLataTinta();
+		new EasterEggPatoBorracha();
+		new EasterEggSeringa();
+		new EasterEggPneu();
 
 		// ******************************************************** //
 		// Essa parte não precisa ser alterada

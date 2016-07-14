@@ -55,8 +55,10 @@ public class CriarListaEmpreendimentos : MonoBehaviour
 		         GerenciadorEmpreendimentos.
 		         dicionarioEmpreendimentos.Values)
 		{
-			if (e.NivelMinimo() > Jogador.nivel)
+			Debug.Log("Criar lista de empreendimentos; Empreendimento: "+e.nome+"; Nivel mínimo: "+e.NivelMinimo()+"; Nível atual: "+e.nivel);
+			if (e.NivelMinimo(0) > Jogador.nivel)
 			{
+				Debug.Log("Nível do "+e.nome+": "+e.nivel+"; Nivel do jogador: "+Jogador.nivel+"; Nivel mínimo: "+e.NivelMinimo(0));
 				continue;
 			}
 

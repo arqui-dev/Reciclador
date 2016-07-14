@@ -56,7 +56,16 @@
      <Compile Include="Assets\Scripts\Testes\TesteDelegate.cs" />
      <Compile Include="Assets\Scripts\Testes\TesteNovoModeloEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Tipos\ClassesDosEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\EasterEggs\EasterEggs.cs" />
      <Compile Include="Assets\Scripts\Tipos\Empreendimento.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\ColetaSeletiva.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\FabricaVitrais.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\FerroVelho.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\OficinaBrinquedosReciclaveis.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\PrensaPapel.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\TrituradorResiduosSolidos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\UsinaReciclagem.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\ViveiroGarrafasPet.cs" />
      <Compile Include="Assets\Scripts\Tipos\FuncoesEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Tipos\LixoMisturado.cs" />
      <Compile Include="Assets\Scripts\Tipos\Reciclavel.cs" />
