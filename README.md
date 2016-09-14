@@ -1,3 +1,6 @@
+Agora estamos trabalhando com o #Slack
+
+
 # Projeto "O Reciclador", inscrição de numero 149316, Inovapps 2015.
 
 Coordenado por Marielle Rezende de Andrade e produzido pela parceria entre as equipes [Zugbahn](http://zugbahn.com/) e Arca Brasil.
