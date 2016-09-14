@@ -32,23 +32,22 @@ public class ViveiroGarrafasPet
 
 	int		TaxaSeparacaoLixo(int nivel)
 	{
-		int retorno = nivel / 2;
+		int retorno = nivel / 7;
 		return retorno;
 	}
 
-	int redutorNivelDinheiroTempo = 5;
 	long		DinheiroPorTempo(int nivel)
 	{
-		int v = nivel - redutorNivelDinheiroTempo;
+		int v = nivel - 0;
 		if (v <= 0) return 0;
-		long retorno = (v / 2) + 1;
+		long retorno = v * 5;
 		return retorno;
 	}
 
 	float	AumentoXP(int nivel)
 	{
 		// 5% de XP por nível
-		float retorno = nivel * 0.05f;
+		float retorno = nivel * 0.09f;
 		return retorno;
 	}
 
@@ -64,11 +63,8 @@ public class ViveiroGarrafasPet
 	{
 		// Papel, Vidro, Metal, Plástico
 		int [] retorno = {0,0,0,0};
-		int div = 4;
-		retorno[0] = (nivel + 1) / div;
-		retorno[1] = (nivel + 1) / div;
-		retorno[2] = (nivel + 1) / div;
-		retorno[3] = (nivel + 1) / div;
+		int div = 2;
+		retorno[3] = (nivel + 1) / div + 1;
 		return retorno;
 	}
 
@@ -79,11 +75,8 @@ public class ViveiroGarrafasPet
 		float [] retorno = {0f,0f,0f,0f};
 		if (nv <= 0) return retorno;
 
-		float porcentagem = 0.05f;
-		retorno[0] = nv * porcentagem;
-		retorno[1] = nv * porcentagem;
-		retorno[2] = nv * porcentagem;
-		retorno[3] = nv * porcentagem;
+		float porcentagem = 1f;
+		retorno[3] = ((nv * (nv + 1)) / 2) * porcentagem;
 
 		return retorno;
 	}
@@ -91,6 +84,7 @@ public class ViveiroGarrafasPet
 	float []	VelocidadeReciclagem(int nivel)
 	{
 		float [] retorno = {0f,0f,0f,0f};
+		retorno[3] = nivel * 0.05f;
 		return retorno;
 	}
 	//
@@ -114,6 +108,23 @@ public class ViveiroGarrafasPet
 	{
 		// Descrição pode chamar outras funções, para mostrar valores exatos
 		string retorno = "";
+		//retorno += "Custo: "+Custos(nivel)+"\n\n";
+		if (TaxaSeparacaoLixo(nivel+1) > 0)
+		{
+			retorno += "Dano extra:\t\t"+TaxaSeparacaoLixo(nivel)+" -> "+ TaxaSeparacaoLixo(nivel+1)+"\n";
+		}
+		retorno += "$ por tempo:\t"+DinheiroPorTempo(nivel)+" -> "+ DinheiroPorTempo(nivel+1)+"\n";
+		retorno += "XP extra:\t\t\t"+(AumentoXP(nivel)*100f).ToString("0")+"% -> "+(AumentoXP(nivel+1)*100f).ToString("0")+"%\n";
+		retorno += "$ reciclagem Plast:\t"+(ValorDeVenda(nivel)[3]*100f).ToString("0")+"% -> "+(ValorDeVenda(nivel+1)[3]*100f).ToString("0")+"%\n";
+		retorno += "Limite Recic Plast:\t"+(LimiteRecicladoras(nivel)[3])+" -> "+(LimiteRecicladoras(nivel+1)[3])+"\n";
+		retorno += "Vel Reciclagem Pls:\t"+(VelocidadeReciclagem(nivel)[3]*100f).ToString("0")+"% -> "+(VelocidadeReciclagem(nivel+1)[3]*100f).ToString("0")+"%\n";
+
+		return retorno;
+	}
+
+	string DescricaoTexto(int nivel)
+	{
+		string retorno = "As garrafas pet, antes de serem enviadas para reciclagem, podem ser utilizadas em diversas atividades. Uma prática muito comum é a utilização das garrafas pets para produção de mudas. As garrafas são lavadas e cortadas, deixando apenas a parte inferior para o uso (potes). A parte superior é enviada para reciclagem. São inseridos terra e adubo nos potes e em seguida as sementes, que em alguns meses estarão prontas para plantio.";
 		return retorno;
 	}
 

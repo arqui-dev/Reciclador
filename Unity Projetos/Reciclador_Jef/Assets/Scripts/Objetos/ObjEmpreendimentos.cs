@@ -187,6 +187,9 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	static public float TempoReciclar(float tempo, int tipo)
 	{
+		float limite = 0.4f;
+		if (velocidadeReciclagem[tipo] > limite)
+			velocidadeReciclagem[tipo] = limite;
 		float retorno = tempo * (1 - velocidadeReciclagem[tipo]);
 		Debug.Log("Tempo reciclagem antes: "+tempo+"; Tempo reciclagem alterado: "+retorno);
 		return retorno;

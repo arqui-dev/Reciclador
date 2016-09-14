@@ -67,7 +67,7 @@ public class ColetaSeletiva
 	{
 		int v = nivel;
 		if (v <= 0) return 0;
-		long retorno = ((v * (v + 1)) / 2) * 5; // (1,3,6,10,15,21,28...) * 5
+		long retorno = v * 5;
 		return retorno;
 	}
 
@@ -134,6 +134,12 @@ public class ColetaSeletiva
 		retorno += "XP extra:\t\t\t"+(AumentoXP(nivel)*100f).ToString("0")+"% -> "+(AumentoXP(nivel+1)*100f).ToString("0")+"%\n";
 		retorno += "$ reciclagem:\t"+(ValorDeVenda(nivel)[0]*100f).ToString("0")+"% -> "+(ValorDeVenda(nivel+1)[0]*100f).ToString("0")+"%";
 
+		return retorno;
+	}
+
+	string DescricaoTexto(int nivel)
+	{
+		string retorno = "Coleta seletiva é a coleta diferenciada de resíduos que foram previamente separados segundo a sua constituição ou composição. Ou seja, resíduos com características similares são selecionados pelo gerador (que pode ser o cidadão, uma empresa ou outra instituição) e disponibilizados para a coleta separadamente. ";
 		return retorno;
 	}
 }

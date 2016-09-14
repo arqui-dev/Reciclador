@@ -35,20 +35,19 @@ public class OficinaBrinquedosReciclaveis
 		int retorno = nivel / 4;
 		return retorno;
 	}
-
-	int redutorNivelDinheiroTempo = 5;
+		
 	long		DinheiroPorTempo(int nivel)
 	{
-		int v = nivel - redutorNivelDinheiroTempo;
+		int v = nivel;
 		if (v <= 0) return 0;
-		long retorno = (v / 2) + 1;
+		long retorno = ((v * (v + 1)) / 2) * 15;
 		return retorno;
 	}
 
 	float	AumentoXP(int nivel)
 	{
 		// 5% de XP por nível
-		float retorno = nivel * 0.05f;
+		float retorno = nivel * 0.5f;
 		return retorno;
 	}
 
@@ -73,14 +72,14 @@ public class OficinaBrinquedosReciclaveis
 		return retorno;
 	}
 
-	int redutorNivelValorVenda = 3;
 	float []	ValorDeVenda(int nivel)
 	{
-		int nv = nivel - redutorNivelValorVenda;
+		int nv = nivel;
 		float [] retorno = {0f,0f,0f,0f};
 		if (nv <= 0) return retorno;
 
 		float porcentagem = 0.5f;
+		nv = ((nv * (nv + 1)) / 2);
 		retorno[0] = nv * porcentagem;
 		retorno[1] = nv * porcentagem;
 		retorno[2] = nv * porcentagem;
@@ -115,6 +114,22 @@ public class OficinaBrinquedosReciclaveis
 	{
 		// Descrição pode chamar outras funções, para mostrar valores exatos
 		string retorno = "";
+		//retorno += "Custo: "+Custos(nivel)+"\n\n";
+		if (TaxaSeparacaoLixo(nivel+1) > 0)
+		{
+			retorno += "Dano extra:\t\t"+TaxaSeparacaoLixo(nivel)+" -> "+ TaxaSeparacaoLixo(nivel+1)+"\n";
+		}
+		retorno += "$ por tempo:\t"+DinheiroPorTempo(nivel)+" -> "+ DinheiroPorTempo(nivel+1)+"\n";
+		retorno += "XP extra:\t\t\t"+(AumentoXP(nivel)*100f).ToString("0")+"% -> "+(AumentoXP(nivel+1)*100f).ToString("0")+"%\n";
+		retorno += "$ reciclagem:\t"+(ValorDeVenda(nivel)[0]*100f).ToString("0")+"% -> "+(ValorDeVenda(nivel+1)[0]*100f).ToString("0")+"%\n";
+		retorno += "Limite Recic:\t"+(LimiteRecicladoras(nivel)[0])+" -> "+(LimiteRecicladoras(nivel+1)[0]);
+
+		return retorno;
+	}
+
+	string DescricaoTexto(int nivel)
+	{
+		string retorno = "Além de ensinar como organizar atividades que ajudem na preservação da natureza, usando materiais recicláveis as oficinas colaboram para a formação de crianças conscientes e no desenvolvimento do potencial artístico.";
 		return retorno;
 	}
 

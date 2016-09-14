@@ -36,19 +36,18 @@ public class TrituradorResiduosSolidos
 		return retorno;
 	}
 
-	int redutorNivelDinheiroTempo = 5;
 	long		DinheiroPorTempo(int nivel)
 	{
-		int v = nivel - redutorNivelDinheiroTempo;
+		int v = nivel;
 		if (v <= 0) return 0;
-		long retorno = (v / 2) + 1;
+		long retorno =  ((v * (v + 1)) / 2) * 50;
 		return retorno;
 	}
 
 	float	AumentoXP(int nivel)
 	{
 		// 5% de XP por nível
-		float retorno = nivel * 0.05f;
+		float retorno = nivel * 1.8f;
 		return retorno;
 	}
 
@@ -64,22 +63,22 @@ public class TrituradorResiduosSolidos
 	{
 		// Papel, Vidro, Metal, Plástico
 		int [] retorno = {0,0,0,0};
-		int div = 4;
+		int div = 5;
 		retorno[0] = (nivel + 1) / div;
 		retorno[1] = (nivel + 1) / div;
 		retorno[2] = (nivel + 1) / div;
 		retorno[3] = (nivel + 1) / div;
 		return retorno;
 	}
-
-	int redutorNivelValorVenda = 3;
+		
 	float []	ValorDeVenda(int nivel)
 	{
-		int nv = nivel - redutorNivelValorVenda;
+		int nv = nivel;
 		float [] retorno = {0f,0f,0f,0f};
 		if (nv <= 0) return retorno;
 
-		float porcentagem = 0.05f;
+		float porcentagem = 1f;
+		nv = ((nv * (nv + 1)) / 2);
 		retorno[0] = nv * porcentagem;
 		retorno[1] = nv * porcentagem;
 		retorno[2] = nv * porcentagem;
@@ -114,6 +113,22 @@ public class TrituradorResiduosSolidos
 	{
 		// Descrição pode chamar outras funções, para mostrar valores exatos
 		string retorno = "";
+		//retorno += "Custo: "+Custos(nivel)+"\n\n";
+		if (TaxaSeparacaoLixo(nivel+1) > 0)
+		{
+			retorno += "Dano extra:\t\t"+TaxaSeparacaoLixo(nivel)+" -> "+ TaxaSeparacaoLixo(nivel+1)+"\n";
+		}
+		retorno += "$ por tempo:\t"+DinheiroPorTempo(nivel)+" -> "+ DinheiroPorTempo(nivel+1)+"\n";
+		retorno += "XP extra:\t\t\t"+(AumentoXP(nivel)*100f).ToString("0")+"% -> "+(AumentoXP(nivel+1)*100f).ToString("0")+"%\n";
+		retorno += "$ reciclagem:\t"+(ValorDeVenda(nivel)[0]*100f).ToString("0")+"% -> "+(ValorDeVenda(nivel+1)[0]*100f).ToString("0")+"%\n";
+		retorno += "Limite Recic:\t"+(LimiteRecicladoras(nivel)[0])+" -> "+(LimiteRecicladoras(nivel+1)[0])+"\n";
+
+		return retorno;
+	}
+
+	string DescricaoTexto(int nivel)
+	{
+		string retorno = "As necessidades de grandes áreas para criação de aterros sanitários e elevado volume de lixo produzido pelas metrópoles fez-se necessário a trituração e processamento dos mesmos. Através destes equipamentos pode-se obter redução de volume, separação de materiais que possam virar matéria prima tais como metais, plásticos, papéis entre outros recicláveis envolvidos.";
 		return retorno;
 	}
 
