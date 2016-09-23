@@ -132,6 +132,11 @@ public class ObjLixoMisturado : MonoBehaviour
 			Tutorial.esperarDerrotarMonstro = false;
 		}
 
+		// Cria apenas dois recicláveis por monstro derrotado
+		ObjGerenciadorLixo.CriarReciclavel();
+		ObjGerenciadorLixo.CriarReciclavel();
+
+		/*
 		for (int i = 0; i < 2; i++)
 		{
 			ObjGerenciadorLixo.CriarReciclavel();
@@ -148,6 +153,7 @@ public class ObjLixoMisturado : MonoBehaviour
 		{
 			ObjGerenciadorLixo.CriarReciclavel();
 		}
+		*/
 
 		if (Jogador.nivel >= Dados.nivelMinimoEasterEggs && 
 		    Random.Range(0f,1f) <= Dados.chanceEasterEgg)

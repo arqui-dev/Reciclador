@@ -57,7 +57,7 @@ public class ColetaSeletiva
 
 	int		TaxaSeparacaoLixo(int nivel)
 	{
-		int retorno = nivel / 5;
+		int retorno = nivel / 4;
 		if (nivel >= 3) retorno++;
 		return retorno;
 	}

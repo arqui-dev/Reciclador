@@ -32,7 +32,7 @@ public class UsinaReciclagem
 
 	int		TaxaSeparacaoLixo(int nivel)
 	{
-		int retorno = nivel;
+		int retorno = nivel * 2;
 		return retorno;
 	}
 

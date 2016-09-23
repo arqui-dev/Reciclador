@@ -32,7 +32,7 @@ public class TrituradorResiduosSolidos
 
 	int		TaxaSeparacaoLixo(int nivel)
 	{
-		int retorno = nivel / 2;
+		int retorno = nivel;
 		return retorno;
 	}
 
