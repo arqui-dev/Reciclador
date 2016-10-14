@@ -110,9 +110,12 @@ public class UI_Empreendimento : MonoBehaviour
 			descricao += Dados.textoDescricao_custo + ": " + empreendimento.custo + "\n";
 
 			//descricao += Dados.textoDescricao_requisitos + ":\n";
-			descricao += Dados.textoDescricao_sustentabilidade + ": " +
-				empreendimento.nivelRequisito + "\n";
-
+			if (empreendimento.nivelRequisito > 0)
+			{
+				descricao += Dados.textoDescricao_sustentabilidade + ": " +
+					empreendimento.nivelRequisito + "\n";
+			}
+			/*
 			if (empreendimento._empreendimentosRequisitos[empreendimento.nivel+1].Count > 0)
 			{
 				descricao += Dados.textoDescricao_empreendimentosNecessarios + ":\n";
@@ -126,6 +129,7 @@ public class UI_Empreendimento : MonoBehaviour
 				}
 				//descricao += "\n";
 			}
+			*/
 			descricao += "\n";
 		}
 		descricao += Dados.textoDescricao_descricao + ":\n" + empreendimento.descricao;
@@ -180,6 +184,7 @@ public class UI_Empreendimento : MonoBehaviour
 	{
 		if (selecionado == this)
 		{
+			
 			if (empreendimento.PodeComprar())
 			{
 				btComprar.interactable = true;
@@ -188,6 +193,8 @@ public class UI_Empreendimento : MonoBehaviour
 			{
 				btComprar.interactable = false;
 			}
+
+			Debug.Log("Selecionado "+selecionado.empreendimento.nome + ", pode comprar "+btComprar.interactable);
 		}
 
 		if (selecionado == null)

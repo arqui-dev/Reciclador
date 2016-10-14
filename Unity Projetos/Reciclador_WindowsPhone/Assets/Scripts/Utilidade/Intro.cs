@@ -17,12 +17,15 @@ public class Intro : MonoBehaviour
 	bool podeRodar = false;
 
 	bool podeCarregar = false;
+	float proximoTempoClicar = 0;
+	public float tempoClicar = 1.2f;
 
 	void Awake()
 	{
 		
 	}
-	
+
+	// TODO: criar um efeito de fade
 	// Update is called once per frame
 	void Update ()
 	{
@@ -32,56 +35,54 @@ public class Intro : MonoBehaviour
 			{
 				if (Input.GetMouseButton(0))
 				{
-					txtTocar.SetActive(false);
+					//txtTocar.SetActive(false);
 					podeRodar = true;
-					logos[0].SetActive(true);
+					//logos[0].SetActive(true);
+					foreach(Animator animator in logos[0].GetComponentsInChildren<Animator>())
+					{
+						animator.SetBool("fade", true);
+					}
 					proximoTempo = Time.time + tempoMostrarCadaLogo;
+					proximoTempoClicar = Time.time + tempoClicar;
 				}
 			}
 
-			if (podeRodar && Time.time > proximoTempo && itemAtual < logos.Length)
+			if (podeRodar && itemAtual < logos.Length)
 			{
-				proximoTempo = Time.time + tempoMostrarCadaLogo;
-
-				logos[itemAtual].SetActive(false);
-				itemAtual++;
-
-				if (itemAtual < logos.Length)
-					logos[itemAtual].SetActive(true);
-
-				if (itemAtual == logos.Length - 1)
+				if ((Time.time > proximoTempo) || (Time.time > proximoTempoClicar && Input.GetMouseButton(0)))
 				{
-					logos[logos.Length - 1].SetActive(true);
-					proximoTempo = 0;
-					//Application.LoadLevel("Menu");
-					podeCarregar = true;
-					proximoTempo = Time.time + tempoPassos;
-					tempoEsperar = Time.time + tempoPassos * (maxPassosPorcentagem + 1);
+					proximoTempo = Time.time + tempoMostrarCadaLogo;
+					proximoTempoClicar = Time.time + tempoClicar;
+
+					//logos[itemAtual].SetActive(false);
+					//logos[itemAtual].GetComponent<Animator>().SetBool("fade",true);
+					foreach(Animator animator in logos[itemAtual].GetComponentsInChildren<Animator>())
+					{
+						animator.SetBool("fade", true);
+					}
+					itemAtual++;
+
+					/*
+					if (itemAtual < logos.Length)
+					{
+						//logos[itemAtual].SetActive(true);
+						logos[itemAtual].GetComponent<Animator>().SetBool("fade",true);
+						foreach(Animator animator in logos[itemAtual].GetComponentsInChildren<Animator>())
+						{
+							animator.SetBool("fade", false);
+						}
+					}//*/
+
+					if (itemAtual == logos.Length)
+					{
+						//logos[logos.Length - 1].SetActive(true);
+						proximoTempo = 0;
+						Application.LoadLevel("Menu");
+					}
 				}
 			}
 		}
-		else
-		{
-			string texto = "";
-			for (int i = 0; i < passo; i++)
-			{
-				texto += ".";
-			}
-			if (Time.time > proximoTempo)
-			{
-				passo++;
-				proximoTempo = Time.time + tempoPassos;
-				if (passo > maxPassosPorcentagem)
-					passo = 0;
-			}
 
-			textoPorcentagem.text = texto;
-
-			if (CarregamentoAssincrono.pronto) // && Time.time > tempoEsperar)
-			{
-				Application.LoadLevel("Menu");
-			}
-		}
 
 		Jogador.VerificarBotaoBack();
 	}

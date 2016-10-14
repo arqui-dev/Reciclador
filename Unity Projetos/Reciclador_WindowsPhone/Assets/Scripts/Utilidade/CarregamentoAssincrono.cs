@@ -423,6 +423,7 @@ public class CarregamentoAssincrono : MonoBehaviour
 		//*/
 
 		// Pega o resltado do parser e converte para um objeto Empreendimento.
+		/*
 		Empreendimento empreendimento = new Empreendimento();
 		empreendimento.identificador = identificador;
 		empreendimento.nome = nome;
@@ -500,8 +501,9 @@ public class CarregamentoAssincrono : MonoBehaviour
 		}
 		empreendimento._empreendimentosRequisitos = construidos;
 
-
-		return empreendimento;
+		*/
+		//return empreendimento;
+		return null;
 	}
 
 	/// <summary>

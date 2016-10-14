@@ -45,7 +45,7 @@ public class Dados
 	static public int bonusResetDinheiro = 5;
 	static public int bonusResetDano = 2;
 
-	static public int nivelMaximo = 100;
+	static public int nivelMaximo = 2000000000;
 
 	static public int nivelMinimoEasterEggs = 9;
 	static public float chanceEasterEgg = 0.1f;
@@ -58,7 +58,7 @@ public class Dados
 		false, false, false, false,
 		false, false, false, false
 	};
-
+		
 	// TODO: fazer salvar os easter eggs
 }
 

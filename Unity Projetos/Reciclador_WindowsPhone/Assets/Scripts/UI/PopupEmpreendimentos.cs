@@ -36,6 +36,7 @@ public class PopupEmpreendimentos : MonoBehaviour
 		{
 			gameObject.SetActive(true);
 			Som.Tocar(Som.Tipo.Navegar);
+			//CriarListaEmpreendimentos.CarregarEstatico();
 		}
 	}
 

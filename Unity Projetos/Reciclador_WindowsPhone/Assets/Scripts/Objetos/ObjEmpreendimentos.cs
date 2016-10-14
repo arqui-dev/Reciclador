@@ -20,7 +20,7 @@ public class ObjEmpreendimentos : MonoBehaviour
 	Transform	posicaoMostrarGrana;
 	public GameObject	objPontos;
 
-	public float	tempoReceberDinheiro = 5;
+	public float	tempoReceberDinheiro = 10;
 
 	List<Empreendimento> 
 		listaEmpreendimentos = new List<Empreendimento>();
@@ -112,7 +112,11 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	static public void Atualizar()
 	{
-		instancia.CalcularTudo();
+		if (instancia)
+		{
+			instancia.CalcularTudo();
+			Debug.Log("Calcular Tudo");
+		}
 	}
 
 	void CalcularTudo()
@@ -162,14 +166,13 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	static public float TempoCriarLixo(float tempo)
 	{
-		if (velocidadeCriarLixo > 0.9f)
+		if (velocidadeCriarLixo > 0.5f)
 		{
-			velocidadeCriarLixo = 0.9f;
+			velocidadeCriarLixo = 0.5f;
 		}
 		return tempo * (1 - velocidadeCriarLixo);
 	}
 
-	// TODO: ta de 0 a 1, mudar pra ser de zero a 100
 	static public int QuantidadeXPAlterada(int xp)
 	{
 		float fxp = (float) xp;
@@ -180,12 +183,20 @@ public class ObjEmpreendimentos : MonoBehaviour
 
 	static public long ValorVendaAjeitado(long valor, int tipo)
 	{
-		return (long) (valor * (1 + valorDeVenda[tipo]));
+		float fvalor = (float) valor;
+		fvalor = (fvalor * (1f + valorDeVenda[tipo]));
+		Debug.Log("Valor de venda antes de ajeitado: "+valor+"; Valor de venda AJEITADO: "+fvalor);
+		return (long) fvalor;
 	}
 
 	static public float TempoReciclar(float tempo, int tipo)
 	{
-		return tempo * (1 - velocidadeReciclagem[tipo]);
+		float limite = 0.4f;
+		if (velocidadeReciclagem[tipo] > limite)
+			velocidadeReciclagem[tipo] = limite;
+		float retorno = tempo * (1 - velocidadeReciclagem[tipo]);
+		Debug.Log("Tempo reciclagem antes: "+tempo+"; Tempo reciclagem alterado: "+retorno);
+		return retorno;
 	}
 
 	static public int LimiteLixeira(int limite, int tipo)

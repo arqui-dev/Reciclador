@@ -168,8 +168,8 @@ public class ObjAreaReciclavel : MonoBehaviour
 		reciclavel.Reciclar(transform, ultimaDuracao);
 		listaReciclando.Add(reciclavel);
 
-		ObjGerenciadorLixo.CriarXP(
-			xpAoMandarReciclar, reciclavel.transform);
+		//ObjGerenciadorLixo.CriarXP(xpAoMandarReciclar, reciclavel.transform);
+		ObjGerenciadorLixo.CriarXP(Jogador.xpPorReciclar, reciclavel.transform);
 
 		if (listaReciclando.Count == 1)
 		{

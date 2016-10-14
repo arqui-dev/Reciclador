@@ -427,6 +427,7 @@ public class Tutorial : MonoBehaviour {
 			}
 			break;
 		case 17:
+			UI_Achievements.SalvarEstatico();
 			etapaComAcao = false;
 			Config.SetActive(true);
 			break;
