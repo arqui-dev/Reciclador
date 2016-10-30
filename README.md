@@ -24,23 +24,26 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
 <h6>Windows Phone(v1.3)</h6><p><a href="https://www.microsoft.com/pt-br/store/p/reciclador/9nblggh42cq3" target="_blank"><img src="https://github.com/zugbahn/Reciclador/blob/master/Assets/Images/English_Get_it_Win_10.png?raw=true" alt="Windows Store"></a></p>
 
 <ol>
-    <li><h3>Testes</h3></li>
-    <a href="" target="_blank">Baixe a versão com cheat code ativo para testes.</a>
-    <h5>Para usar o cheat code basta entrar no menu opções e selecionar o cheat desejado:</h5>
+    <li><h3>Testes</h3>
+    <h5><a href="https://docs.google.com/presentation/d/1rgyC7XTj0fsL3GOk1pxkQBnmdNg1RTRE7E4YvvrSfhY/edit?usp=sharing" target="_blank">Guia do jogo</a></h5>
+    <h5><a href="" target="_blank">Baixe a versão com cheat code ativo para testes.</a></h5>
+    <p>Para usar o cheat code basta entrar no menu opções e selecionar o cheat desejado:</p>
     <ol>   
         <li>+ Níveis, aumenta o nível de sustentabilidade do jogador</li>
         <li>+ $ aumenta a quantidade de $ do jogador</li>
     </ol>
-    <p>Com esses códigos o usuário é capaz de testar a todas as features do jogo de maneira rápida e eficaz.</p>
+<p>Com esses códigos o usuário é capaz de testar a todas as features do jogo de maneira rápida e eficaz.</p></li>
 <li><h3>Ferramentas</h3></li>
     <p>O projeto utilizou-se de práticas AGILE e das seguintes ferramentas:</p>
     <h5>Para versionamento, armazenamento e disponibilização do projetos e comunicação.</h5>
     <ul>
         <li>Github</li>
         <li>Dropbox</li>
+        <li>Google Drive</li>
         <li>Slack</li>
         <li>Trello</li>
     </ul>
+
     <h5>Para o desenvolvimento do jogo:</h5>
     <ul>
         <li>Unity3D v 5.3.4f1</li>
@@ -53,4 +56,5 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
         <li>Adobe Photoshop CS2</li>
         <li>Adobe Illustrator CS2</li>
     </ul>
- </ol>
+    <li><a href="https://github.com/zugbahn/Reciclador/tree/master/Assets" target="_blank"><h5>Assets</h5></a></li>
+</ol>
