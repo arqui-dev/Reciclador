@@ -15,8 +15,8 @@
 <p>O Reciclador é um jogo mobile simples e divertido que propõe o relacionamento de crianças,
 adolescentes e adultos com o tema reciclagem, através de informações realistas sobre como descartar o lixo e todos os resíduos gerados no dia a dia. Estimula o conhecimento de diferentes tipos de resíduos e a forma como devem ser descartados adequadamente.</p>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/ai4hRM46NAU" frameborder="0" allowfullscreen></iframe>
-<h3>Download:</h3>
-<span><a href="https://github.com/zugbahn/Reciclador/tree/master/Builds/" target="_blank">Clique aqui para download da ultima build do projeto.</a></span>
+<h3>Download da ultima build ainda não lançada:</h3>
+<span><a href="https://github.com/zugbahn/Reciclador/tree/master/Builds/BuildAtual" target="_blank">Clique aqui para download da ultima build do projeto.</a></span>
 
 <h5>Versões para testes abertos nas stores:</h5>
 <h6>Android (v1.3)</h6><p><a href="https://play.google.com/store/apps/details?id=com.zugbahn.reciclador&ah=0pLaeSaaogRE_g2PMIkdGCxhVwI" target="_blank"><img src="https://github.com/zugbahn/Reciclador/blob/master/Assets/Images/google-play-badge-300x89.png?raw=true" alt="Google Play"></a></p>
@@ -26,7 +26,7 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
 <ol>
     <li><h3>Testes</h3>
     <h5><a href="https://docs.google.com/presentation/d/1rgyC7XTj0fsL3GOk1pxkQBnmdNg1RTRE7E4YvvrSfhY/edit?usp=sharing" target="_blank">Guia do jogo</a></h5>
-    <h5><a href="" target="_blank">Baixe a versão com cheat code ativo para testes.</a></h5>
+    <h5><a href="https://github.com/zugbahn/Reciclador/tree/master/Builds/BuildAtual/CheatCode" target="_blank">Baixe a versão com cheat code ativo para testes.</a></h5>
     <p>Para usar o cheat code basta entrar no menu opções e selecionar o cheat desejado:</p>
     <ol>   
         <li>+ Níveis, aumenta o nível de sustentabilidade do jogador</li>
