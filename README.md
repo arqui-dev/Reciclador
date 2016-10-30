@@ -4,7 +4,7 @@
     <li>Coordenado por Marielle Rezende de Andrade</li>
     <li>produzido pela parceria entre as equipes:
         <ul>
-            <li>[Zugbahn](http://zugbahn.com/)</li>
+            <li><a href="http://zugbahn.com/" target="_blank">Zugbahn</a></li>
             <li>Arca Brasil.</li>
         </ul>
     </li>
@@ -41,7 +41,6 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
         <li>Slack</li>
         <li>Trello</li>
     </ul>
-
     <h5>Para o desenvolvimento do jogo:</h5>
     <ul>
         <li>Unity3D v 5.3.4f1</li>
@@ -54,4 +53,4 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
         <li>Adobe Photoshop CS2</li>
         <li>Adobe Illustrator CS2</li>
     </ul>
-    </ol>
+ </ol>
