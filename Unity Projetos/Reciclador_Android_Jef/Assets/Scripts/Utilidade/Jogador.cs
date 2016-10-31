@@ -8,8 +8,17 @@ public class Jogador : MonoBehaviour
 
 	//public GameObject _canvasReset;
 
-	public int 	multiplicadorXPNivel	= 50;
-	public int 	multiplicadorXPGeral	= 100;
+	public Color [] _coresMonstros;
+	static public Color [] coresMonstros;
+
+	static public int 	multiplicadorXPNivel		= 1;
+	static public int 	multiplicadorXPGeral		= 1;
+	static public int	multiplicadorXPNivelMonstro = 250;
+	static public int 	xpPorReciclar				= 100;
+	static int 			multiplicadorXPPorNivel		= 1000;
+
+	public static int 	divisorNiveisNivelMaximoMonstrosAparecem = 3;
+	public static int 	divisorNiveisNivelMinimoMonstrosAparecem = 12;
 
 	public int dinheiroInicialTestes	= 10000;
 	public int nivelInicialTestes		= 90;
@@ -34,7 +43,14 @@ public class Jogador : MonoBehaviour
 	static GameObject canvasReset	= null;
 
 
+
+
 	public bool resetarDados = false;
+
+	static public int NivelMaximoMonstro()
+	{
+		return _nivel + 1;
+	}
 
 	static public void Salvar()
 	{
@@ -90,8 +106,12 @@ public class Jogador : MonoBehaviour
 
 	static string tutorialNome = "Tutorial";
 
+	static bool jogadorCarregou = false;
+
 	static void Carregar()
 	{
+		if (jogadorCarregou) return;
+
 		if (PlayerPrefs.HasKey(tutorialNome))
 		{
 			tutorialCompleto = PlayerPrefs.GetInt(tutorialNome) == 1;
@@ -124,6 +144,8 @@ public class Jogador : MonoBehaviour
 		}
 
 		Debug.Log ("Jogador Carregado\n"+entrada);
+
+		//jogadorCarregou = true;
 	}
 
 	static public int 	EasterEggMaximo()
@@ -213,8 +235,7 @@ public class Jogador : MonoBehaviour
 
 	static public int XPAjeitada(int xp)
 	{
-		if (instancia == null) return xp * 100;
-		return xp * instancia.multiplicadorXPGeral;
+		return xp * multiplicadorXPGeral;
 	}
 
 	static public bool GanharXP(int xp)
@@ -277,18 +298,18 @@ public class Jogador : MonoBehaviour
 
 	static int CalcularXPProximoNivel(int pnivel)
 	{
-		if (instancia)
-			return pnivel * XPAjeitada(instancia.multiplicadorXPNivel);
-		return pnivel * XPAjeitada(50);
+		return pnivel * multiplicadorXPPorNivel;
+		//return pnivel * XPAjeitada(multiplicadorXPNivel);
 	}
 
 	static void AtualizarXPTotal()
 	{
-		int mu = 50;
-		if (instancia != null)
-			mu = instancia.multiplicadorXPNivel;
+		int mu = multiplicadorXPNivel;
 		int valorBase		= (_nivel * (_nivel - 1)) / 2;
 		int multiplicador	= XPAjeitada(mu);
+
+		// 100 por nível
+		multiplicador = multiplicadorXPPorNivel;
 
 		_xpTotal = valorBase * multiplicador + _xpAtual;
 	}
@@ -316,7 +337,7 @@ public class Jogador : MonoBehaviour
 		Inicializar();
 	}
 
-	void Awake()
+	void Start()
 	{
 /*
 #if UNITY_EDITOR
@@ -324,6 +345,8 @@ public class Jogador : MonoBehaviour
 		_nivel = nivelInicialTestes;
 #endif
 //*/
+		coresMonstros = _coresMonstros;
+
 		#if UNITY_EDITOR
 		if (resetarDados)
 		{
@@ -367,6 +390,15 @@ public class Jogador : MonoBehaviour
 		if (Application.loadedLevelName == "Jogo")
 		{
 			UI_Achievements.VerificarUnlockEstatico();
+
+			if (jogadorCarregou == false)
+			{
+				Carregar();
+				UI_Achievements.CarregarEstatico();
+				ObjGerenciadorLixo.CarregarEstativo();
+				GerenciadorEmpreendimentos.CarregarEstatico();
+				jogadorCarregou = true;
+			}
 
 			if (Time.time > proximoSave)
 			{
@@ -451,7 +483,16 @@ public class Jogador : MonoBehaviour
 			}
 			else
 			{
-				Application.Quit();
+				if (Application.platform == RuntimePlatform.Android)
+				{
+					AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+					activity.Call<bool>("moveTaskToBack", true);
+				}
+				else
+				{
+					Application.Quit();
+				}
+				//Application.Quit();
 			}
 		}
 	}

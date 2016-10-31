@@ -191,6 +191,11 @@ public class UI_Achievements : MonoBehaviour
 			instancia.VerificarUnlock();
 	}
 
+	public static void SalvarEstatico()
+	{
+		instancia.SalvarDados();
+	}
+
 	void SalvarDados()
 	{
 		foreach (BaseadoDinheiro bd in baseadoDinheiro) {
@@ -216,7 +221,7 @@ public class UI_Achievements : MonoBehaviour
 			{
 				bool unlocked = PlayerPrefs.GetInt(bd.Nome) == 1;
 				bd.Unlocked = unlocked;
-				//Debug.Log ("Carregou "+bd.Nome+" - Unlocked "+bd.Unlocked);
+				Debug.Log ("Carregou "+bd.Nome+" - Unlocked "+bd.Unlocked);
 			}
 		}
 
@@ -225,6 +230,7 @@ public class UI_Achievements : MonoBehaviour
 			{
 				bool unlocked = PlayerPrefs.GetInt(bd.Nome) == 1;
 				bd.Unlocked = unlocked;
+				Debug.Log ("Carregou "+bd.Nome+" - Unlocked "+bd.Unlocked);
 			}
 		}
 
@@ -233,6 +239,7 @@ public class UI_Achievements : MonoBehaviour
 			{
 				bool unlocked = PlayerPrefs.GetInt(bd.Nome) == 1;
 				bd.Unlocked = unlocked;
+				Debug.Log ("Carregou "+bd.Nome+" - Unlocked "+bd.Unlocked);
 			}
 		}
 	}
@@ -245,12 +252,6 @@ public class UI_Achievements : MonoBehaviour
 		instancia.CarregarDados();
 
 		return true;
-	}
-
-	static public void SalvarEstatico()
-	{
-		if (instancia)
-			instancia.SalvarDados();
 	}
 
 	void VerificarUnlock()

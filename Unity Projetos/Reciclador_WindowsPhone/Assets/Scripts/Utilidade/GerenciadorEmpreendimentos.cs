@@ -71,6 +71,14 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 		Debug.Log("Carregado: "+_carregado+"; Quantidade: "+dicionarioEmpreendimentos.Count);
 	}
 
+	public static void CarregarEstatico()
+	{
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Carregar();
+		}
+	}
+
 	/// <summary>
 	/// Salva os empreendimentos
 	/// </summary>

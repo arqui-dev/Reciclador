@@ -6,12 +6,13 @@ public class CarregamentoAssincrono : MonoBehaviour
 {
 	public static bool pronto = false;
 
-	System.Threading.Thread thread = null;
+	//System.Threading.Thread thread = null;
 
 	void Awake()
 	{
-		thread = new System.Threading.Thread(PegarEmpreendimentos);
-		thread.Start();
+		//thread = new System.Threading.Thread(PegarEmpreendimentos);
+		//thread.Start();
+		PegarEmpreendimentos();
 	}
 
 	float tempo = 0;
@@ -422,6 +423,7 @@ public class CarregamentoAssincrono : MonoBehaviour
 		//*/
 
 		// Pega o resltado do parser e converte para um objeto Empreendimento.
+		/*
 		Empreendimento empreendimento = new Empreendimento();
 		empreendimento.identificador = identificador;
 		empreendimento.nome = nome;
@@ -499,8 +501,9 @@ public class CarregamentoAssincrono : MonoBehaviour
 		}
 		empreendimento._empreendimentosRequisitos = construidos;
 
-
-		return empreendimento;
+		*/
+		//return empreendimento;
+		return null;
 	}
 
 	/// <summary>

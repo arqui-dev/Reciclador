@@ -106,8 +106,12 @@ public class Jogador : MonoBehaviour
 
 	static string tutorialNome = "Tutorial";
 
+	static bool jogadorCarregou = false;
+
 	static void Carregar()
 	{
+		if (jogadorCarregou) return;
+
 		if (PlayerPrefs.HasKey(tutorialNome))
 		{
 			tutorialCompleto = PlayerPrefs.GetInt(tutorialNome) == 1;
@@ -140,6 +144,8 @@ public class Jogador : MonoBehaviour
 		}
 
 		Debug.Log ("Jogador Carregado\n"+entrada);
+
+		//jogadorCarregou = true;
 	}
 
 	static public int 	EasterEggMaximo()
@@ -385,6 +391,15 @@ public class Jogador : MonoBehaviour
 		{
 			UI_Achievements.VerificarUnlockEstatico();
 
+			if (jogadorCarregou == false)
+			{
+				Carregar();
+				UI_Achievements.CarregarEstatico();
+				ObjGerenciadorLixo.CarregarEstativo();
+				GerenciadorEmpreendimentos.CarregarEstatico();
+				jogadorCarregou = true;
+			}
+
 			if (Time.time > proximoSave)
 			{
 				proximoSave = Time.time + tempoSalvar;
@@ -468,7 +483,16 @@ public class Jogador : MonoBehaviour
 			}
 			else
 			{
-				Application.Quit();
+				if (Application.platform == RuntimePlatform.Android)
+				{
+					AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+					activity.Call<bool>("moveTaskToBack", true);
+				}
+				else
+				{
+					Application.Quit();
+				}
+				//Application.Quit();
 			}
 		}
 	}

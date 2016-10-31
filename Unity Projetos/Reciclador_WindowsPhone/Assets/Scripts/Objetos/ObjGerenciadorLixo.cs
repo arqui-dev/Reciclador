@@ -80,6 +80,12 @@ public class ObjGerenciadorLixo : MonoBehaviour
 		Debug.Log ("Saida "+saida);
 	}
 
+	static public void CarregarEstativo()
+	{
+		if (instancia)
+			instancia.Carregar();
+	}
+
 	void Carregar()
 	{
 		if (PlayerPrefs.HasKey(nomeArquivoCenario) == false)
@@ -101,7 +107,7 @@ public class ObjGerenciadorLixo : MonoBehaviour
 			int nivel = int.Parse(lista[indiceGeral]);
 			indiceGeral++;
 
-			if (nivel < 100)
+			if (nivel < Dados.nivelMaximo)
 			{
 				CriarLixo(nivel, true);
 			}

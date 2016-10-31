@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{EA7547B7-87B8-A56C-5390-F91EDABECC74}</ProjectGuid>
+    <ProjectGuid>{F735289F-51B2-8108-D34C-C2C2304C9539}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,9 +53,24 @@
      <Compile Include="Assets\Scripts\Objetos\ObjReciclavel.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjReset.cs" />
      <Compile Include="Assets\Scripts\Objetos\ObjTextoFlutuante.cs" />
+     <Compile Include="Assets\Scripts\Testes\TesteDelegate.cs" />
+     <Compile Include="Assets\Scripts\Testes\TesteNovoModeloEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\ClassesDosEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\EasterEggs\EasterEggs.cs" />
      <Compile Include="Assets\Scripts\Tipos\Empreendimento.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\ColetaSeletiva.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\FabricaVitrais.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\FerroVelho.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\OficinaBrinquedosReciclaveis.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\PrensaPapel.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\TrituradorResiduosSolidos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\UsinaReciclagem.cs" />
+     <Compile Include="Assets\Scripts\Tipos\Empreendimentos\ViveiroGarrafasPet.cs" />
+     <Compile Include="Assets\Scripts\Tipos\FuncoesEmpreendimentos.cs" />
+     <Compile Include="Assets\Scripts\Tipos\IValoresEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\Tipos\LixoMisturado.cs" />
      <Compile Include="Assets\Scripts\Tipos\Reciclavel.cs" />
+     <Compile Include="Assets\Scripts\Tipos\ValoresEmpreendimentos.cs" />
      <Compile Include="Assets\Scripts\UI\AchievementBase.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_BarraXP.cs" />
      <Compile Include="Assets\Scripts\UI\HUD_Pontos.cs" />

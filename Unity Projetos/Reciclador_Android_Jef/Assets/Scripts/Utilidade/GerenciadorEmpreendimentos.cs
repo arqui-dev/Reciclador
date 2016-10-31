@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 /// <summary>
 /// Classe para gerenciar a lista dos empreendimentos carregados.
@@ -19,10 +20,27 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 
 	static public Empreendimento [] listaEmpreendimentosEstatica = null;
 
+	static public void Recarregar()
+	{
+		listaEmpreendimentosEstatica = FuncoesEmpreendimentos.CriarEmpreendimentos();
+		dicionarioEmpreendimentos.Clear();
+		foreach(Empreendimento e in listaEmpreendimentosEstatica)
+		{
+			e.Reiniciar();
+			e.Carregar();
+			dicionarioEmpreendimentos.Add(e.identificador, e);
+		}
+		if (Application.loadedLevelName == "Jogo")
+		{
+			ObjEmpreendimentos.Atualizar();
+			_carregado = true;
+		}
+	}
+
 	/// <summary>
 	/// Carrega a lista dos empreendimentos e a coloca em um dicionario
 	/// </summary>
-	void Awake()
+	void Start()
 	{
 		if (_carregado) return;
 
@@ -31,9 +49,12 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 
 		if (listaEmpreendimentosEstatica == null)
 		{
-			listaEmpreendimentosEstatica = GerenciadorCarregamento.CarregarEmpreendimentos();
+			// TODO: Ajeitar para não mostrar que já está no nível máximo
+			//listaEmpreendimentosEstatica = GerenciadorCarregamento.CarregarEmpreendimentos();
+			listaEmpreendimentosEstatica = FuncoesEmpreendimentos.CriarEmpreendimentos();
 		}
 
+		dicionarioEmpreendimentos.Clear();
 		//foreach(Empreendimento e in listaEmpreendimentos)
 		foreach(Empreendimento e in listaEmpreendimentosEstatica)
 		{
@@ -42,8 +63,20 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 			dicionarioEmpreendimentos.Add(e.identificador, e);
 		}
 
-		_carregado = true;
+		if (Application.loadedLevelName == "Jogo")
+		{
+			ObjEmpreendimentos.Atualizar();
+			_carregado = true;
+		}
+		Debug.Log("Carregado: "+_carregado+"; Quantidade: "+dicionarioEmpreendimentos.Count);
+	}
 
+	public static void CarregarEstatico()
+	{
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Carregar();
+		}
 	}
 
 	/// <summary>
@@ -51,17 +84,31 @@ public class GerenciadorEmpreendimentos : MonoBehaviour
 	/// </summary>
 	static public void Salvar()
 	{
+		/*
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Salvar();
+		}
+		//*/
+
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Salvar();
 		}
 	}
 
 	static public void Reiniciar()
 	{
+		/*
 		foreach(string s in dicionarioEmpreendimentos.Keys)
 		{
 			dicionarioEmpreendimentos[s].Reiniciar();
+		}
+		//*/
+
+		foreach(Empreendimento e in dicionarioEmpreendimentos.Values)
+		{
+			e.Reiniciar();
 		}
 	}
 

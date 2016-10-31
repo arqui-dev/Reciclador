@@ -36,14 +36,59 @@ public class Empreendimento// : MonoBehaviour
 
 	int 	_nivel = 0;
 
+	public IValoresEmpreendimentos valores;
+
+	public Empreendimento(IValoresEmpreendimentos v)
+	{
+		valores = v;
+		nome = v.Nome();
+		identificador = v.Identificador();
+	}
+
+	public void AlterarNivel(int novoNivel)
+	{
+		#if UNITY_EDITOR
+
+		_nivel = novoNivel;
+
+		#endif
+	}
+
+	public void Imprimir(int nivel = -1)
+	{
+		if (nivel > 0)
+		{
+			AlterarNivel(nivel);
+		}
+
+		string saida = "Empreendimento "+nome+". Identificador: "+identificador+". Nivel "+nivel+"\n";
+		saida += "    "+"Custo para o próximo nível: "+custo + "\n";
+		saida += "    "+"Sustentabilidade necessária para o próximo nível: "+nivelRequisito+"\n";
+		saida += "    "+"Poder do jogador: "+taxaSeparacaoLixo+"\n";
+		saida += "    "+"Dinheiro por tempo: "+dinheiroPorTempo+"\n";
+		saida += "    "+"Aumento de XP: "+aumentoXP+"\n";
+		saida += "    "+"Nível extra do lixo: "+nivelMinimoLixo+"\n";
+		saida += "    "+"Dano automático por tempo: "+separacaoAutomatica+"\n";
+		saida += "    "+"Descrição: '"+descricao+"'\n\n";
+		saida += "    "+"Limite das recicladoras:"+"\n";
+		saida += "        "+"Papel: "+limiteRecicladoras[0]+"; Vidro: "+limiteRecicladoras[1]+"; Metal: "+limiteRecicladoras[2]+"; Plástico: "+limiteRecicladoras[3]+"\n";
+		saida += "    "+"Valor de venda:"+"\n";
+		saida += "        "+"Papel: "+valorDeVenda[0].ToString("0.0")+"; Vidro: "+valorDeVenda[1].ToString("0.0")+"; Metal: "+valorDeVenda[2].ToString("0.0")+"; Plástico: "+valorDeVenda[3].ToString("0.0")+"\n";
+		saida += "    "+"Velocidade de Reciclagem:"+"\n";
+		saida += "        "+"Papel: "+velocidadeReciclagem[0].ToString("0.0")+"; Vidro: "+velocidadeReciclagem[1].ToString("0.0")+"; Metal: "+velocidadeReciclagem[2].ToString("0.0")+"; Plástico: "+velocidadeReciclagem[3].ToString("0.0")+"\n";
+		//saida += "    "+""+"\n";
+		Debug.Log(saida);
+	}
+
 	public int		nivelMaximo {
-		get { return _custos.Length; }
+		//get { return _custos.Length; }
+		get { return 1000000000; }
 	}
 	public long		custo {
 		get 
 		{ 
 			if (_nivel >= nivelMaximo) return -1;
-			return _custos[_nivel]; 
+			return valores.Custos(_nivel);
 		}
 	}
 	public int		nivel {
@@ -51,7 +96,7 @@ public class Empreendimento// : MonoBehaviour
 	}
 
 	public int separacaoAutomatica {
-		get { return _separacaoAutomatica[_nivel]; }
+		get { return valores.SeparacaoAutomatica(_nivel); }
 	}
 
 	public int 		nivelRequisito
@@ -59,81 +104,93 @@ public class Empreendimento// : MonoBehaviour
 		get
 		{
 			if (_nivel == nivelMaximo) return -1;
-			return _nivelRequisito[_nivel];
+			return valores.NivelRequisito(_nivel);
 		}
 	}
 
-	public int NivelMinimo()
+	public int NivelMinimo(int niv = -1)
 	{
-		return _nivelRequisito[0];
+		if (nivel >= 0)
+			return valores.NivelRequisito(niv);
+		
+		return valores.NivelRequisito(_nivel);
 	}
 
 	public string 	descricao{
-		get { return _descricao[_nivel]; }
+		get { return valores.Descricao(_nivel); }
 	}
 
 	public int		taxaSeparacaoLixo {
 		get
 		{
 			if (_nivel == 0) return 0;
-			return _taxaSeparacaoLixo[_nivel - 1];
+			return valores.TaxaSeparacaoLixo(_nivel);
 		}
 	}
 	public long		dinheiroPorTempo {
 		get
 		{
 			if (_nivel == 0) return 0;
-			return _dinheiroPorTempo[_nivel - 1];
+			return valores.DinheiroPorTempo(_nivel);
 		}
 	}
 	public float 	aumentoXP {
 		get
 		{
 			if (_nivel == 0) return 0;
-			return _aumentoXP[_nivel - 1];
+			return valores.AumentoXP(_nivel);
 		}
 	}
 	public int 		nivelMinimoLixo {
 		get
 		{
 			if (_nivel == 0) return 0;
-			return _nivelMinimoLixo[_nivel - 1];
+			return valores.NivelMinimoLixo(_nivel);
 		}
 	}
 	public int []	limiteRecicladoras {
 		get 
 		{
 			if (_nivel == 0) return _valorBaseI;
+			/*
 			int [] ret = new int[4];
 			ret[0] = (int)_limiteRecicladoras[_nivel - 1].x;
 			ret[1] = (int)_limiteRecicladoras[_nivel - 1].y;
 			ret[2] = (int)_limiteRecicladoras[_nivel - 1].z;
 			ret[3] = (int)_limiteRecicladoras[_nivel - 1].w;
 			return ret;
+			*/
+			return valores.LimiteRecicladoras(_nivel);
 		}
 	}
 	public float []	valorDeVenda {
 		get
 		{
 			if (_nivel == 0) return _valorBaseF;
+			/*
 			float [] ret = new float[4];
 			ret[0] = _valorDeVenda[_nivel - 1].x;
 			ret[1] = _valorDeVenda[_nivel - 1].y;
 			ret[2] = _valorDeVenda[_nivel - 1].z;
 			ret[3] = _valorDeVenda[_nivel - 1].w;
 			return ret;
+			*/
+			return valores.ValorDeVenda(_nivel);
 		}
 	}
 	public float []	velocidadeReciclagem {
 		get
 		{
 			if (_nivel == 0) return _valorBaseF;
+			/*
 			float [] ret = new float[4];
 			ret[0] = _velocidadeReciclagem[_nivel - 1].x;
 			ret[1] = _velocidadeReciclagem[_nivel - 1].y;
 			ret[2] = _velocidadeReciclagem[_nivel - 1].z;
 			ret[3] = _velocidadeReciclagem[_nivel - 1].w;
 			return ret;
+			*/
+			return valores.VelocidadeReciclagem(_nivel);
 		}
 	}
 
@@ -141,7 +198,7 @@ public class Empreendimento// : MonoBehaviour
 		get
 		{
 			if (_nivel == 0) return 0;
-			return _velocidadeAparecerLixo[_nivel - 1];
+			return valores.VelocidadeAparecerLixo(_nivel);
 		}
 	}
 
@@ -199,8 +256,8 @@ public class Empreendimento// : MonoBehaviour
 	public bool PodeComprar()
 	{
 		if (custo <= Jogador.pontos && custo > 0 &&
-		    nivelRequisito > 0 && nivelRequisito <= Jogador.nivel &&
-		    TemRequisitos())
+		    nivelRequisito >= 0 && nivelRequisito <= Jogador.nivel
+			)//&& TemRequisitos())
 		{
 			return true;
 		}

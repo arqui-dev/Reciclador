@@ -407,6 +407,7 @@ public class GerenciadorCarregamento : MonoBehaviour
 		//*/
 
 		// Pega o resltado do parser e converte para um objeto Empreendimento.
+		/*
 		Empreendimento empreendimento = new Empreendimento();
 		empreendimento.identificador = identificador;
 		empreendimento.nome = nome;
@@ -486,6 +487,8 @@ public class GerenciadorCarregamento : MonoBehaviour
 
 
 		return empreendimento;
+		*/
+		return null;
 	}
 
 	/// <summary>
