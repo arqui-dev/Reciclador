@@ -17,6 +17,7 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
 <iframe width="640" height="360" src="https://www.youtube.com/embed/ai4hRM46NAU" frameborder="0" allowfullscreen></iframe>
 <h3>Download da ultima build ainda não lançada:</h3>
 <span><a href="https://github.com/zugbahn/Reciclador/tree/master/Builds/BuildAtual" target="_blank">Clique aqui para download da ultima build do projeto.</a></span>
+<h6><a href="https://www.dropbox.com/sh/lab8tg10kw14bp3/AAD-DjMPqFOWoq8bXPv0exvFa?dl=0" target="_blank">Ou aqui.</a></h6>
 
 <h5>Versões para testes abertos nas stores:</h5>
 <h6>Android (v1.3)</h6><p><a href="https://play.google.com/store/apps/details?id=com.zugbahn.reciclador&ah=0pLaeSaaogRE_g2PMIkdGCxhVwI" target="_blank"><img src="https://github.com/zugbahn/Reciclador/blob/master/Assets/Images/google-play-badge-300x89.png?raw=true" alt="Google Play"></a></p>
