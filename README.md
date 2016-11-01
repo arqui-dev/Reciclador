@@ -57,5 +57,5 @@ adolescentes e adultos com o tema reciclagem, através de informações realista
         <li>Adobe Photoshop CS2</li>
         <li>Adobe Illustrator CS2</li>
     </ul>
-    <li><a href="https://github.com/zugbahn/Reciclador/tree/master/Assets" target="_blank"><h5>Assets</h5></a></li>
+    <li><h5><a href="https://github.com/zugbahn/Reciclador/tree/master/Assets" target="_blank">Assets</a></h5></li>
 </ol>
