@@ -1,0 +1,11 @@
+Bem vindo ao mundo de O Reciclador e prepare-se para embarcar no mundo da reciclagem. Salve o mundo dos monstros de lixo acumulado, e conquiste fama e fortuna como o maior de todos os empreendedores sustentáveis, mas lembre-se, você nunca deve parar de reciclar pois o lixo nunca acaba. 
+
+Aprovado no concurso INOVAPPS 2015, do MINISTÉRIO DA CIÊNCIA, TECNOLOGIA, INOVAÇÕES E COMUNICAÇÕES. O Reciclador busca transmitir de maneira conhecimentos sobre reciclagem e coleta seletiva de maneira divertida, simples e agradável para crianças e adolescentes.
+
+- Monstros feitos de lixo surgem ao longo do tempo 
+- Quanto mais o tempo passa mais esses monstros se acumulam e evoluem para monstros maiores;
+- Clique freneticamente nos monstros para derrota-los;  
+- Arraste os recicláveis que deixados pelos monstros derrotados para as lixeiras adequadas;
+- São 4 Lixeiras representando Papel (azul), Vidro (verde), Metal (amarelo) e Plástico (vermelho);
+- As lixeiras reciclam o material arrastado para elas e depois de um tempo geram $ e sustentabilidade para o jogador
+- Com esses recursos o jogador libera e melhora empreendimentos sustentáveis que o ajudam em sua jornada.

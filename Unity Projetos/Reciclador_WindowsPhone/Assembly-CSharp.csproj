@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\Utilidade\Jogador.cs" />
      <Compile Include="Assets\Scripts\Utilidade\MensagensAleatorias.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Musica.cs" />
+     <Compile Include="Assets\Scripts\Utilidade\SaveClass.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Som.cs" />
      <Compile Include="Assets\Scripts\Utilidade\Tutorial.cs" />
      <None Include="Assets\Fontes\OFL.txt" />
